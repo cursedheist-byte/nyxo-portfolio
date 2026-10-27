@@ -1,0 +1,137 @@
+/* Design Tokens - Auto-generated */
+/* Do not edit directly - modify tokens.json instead */
+
+/* === PRIMITIVES === */
+:root {
+  --primitive-color-ink-700: #151726;
+  --primitive-color-ink-800: #0E1019;
+  --primitive-color-ink-850: #0A0B13;
+  --primitive-color-ink-900: #07080F;
+  --primitive-color-ink-950: #05060A;
+  --primitive-color-white: #FFFFFF;
+  --primitive-color-slate-100: #F1F5F9;
+  --primitive-color-slate-200: #E2E8F0;
+  --primitive-color-slate-300: #CBD5E1;
+  --primitive-color-slate-400: #94A3B8;
+  --primitive-color-slate-500: #64748B;
+  --primitive-color-violet-300: #C4B5FD;
+  --primitive-color-violet-400: #A78BFA;
+  --primitive-color-violet-500: #8B5CF6;
+  --primitive-color-violet-600: #7C3AED;
+  --primitive-color-cyan-300: #67E8F9;
+  --primitive-color-cyan-400: #22D3EE;
+  --primitive-color-cyan-500: #06B6D4;
+  --primitive-color-pink-400: #F472B6;
+  --primitive-color-pink-500: #EC4899;
+  --primitive-color-mint: #34D399;
+  --primitive-color-amber: #FBBF24;
+  --primitive-alpha-white-4: rgba(255, 255, 255, 0.04);
+  --primitive-alpha-white-6: rgba(255, 255, 255, 0.06);
+  --primitive-alpha-white-10: rgba(255, 255, 255, 0.10);
+  --primitive-alpha-white-14: rgba(255, 255, 255, 0.14);
+  --primitive-alpha-white-20: rgba(255, 255, 255, 0.20);
+  --primitive-alpha-white-64: rgba(255, 255, 255, 0.64);
+  --primitive-alpha-ink-60: rgba(5, 6, 10, 0.60);
+  --primitive-alpha-ink-80: rgba(5, 6, 10, 0.80);
+  --primitive-fontFamily-display: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+  --primitive-fontFamily-body: 'Archivo', ui-sans-serif, system-ui, sans-serif;
+  --primitive-fontFamily-mono: 'JetBrains Mono', ui-monospace, monospace;
+  --primitive-fontFamily-signature: 'Caveat', cursive;
+  --primitive-fontSize-2xs: 0.6875rem;
+  --primitive-fontSize-xs: 0.75rem;
+  --primitive-fontSize-sm: 0.875rem;
+  --primitive-fontSize-base: 1rem;
+  --primitive-fontSize-lg: 1.125rem;
+  --primitive-fontSize-xl: 1.25rem;
+  --primitive-fontSize-2xl: 1.5rem;
+  --primitive-fontSize-3xl: 1.875rem;
+  --primitive-fontSize-4xl: 2.25rem;
+  --primitive-fontSize-5xl: 3rem;
+  --primitive-fontSize-6xl: 3.75rem;
+  --primitive-fontSize-7xl: 4.5rem;
+  --primitive-spacing-1: 0.25rem;
+  --primitive-spacing-2: 0.5rem;
+  --primitive-spacing-3: 0.75rem;
+  --primitive-spacing-4: 1rem;
+  --primitive-spacing-5: 1.25rem;
+  --primitive-spacing-6: 1.5rem;
+  --primitive-spacing-8: 2rem;
+  --primitive-spacing-10: 2.5rem;
+  --primitive-spacing-12: 3rem;
+  --primitive-spacing-16: 4rem;
+  --primitive-spacing-20: 5rem;
+  --primitive-spacing-24: 6rem;
+  --primitive-radius-sm: 0.75rem;
+  --primitive-radius-md: 1rem;
+  --primitive-radius-lg: 1.5rem;
+  --primitive-radius-xl: 2rem;
+  --primitive-radius-2xl: 2.5rem;
+  --primitive-radius-full: 9999px;
+  --primitive-shadow-glass: 0 24px 80px -32px rgba(0, 0, 0, 0.85), inset 0 1px 0 rgba(255, 255, 255, 0.14), inset 0 -1px 0 rgba(255, 255, 255, 0.04);
+  --primitive-shadow-glow-violet: 0 0 80px -12px rgba(139, 92, 246, 0.55);
+  --primitive-shadow-glow-cyan: 0 0 80px -18px rgba(34, 211, 238, 0.45);
+  --primitive-duration-fast: 160ms;
+  --primitive-duration-base: 280ms;
+  --primitive-duration-slow: 600ms;
+  --primitive-duration-cinematic: 1100ms;
+  --primitive-easing-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --primitive-easing-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --primitive-easing-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* === SEMANTIC === */
+:root {
+  --color-bg: #05060A;
+  --color-bg-elevated: #07080F;
+  --color-surface: #0A0B13;
+  --color-fg: #F1F5F9;
+  --color-fg-strong: #FFFFFF;
+  --color-muted-fg: #94A3B8;
+  --color-subtle-fg: #64748B;
+  --color-primary: #8B5CF6;
+  --color-primary-strong: #A78BFA;
+  --color-secondary: #22D3EE;
+  --color-accent: #F472B6;
+  --color-success: #34D399;
+  --color-border: rgba(255, 255, 255, 0.10);
+  --color-border-strong: rgba(255, 255, 255, 0.20);
+  --color-ring: #A78BFA;
+  --color-glass: rgba(255, 255, 255, 0.06);
+  --color-glass-strong: rgba(255, 255, 255, 0.10);
+  --color-glass-highlight: rgba(255, 255, 255, 0.20);
+  --color-overlay: rgba(5, 6, 10, 0.80);
+  --font-display: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+  --font-body: 'Archivo', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+  --font-signature: 'Caveat', cursive;
+  --radius-card: 1.5rem;
+  --radius-panel: 2rem;
+  --radius-pill: 9999px;
+  --space-section: clamp(5rem, 10vw, 9rem);
+  --space-gutter: clamp(1.25rem, 4vw, 3rem);
+  --space-container: 78rem;
+  --shadow-glass: 0 24px 80px -32px rgba(0, 0, 0, 0.85), inset 0 1px 0 rgba(255, 255, 255, 0.14), inset 0 -1px 0 rgba(255, 255, 255, 0.04);
+  --shadow-glow-primary: 0 0 80px -12px rgba(139, 92, 246, 0.55);
+  --shadow-glow-secondary: 0 0 80px -18px rgba(34, 211, 238, 0.45);
+  --motion-fast: 160ms;
+  --motion-base: 280ms;
+  --motion-slow: 600ms;
+  --motion-ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* === COMPONENTS === */
+:root {
+  --nav-height: 4.5rem;
+  --nav-bg: rgba(5, 6, 10, 0.60);
+  --nav-border: rgba(255, 255, 255, 0.10);
+  --button-primary-bg: #F1F5F9;
+  --button-primary-fg: #05060A;
+  --button-ghost-bg: rgba(255, 255, 255, 0.06);
+  --button-ghost-fg: #F1F5F9;
+  --button-radius: 9999px;
+  --card-bg: rgba(255, 255, 255, 0.04);
+  --card-bg-hover: rgba(255, 255, 255, 0.06);
+  --card-border: rgba(255, 255, 255, 0.10);
+  --card-border-hover: rgba(255, 255, 255, 0.20);
+  --card-blur: 28px;
+}

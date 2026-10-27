@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>NYXO — Varun / AI web &amp; app developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --color-bg: #05060a;
+    --color-bg-elevated: #07080f;
+    --color-fg: #f1f5f9;
+    --color-muted: #94a3b8;
+    --color-violet: #8b5cf6;
+    --color-violet-soft: #c4b5fd;
+    --color-cyan: #22d3ee;
+    --color-pink: #f472b6;
+    --color-success: #34d399;
+    --border: rgba(255, 255, 255, .11);
+    --border-strong: rgba(255, 255, 255, .2);
+    --glass-bg: linear-gradient(142deg, rgba(255,255,255,.1), rgba(255,255,255,.028) 42%, rgba(255,255,255,.055));
+    --font-display: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+    --ease: cubic-bezier(.22, 1, .36, 1);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { height: 100%; }
+  body {
+    background: var(--color-bg);
+    color: var(--color-fg);
+    font-family: var(--font-display);
+    overflow: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .deck {
+    position: fixed;
+    inset: 0;
+    background:
+      radial-gradient(60% 80% at 15% 0%, rgba(139, 92, 246, .28), transparent 62%),
+      radial-gradient(50% 65% at 90% 18%, rgba(34, 211, 238, .18), transparent 68%),
+      radial-gradient(55% 60% at 55% 110%, rgba(244, 114, 182, .16), transparent 70%),
+      var(--color-bg);
+  }
+  .deck::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
+    background-size: 72px 72px;
+    mask-image: radial-gradient(ellipse 80% 80% at 50% 40%, #000 20%, transparent 78%);
+    pointer-events: none;
+  }
+  .deck::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 50%, transparent 42%, rgba(5,6,10,.82) 100%);
+    pointer-events: none;
+  }
+
+  .slide {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: clamp(36px, 6vw, 92px);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(18px);
+    transition: opacity .45s var(--ease), transform .45s var(--ease), visibility .45s;
+  }
+  .slide.active { opacity: 1; visibility: visible; transform: none; }
+
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-mono);
+    font-size: clamp(9px, .72vw, 11px);
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, .5);
+  }
+  .eyebrow::before {
+    content: "";
+    width: 26px;
+    height: 1px;
+    background: rgba(255, 255, 255, .25);
+  }
+
+  h1, h2 { font-weight: 600; letter-spacing: -.045em; line-height: .98; text-wrap: balance; }
+  h1 { font-size: clamp(40px, 7vw, 108px); }
+  h2 { font-size: clamp(28px, 4.4vw, 62px); }
+  .iridescent {
+    background: linear-gradient(100deg, #f4f1ff 4%, #c4b5fd 34%, #67e8f9 62%, #f9a8d4 92%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .lede {
+    margin-top: 22px;
+    max-width: 44ch;
+    font-size: clamp(14px, 1.35vw, 19px);
+    line-height: 1.6;
+    color: var(--color-muted);
+  }
+  .lede strong { color: rgba(255, 255, 255, .9); font-weight: 500; }
+
+  .glass {
+    position: relative;
+    background: var(--glass-bg);
+    border: 1px solid var(--border);
+    border-radius: 26px;
+    box-shadow:
+      0 28px 90px -40px rgba(0, 0, 0, .9),
+      inset 0 1px 0 rgba(255, 255, 255, .16),
+      inset 0 -1px 0 rgba(255, 255, 255, .04);
+    -webkit-backdrop-filter: blur(26px) saturate(165%);
+    backdrop-filter: blur(26px) saturate(165%);
+  }
+
+  .mono { font-family: var(--font-mono); font-size: 10px; letter-spacing: .18em; text-transform: uppercase; }
+  .muted { color: rgba(255, 255, 255, .4); }
+
+  .layout { display: grid; grid-template-columns: 1.05fr .95fr; gap: clamp(28px, 4vw, 64px); align-items: center; }
+  .stack { display: flex; flex-direction: column; gap: 18px; }
+  .row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+
+  .tag {
+    font-family: var(--font-mono);
+    font-size: clamp(8px, .65vw, 10px);
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, .55);
+    border: 1px solid rgba(255, 255, 255, .12);
+    background: rgba(255, 255, 255, .03);
+    border-radius: 999px;
+    padding: 8px 13px;
+  }
+  .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--color-success); box-shadow: 0 0 12px var(--color-success); }
+
+  /* Slide 1 — cover */
+  .cover { justify-content: space-between; }
+  .brandbar { display: flex; align-items: center; justify-content: space-between; }
+  .brand { display: flex; align-items: center; gap: 14px; }
+  .mark {
+    width: 48px; height: 48px; border-radius: 15px;
+    display: grid; place-items: center;
+    background: linear-gradient(160deg, rgba(255,255,255,.16), rgba(255,255,255,.03));
+    border: 1px solid var(--border-strong);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.32);
+  }
+  .mark svg { width: 27px; height: 27px; }
+  .wordmark { font-size: 18px; font-weight: 600; letter-spacing: .26em; }
+  .cover-main { max-width: 900px; }
+  .cover-foot { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; }
+  .handle {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 13px 20px; border-radius: 999px;
+    background: linear-gradient(180deg, rgba(255,255,255,.98), rgba(230,232,245,.92));
+    color: #0b0c14; font-size: clamp(12px, 1vw, 15px); font-weight: 500;
+    text-decoration: none;
+    box-shadow: 0 24px 50px -24px rgba(196,181,253,.85);
+  }
+  .handle svg { width: 16px; height: 16px; }
+
+  /* Slide 2 — identity */
+  .identity-card { padding: clamp(22px, 2.4vw, 34px); }
+  .identity-head { display: flex; align-items: center; gap: 16px; padding-bottom: 18px; border-bottom: 1px solid rgba(255,255,255,.08); }
+  .avatar {
+    width: 54px; height: 54px; border-radius: 50%;
+    display: grid; place-items: center;
+    font-size: 20px; font-weight: 600; color: rgba(255,255,255,.85);
+    background: linear-gradient(135deg, rgba(139,92,246,.55), rgba(244,114,182,.28) 55%, rgba(34,211,238,.4));
+    border: 1px solid rgba(255,255,255,.24);
+  }
+  .facts { display: grid; gap: 12px; padding-top: 18px; }
+  .fact { display: flex; justify-content: space-between; gap: 18px; align-items: baseline; padding: 12px 14px; border-radius: 14px; border: 1px solid rgba(255,255,255,.07); background: rgba(255,255,255,.025); }
+  .fact dt { font-family: var(--font-mono); font-size: 9px; letter-spacing: .18em; text-transform: uppercase; color: rgba(255,255,255,.35); }
+  .fact dd { font-size: clamp(12px, 1.05vw, 15px); color: rgba(255,255,255,.85); text-align: right; }
+
+  /* Slide 3 — cards */
+  .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(14px, 1.6vw, 22px); margin-top: clamp(24px, 3vw, 44px); }
+  .card { padding: clamp(20px, 2vw, 30px); display: flex; flex-direction: column; gap: 14px; min-height: 210px; }
+  .card .num { font-family: var(--font-mono); font-size: 10px; letter-spacing: .2em; color: rgba(255,255,255,.3); }
+  .card h3 { font-size: clamp(18px, 1.8vw, 26px); font-weight: 500; letter-spacing: -.03em; }
+  .card p { font-size: clamp(12px, 1vw, 14px); line-height: 1.55; color: var(--color-muted); }
+  .card .repos { margin-top: auto; display: flex; flex-direction: column; gap: 6px; }
+  .card .repo { display: flex; align-items: center; gap: 8px; font-family: var(--font-mono); font-size: 9px; letter-spacing: .05em; color: rgba(255,255,255,.45); }
+  .card .repo i { width: 6px; height: 6px; border-radius: 50%; }
+
+  /* Slide 4 — process */
+  .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(12px, 1.4vw, 20px); margin-top: clamp(26px, 3vw, 46px); }
+  .step { padding: clamp(18px, 1.8vw, 26px); border-radius: 20px; border: 1px solid rgba(255,255,255,.09); background: linear-gradient(150deg, rgba(255,255,255,.06), rgba(255,255,255,.015)); }
+  .step .idx { font-family: var(--font-mono); font-size: 10px; letter-spacing: .18em; color: rgba(196,181,253,.7); }
+  .step h3 { margin-top: 26px; font-size: clamp(15px, 1.35vw, 20px); font-weight: 500; letter-spacing: -.02em; }
+  .step p { margin-top: 8px; font-size: clamp(11px, .9vw, 13px); line-height: 1.5; color: rgba(255,255,255,.42); }
+  .philosophy { margin-top: clamp(24px, 3vw, 40px); display: flex; align-items: center; gap: 14px; font-family: var(--font-mono); font-size: clamp(9px, .8vw, 11px); letter-spacing: .18em; text-transform: uppercase; color: rgba(255,255,255,.4); }
+
+  /* Slide 5 — contact */
+  .contact { text-align: left; }
+  .contact-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: clamp(28px, 4vw, 60px); align-items: center; }
+  .panel { padding: clamp(22px, 2.4vw, 34px); }
+  .panel .item { display: flex; justify-content: space-between; gap: 16px; padding: 15px 0; border-bottom: 1px solid rgba(255,255,255,.08); font-size: clamp(12px, 1vw, 14px); }
+  .panel .item:last-child { border-bottom: 0; }
+  .panel .item span:first-child { font-family: var(--font-mono); font-size: 9px; letter-spacing: .18em; text-transform: uppercase; color: rgba(255,255,255,.35); padding-top: 3px; }
+  .panel .item span:last-child { color: rgba(255,255,255,.85); text-align: right; }
+
+  /* chrome */
+  .progress { position: fixed; top: 0; left: 0; z-index: 20; height: 2px; width: 0; background: linear-gradient(90deg, var(--color-violet), var(--color-cyan), var(--color-pink)); transition: width .4s var(--ease); }
+  .chrome { position: fixed; left: 0; right: 0; bottom: 0; z-index: 20; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 18px clamp(20px, 3vw, 40px); }
+  .dots { display: flex; gap: 7px; }
+  .dots button { width: 24px; height: 3px; border: 0; border-radius: 999px; background: rgba(255,255,255,.16); cursor: pointer; transition: background .3s, width .3s; }
+  .dots button[aria-current="true"] { width: 38px; background: rgba(255,255,255,.75); }
+  .arrows { display: flex; align-items: center; gap: 10px; }
+  .counter { font-family: var(--font-mono); font-size: 10px; letter-spacing: .18em; color: rgba(255,255,255,.35); margin-right: 6px; }
+  .nav-btn { width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--border); background: rgba(255,255,255,.05); color: rgba(255,255,255,.8); cursor: pointer; display: grid; place-items: center; transition: background .25s, border-color .25s, transform .25s; }
+  .nav-btn:hover { background: rgba(255,255,255,.1); border-color: var(--border-strong); }
+  .nav-btn:active { transform: scale(.94); }
+  .nav-btn:focus-visible, .dots button:focus-visible, .handle:focus-visible { outline: 2px solid var(--color-violet-soft); outline-offset: 2px; }
+
+  @media (max-width: 860px) {
+    .layout, .contact-grid { grid-template-columns: 1fr; }
+    .cards { grid-template-columns: 1fr; }
+    .steps { grid-template-columns: 1fr 1fr; }
+    .slide { overflow-y: auto; justify-content: flex-start; padding-top: 72px; padding-bottom: 84px; }
+    .cover { justify-content: flex-start; gap: 48px; }
+    .identity-card { display: none; }
+  }
+  @media (max-width: 520px) {
+    .steps { grid-template-columns: 1fr; }
+    .cover-foot { flex-direction: column; align-items: flex-start; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition-duration: .01ms !important; }
+  }
+  @media print {
+    .chrome, .progress { display: none; }
+    .slide { position: relative; opacity: 1; visibility: visible; transform: none; page-break-after: always; height: 100vh; }
+  }
+</style>
+</head>
+<body>
+<div class="deck" aria-hidden="true"></div>
+<div class="progress" id="progress"></div>
+
+<main id="deck">
+  <!-- 01 -->
+  <section class="slide cover" data-title="Cover" aria-label="Slide 1 of 5">
+    <header class="brandbar">
+      <div class="brand">
+        <div class="mark">
+          <svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="lg" x1="8" y1="8" x2="56" y2="56" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#C4B5FD" /><stop offset=".45" stop-color="#8B5CF6" /><stop offset="1" stop-color="#22D3EE" />
+              </linearGradient>
+            </defs>
+            <path d="M18 46V18l28 28V18" stroke="url(#lg)" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" />
+            <circle cx="18" cy="18" r="3" fill="#F1F5F9" /><circle cx="46" cy="46" r="3" fill="#67E8F9" />
+          </svg>
+        </div>
+        <div>
+          <div class="wordmark">NYXO</div>
+          <div class="mono muted" style="margin-top:4px">Varun / portfolio 2026</div>
+        </div>
+      </div>
+      <span class="tag">AI · Web · Apps</span>
+    </header>
+
+    <div class="cover-main">
+      <div class="eyebrow">High school builder</div>
+      <h1 style="margin-top:24px">Interfaces<br />that feel <span class="iridescent">alive.</span></h1>
+      <p class="lede">I design and build <strong>AI-powered websites and applications</strong> with liquid-glass depth, real motion, and code that lives in the open.</p>
+    </div>
+
+    <footer class="cover-foot">
+      <a class="handle" href="https://github.com/cursedheist-byte/" target="_blank" rel="noreferrer">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.19-1.49 3.15-1.18 3.15-1.18.62 1.58.23 2.75.11 3.04.73.81 1.18 1.83 1.18 3.09 0 4.41-2.69 5.38-5.25 5.67.41.35.78 1.05.78 2.12 0 1.53-.01 2.77-.01 3.15 0 .31.21.68.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5Z"/></svg>
+        github.com/cursedheist-byte
+      </a>
+      <span class="mono muted">Use ← → to navigate</span>
+    </footer>
+  </section>
+
+  <!-- 02 -->
+  <section class="slide" data-title="Who" aria-label="Slide 2 of 5">
+    <div class="layout">
+      <div>
+        <div class="eyebrow">01 — Who</div>
+        <h2 style="margin-top:22px">Student by day.<br /><span class="iridescent">Builder by default.</span></h2>
+        <p class="lede">I'm <strong>Varun</strong>, a high school student building under the name <strong>NYXO</strong>. I care about interfaces that feel physical, products that solve a real problem, and shipping instead of talking about shipping.</p>
+        <div class="row" style="margin-top:26px">
+          <span class="tag"><span class="dot" style="display:inline-block;margin-right:7px"></span>Open to collabs</span>
+          <span class="tag">Internships</span>
+          <span class="tag">Freelance</span>
+        </div>
+      </div>
+
+      <div class="glass identity-card">
+        <div class="identity-head">
+          <div class="avatar">V</div>
+          <div>
+            <div style="font-size:17px;font-weight:500">Varun</div>
+            <div class="mono muted" style="margin-top:5px">@cursedheist-byte</div>
+          </div>
+        </div>
+        <dl class="facts">
+          <div class="fact"><dt>Focus</dt><dd>AI web &amp; app products</dd></div>
+          <div class="fact"><dt>Stack</dt><dd>React · Python · WebGL</dd></div>
+          <div class="fact"><dt>Method</dt><dd>Build in public</dd></div>
+          <div class="fact"><dt>Status</dt><dd style="color:#6ee7b7">Shipping</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 -->
+  <section class="slide" data-title="What I build" aria-label="Slide 3 of 5">
+    <div class="eyebrow">02 — What I build</div>
+    <h2 style="margin-top:20px">Real projects.<br /><span class="iridescent">Real repositories.</span></h2>
+    <p class="lede">Three tracks, one rule: if it isn't public, it isn't finished.</p>
+
+    <div class="cards">
+      <div class="glass card">
+        <span class="num">01 / AI TOOLS</span>
+        <h3>Automation that thinks</h3>
+        <p>Pipelines that turn an idea into published content with AI in the loop, not as a gimmick.</p>
+        <div class="repos">
+          <span class="repo"><i style="background:#3572a5"></i>ai-youtube-auto-publisher</span>
+        </div>
+      </div>
+      <div class="glass card">
+        <span class="num">02 / WEB APPS</span>
+        <h3>Products people use</h3>
+        <p>Full-stack apps with real data, real auth and interfaces that stay out of the way.</p>
+        <div class="repos">
+          <span class="repo"><i style="background:#f7df1e"></i>Football-Tournament</span>
+          <span class="repo"><i style="background:#8b5cf6"></i>grocery_app</span>
+        </div>
+      </div>
+      <div class="glass card">
+        <span class="num">03 / EXPERIMENTS</span>
+        <h3>Motion &amp; spatial UI</h3>
+        <p>Shaders, glass, scroll systems — experiments that become the next product's foundation.</p>
+        <div class="repos">
+          <span class="repo"><i style="background:#61dafb"></i>nyxo-portfolio</span>
+          <span class="repo"><i style="background:#f472b6"></i>ThumbPrompt</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 -->
+  <section class="slide" data-title="Process" aria-label="Slide 4 of 5">
+    <div class="eyebrow">03 — Process</div>
+    <h2 style="margin-top:20px">From idea to<br /><span class="iridescent">shipped.</span></h2>
+    <p class="lede">A short loop, run often. No month-long discovery phases.</p>
+
+    <div class="steps">
+      <div class="step">
+        <span class="idx">01</span>
+        <h3>Frame it</h3>
+        <p>Write the problem in one sentence. If it takes two, the scope is wrong.</p>
+      </div>
+      <div class="step">
+        <span class="idx">02</span>
+        <h3>Design it</h3>
+        <p>Tokens, hierarchy, motion — the interface is designed before it's coded.</p>
+      </div>
+      <div class="step">
+        <span class="idx">03</span>
+        <h3>Build it</h3>
+        <p>Small commits, real data, accessible defaults. Ship behind a URL, not a promise.</p>
+      </div>
+      <div class="step">
+        <span class="idx">04</span>
+        <h3>Ship it</h3>
+        <p>Publish the repo, collect feedback, iterate in public. Repeat.</p>
+      </div>
+    </div>
+
+    <div class="philosophy"><span class="dot"></span>Built in public — every project on this site is a real repository</div>
+  </section>
+
+  <!-- 05 -->
+  <section class="slide contact" data-title="Contact" aria-label="Slide 5 of 5">
+    <div class="contact-grid">
+      <div>
+        <div class="eyebrow">04 — Contact</div>
+        <h2 style="margin-top:22px">Let's build<br /><span class="iridescent">something unreal.</span></h2>
+        <p class="lede">Got an idea, a project, or a problem worth solving? The fastest way in is GitHub.</p>
+        <a class="handle" href="https://github.com/cursedheist-byte/" target="_blank" rel="noreferrer" style="margin-top:28px">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.19-1.49 3.15-1.18 3.15-1.18.62 1.58.23 2.75.11 3.04.73.81 1.18 1.83 1.18 3.09 0 4.41-2.69 5.38-5.25 5.67.41.35.78 1.05.78 2.12 0 1.53-.01 2.77-.01 3.15 0 .31.21.68.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5Z"/></svg>
+          DM me on GitHub
+        </a>
+      </div>
+
+      <div class="glass panel">
+        <div class="item"><span>Availability</span><span style="color:#6ee7b7">Open for collabs</span></div>
+        <div class="item"><span>Also open to</span><span>Internships · Freelance</span></div>
+        <div class="item"><span>Handle</span><span>@cursedheist-byte</span></div>
+        <div class="item"><span>Based</span><span>India · remote-first</span></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<nav class="chrome" aria-label="Slide controls">
+  <div class="dots" id="dots" role="tablist" aria-label="Slides"></div>
+  <div class="arrows">
+    <span class="counter" id="counter">01 / 05</span>
+    <button class="nav-btn" id="prev" type="button" aria-label="Previous slide">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+    </button>
+    <button class="nav-btn" id="next" type="button" aria-label="Next slide">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+    </button>
+  </div>
+</nav>
+
+<script>
+  const slides = [...document.querySelectorAll('.slide')]
+  const dots = document.getElementById('dots')
+  const counter = document.getElementById('counter')
+  const progress = document.getElementById('progress')
+  let index = 0
+
+  slides.forEach((slide, i) => {
+    const btn = document.createElement('button')
+    btn.type = 'button'
+    btn.setAttribute('role', 'tab')
+    btn.setAttribute('aria-label', `Go to slide ${i + 1}: ${slide.dataset.title}`)
+    btn.addEventListener('click', () => go(i))
+    dots.appendChild(btn)
+  })
+
+  function go(next) {
+    index = (next + slides.length) % slides.length
+    slides.forEach((slide, i) => {
+      const active = i === index
+      slide.classList.toggle('active', active)
+      slide.setAttribute('aria-hidden', String(!active))
+    })
+    ;[...dots.children].forEach((dot, i) => dot.setAttribute('aria-current', String(i === index)))
+    counter.textContent = `${String(index + 1).padStart(2, '0')} / ${String(slides.length).padStart(2, '0')}`
+    progress.style.width = `${((index + 1) / slides.length) * 100}%`
+    history.replaceState(null, '', `#${index + 1}`)
+  }
+
+  document.getElementById('prev').addEventListener('click', () => go(index - 1))
+  document.getElementById('next').addEventListener('click', () => go(index + 1))
+
+  window.addEventListener('keydown', event => {
+    if (['ArrowRight', 'ArrowDown', 'PageDown', ' '].includes(event.key)) {
+      event.preventDefault()
+      go(index + 1)
+    } else if (['ArrowLeft', 'ArrowUp', 'PageUp'].includes(event.key)) {
+      event.preventDefault()
+      go(index - 1)
+    } else if (event.key === 'Home') {
+      go(0)
+    } else if (event.key === 'End') {
+      go(slides.length - 1)
+    }
+  })
+
+  let touchStart = null
+  window.addEventListener('touchstart', event => { touchStart = event.touches[0].clientX }, { passive: true })
+  window.addEventListener('touchend', event => {
+    if (touchStart === null) return
+    const delta = event.changedTouches[0].clientX - touchStart
+    if (Math.abs(delta) > 60) go(index + (delta < 0 ? 1 : -1))
+    touchStart = null
+  }, { passive: true })
+
+  const fromHash = Number(location.hash.replace('#', ''))
+  go(Number.isInteger(fromHash) && fromHash > 0 ? fromHash - 1 : 0)
+</script>
+</body>
+</html>
