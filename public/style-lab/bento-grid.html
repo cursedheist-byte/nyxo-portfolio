@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="en" data-page="bento-grid">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f2f0eb">
+  <meta name="description" content="NYXO Build — a bento-grid studio site for NYXO Web &amp; App Developer. Scope a website, app or design system tile by tile, then start a brief.">
+  <title>NYXO Build — Bento Grid · NYXO Style Lab</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/bento-grid.css">
+  <script>
+    document.documentElement.classList.add('js');
+    try {
+      var p = localStorage.getItem('nyxo.palette.' + document.documentElement.dataset.page);
+      if (p) document.documentElement.dataset.palette = p;
+    } catch (e) {}
+  </script>
+  <script src="assets/js/app.js" defer></script>
+</head>
+<body class="bt-page">
+  <a class="nx-skip" href="#main">Skip to content</a>
+  <header id="nx-bar" class="nx-bar" aria-label="Style lab controls"></header>
+
+  <header class="bt-head">
+    <div class="bt-head__inner nx-container">
+      <div class="bt-bar">
+        <a class="bt-brand" href="#top" aria-label="NYXO Build — back to top">
+          <span class="bt-brand__mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <rect x="2" y="2" width="9" height="12" rx="2.4" fill="currentColor"/>
+              <rect x="13" y="2" width="9" height="7" rx="2.4" fill="currentColor" opacity=".45"/>
+              <rect x="13" y="11" width="9" height="11" rx="2.4" fill="currentColor" opacity=".7"/>
+              <rect x="2" y="16" width="9" height="6" rx="2.4" fill="currentColor" opacity=".28"/>
+            </svg>
+          </span>
+          <span class="bt-brand__word">NYXO<em>Build</em></span>
+        </a>
+
+        <nav class="bt-nav" aria-label="Primary">
+          <a href="#board">The board</a>
+          <a href="#services">Services</a>
+          <a href="#process">Process</a>
+          <a href="#proof">Proof</a>
+        </nav>
+
+        <div class="bt-head__actions">
+          <a class="bt-head__mail" href="mailto:hello@nyxo.dev">hello@nyxo.dev</a>
+          <a class="bt-btn bt-btn--primary bt-btn--small" href="#contact">
+            Start a brief
+            <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h9M8.5 3.5 13 8l-4.5 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <button class="bt-menu" type="button" data-menu-toggle aria-controls="bt-sheet" aria-expanded="false" aria-label="Open menu">
+            <span></span><span></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="bt-sheet" id="bt-sheet">
+        <div class="bt-sheet__top">
+          <span class="bt-sheet__title">Menu</span>
+          <button class="bt-sheet__close" type="button" data-menu-close aria-label="Close menu">
+            <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+          </button>
+        </div>
+        <nav class="bt-sheet__nav" aria-label="Mobile">
+          <a href="#board"><span>01</span>The board</a>
+          <a href="#services"><span>02</span>Services &amp; scope</a>
+          <a href="#process"><span>03</span>Process</a>
+          <a href="#proof"><span>04</span>Proof</a>
+          <a href="#contact"><span>05</span>Start a brief</a>
+        </nav>
+        <a class="bt-sheet__mail" href="mailto:hello@nyxo.dev">hello@nyxo.dev</a>
+        <p class="bt-sheet__note">Taking two projects for Q1 2027.<br>One studio, no handoffs.</p>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="bt-hero" id="top" aria-labelledby="hero-title">
+      <div class="bt-hero__wash" aria-hidden="true"></div>
+      <div class="nx-container">
+        <div class="bt-hero__head">
+          <div class="bt-hero__copy">
+            <p class="bt-eyebrow" data-reveal>
+              <span class="bt-eyebrow__no">NYXO</span>
+              Web &amp; app developer · Pune, IN
+            </p>
+            <h1 class="bt-hero__title" id="hero-title" data-reveal style="--reveal-delay:60ms">
+              The whole product,<br><span class="bt-mark">one grid.</span>
+            </h1>
+            <p class="bt-hero__lead" data-reveal style="--reveal-delay:120ms">
+              Websites, product interfaces and design systems — scoped, designed
+              and shipped by one studio. Every tile below is a real part of how
+              we work. Click the ones you need.
+            </p>
+            <div class="bt-hero__actions" data-reveal style="--reveal-delay:180ms">
+              <a class="bt-btn bt-btn--primary bt-btn--large" href="#services">
+                Build your scope
+                <svg viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+              <a class="bt-btn bt-btn--large" href="#process">See the process</a>
+            </div>
+          </div>
+
+          <dl class="bt-hero__side" data-reveal style="--reveal-delay:140ms">
+            <div>
+              <dt>Availability</dt>
+              <dd><span class="bt-live"><i aria-hidden="true"></i>2 slots · Q1 2027</span></dd>
+            </div>
+            <div>
+              <dt>Studio</dt>
+              <dd>Koregaon Park, Pune</dd>
+            </div>
+            <div>
+              <dt>Reply time</dt>
+              <dd>Within one working day</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="bt-board-head" data-reveal>
+          <span class="bt-label"><i aria-hidden="true"></i>Studio snapshot · live</span>
+          <span class="bt-board-head__note">Built, measured and updated in the open</span>
+        </div>
+
+        <div class="bt-board bt-board--hero" id="board">
+          <article class="bt-tile bt-term is-run" data-reveal aria-labelledby="term-title">
+            <span class="bt-term__glow" aria-hidden="true"></span>
+            <div class="bt-term__head">
+              <span class="bt-term__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+              <span class="bt-term__file" id="term-title">nyxo build — deploy.log</span>
+              <button class="bt-term__run" type="button" data-term-run>
+                <svg viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3.2 2.4 11 7l-7.8 4.6V2.4Z" fill="currentColor"/></svg>
+                Replay
+              </button>
+            </div>
+
+            <div class="bt-term__body" data-term-body>
+              <p class="bt-term__line bt-term__line--cmd"><span class="bt-term__sign">$</span><span>nyxo ship <em>--prod</em></span><span class="bt-term__ms">0.2s</span></p>
+              <p class="bt-term__line"><span class="bt-term__sign bt-term__sign--ok">✓</span><span>148 modules transformed</span><span class="bt-term__ms">1.2s</span></p>
+              <p class="bt-term__line"><span class="bt-term__sign bt-term__sign--ok">✓</span><span>assets optimized · webp + avif</span><span class="bt-term__ms">0.4s</span></p>
+              <p class="bt-term__line"><span class="bt-term__sign bt-term__sign--ok">✓</span><span>312 kB total · 98 lighthouse</span><span class="bt-term__ms">0.8s</span></p>
+              <p class="bt-term__line"><span class="bt-term__sign bt-term__sign--ok">✓</span><span>24 routes prerendered</span><span class="bt-term__ms">0.6s</span></p>
+              <p class="bt-term__line"><span class="bt-term__sign bt-term__sign--ok">✓</span><span>images 64% lighter</span><span class="bt-term__ms">0.3s</span></p>
+              <p class="bt-term__line bt-term__line--done"><span class="bt-term__sign bt-term__sign--go">▸</span><span>preview ready in <b>8.4s</b></span><span class="bt-term__ms">nyxo.build</span></p>
+            </div>
+
+            <div class="bt-term__foot">
+              <span class="bt-term__track" aria-hidden="true"><i data-term-bar></i></span>
+              <div class="bt-term__meta">
+                <span>main · 8f2c1a</span>
+                <span data-term-time>deployed · 18:42</span>
+              </div>
+            </div>
+            <span class="nx-sr-only" role="status" aria-live="polite" data-term-live></span>
+          </article>
+
+          <article class="bt-tile bt-clock" data-reveal>
+            <div class="bt-tile__head">
+              <span class="bt-label">Pune · IST</span>
+              <span class="bt-clock__date" data-bt-date>Mon 2 Nov</span>
+            </div>
+            <div class="bt-clock__time" data-bt-clock aria-label="Current studio time">18:42:07</div>
+            <div class="bt-clock__week" data-bt-week aria-hidden="true">
+              <span data-day="1">M</span><span data-day="2">T</span><span data-day="3">W</span><span data-day="4">T</span><span data-day="5">F</span><span data-day="6">S</span><span data-day="0">S</span>
+            </div>
+          </article>
+
+          <article class="bt-tile bt-avail" data-reveal>
+            <div class="bt-tile__head">
+              <span class="bt-label">Studio queue</span>
+              <span class="bt-tag bt-tag--live"><i aria-hidden="true"></i>Open</span>
+            </div>
+            <div class="bt-avail__body">
+              <div class="bt-avail__copy">
+                <strong>2</strong>
+                <span>slots open<br>Q1 2027</span>
+              </div>
+              <span class="bt-gauge" style="--p:74" aria-hidden="true">
+                <span class="bt-gauge__hole"><b>74%</b><small>booked</small></span>
+              </span>
+            </div>
+          </article>
+
+          <article class="bt-tile bt-now" data-reveal>
+            <div class="bt-tile__head">
+              <span class="bt-label">On the bench</span>
+              <span class="bt-now__week">Week 3 / 6</span>
+            </div>
+            <p class="bt-now__name">Fold — checkout rebuild</p>
+            <div class="bt-now__phases" aria-label="Project phase: build">
+              <span class="is-done">Brief</span>
+              <span class="is-done">Design</span>
+              <span class="is-active">Build</span>
+              <span>Ship</span>
+            </div>
+          </article>
+
+          <article class="bt-tile bt-metric bt-metric--accent" data-reveal>
+            <div class="bt-tile__head">
+              <span class="bt-label">Performance</span>
+              <svg class="bt-metric__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3.5 12.5 12.5 3.5M5.5 3.5h7v7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <strong class="bt-metric__num"><span data-count="98">98</span></strong>
+            <span class="bt-metric__foot">avg. Lighthouse score</span>
+          </article>
+
+          <article class="bt-tile bt-metric" data-reveal>
+            <div class="bt-tile__head">
+              <span class="bt-label">Timeline</span>
+              <svg class="bt-metric__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3.5 12.5 12.5 3.5M5.5 3.5h7v7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <strong class="bt-metric__num"><span data-count="6">6</span><small>wks</small></strong>
+            <span class="bt-metric__foot">brief to launch</span>
+          </article>
+
+          <article class="bt-tile bt-metric bt-metric--ink" data-reveal>
+            <div class="bt-tile__head">
+              <span class="bt-label">Handoffs</span>
+              <svg class="bt-metric__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3.5 12.5 12.5 3.5M5.5 3.5h7v7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <strong class="bt-metric__num">0</strong>
+            <span class="bt-metric__foot">studio to ship</span>
+          </article>
+
+          <article class="bt-tile bt-metric" data-reveal>
+            <div class="bt-tile__head">
+              <span class="bt-label">Ownership</span>
+              <svg class="bt-metric__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3.5 12.5 12.5 3.5M5.5 3.5h7v7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <strong class="bt-metric__num"><span data-count="100">100</span><small>%</small></strong>
+            <span class="bt-metric__foot">repo, docs and tokens</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="bt-section" id="services" aria-labelledby="services-title">
+      <div class="nx-container">
+        <div class="bt-shead" data-reveal>
+          <div>
+            <p class="bt-eyebrow"><span class="bt-eyebrow__no">02</span> What we make</p>
+            <h2 id="services-title">Pick your tiles.<br><em>Build your scope.</em></h2>
+          </div>
+          <div class="bt-shead__side">
+            <p>No discovery deck, no vague “let's talk.” Choose what you need and see the weeks and the starting price update live.</p>
+            <a class="bt-arrowlink" href="#contact">
+              Or send the brief first
+              <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h9M8.5 3.5 13 8l-4.5 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="bt-board bt-board--services">
+          <article class="bt-tile bt-scope" data-reveal aria-labelledby="scope-title">
+            <div class="bt-tile__head">
+              <span class="bt-label"><i aria-hidden="true"></i>Scope builder</span>
+              <span class="bt-tag" data-scope-count>2 of 4 tiles</span>
+            </div>
+            <h3 class="bt-tile__title" id="scope-title">What do you need?</h3>
+
+            <div class="bt-scope__grid" role="group" aria-label="Choose the parts of your project">
+              <button class="bt-opt" type="button" data-scope-option aria-pressed="true" data-name="Marketing website" data-weeks="4" data-price="8000">
+                <span class="bt-opt__top">
+                  <span class="bt-opt__name">Marketing website</span>
+                  <span class="bt-opt__box" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none"><path d="m2.5 6.2 2.3 2.3 4.7-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                </span>
+                <span class="bt-opt__meta"><span>4 weeks</span><b>from $8k</b></span>
+              </button>
+
+              <button class="bt-opt" type="button" data-scope-option aria-pressed="true" data-name="Product interface" data-weeks="6" data-price="14000">
+                <span class="bt-opt__top">
+                  <span class="bt-opt__name">Product interface</span>
+                  <span class="bt-opt__box" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none"><path d="m2.5 6.2 2.3 2.3 4.7-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                </span>
+                <span class="bt-opt__meta"><span>6 weeks</span><b>from $14k</b></span>
+              </button>
+
+              <button class="bt-opt" type="button" data-scope-option aria-pressed="false" data-name="Mobile app" data-weeks="8" data-price="22000">
+                <span class="bt-opt__top">
+                  <span class="bt-opt__name">Mobile app</span>
+                  <span class="bt-opt__box" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none"><path d="m2.5 6.2 2.3 2.3 4.7-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                </span>
+                <span class="bt-opt__meta"><span>8 weeks</span><b>from $22k</b></span>
+              </button>
+
+              <button class="bt-opt" type="button" data-scope-option aria-pressed="false" data-name="Design system" data-weeks="3" data-price="6000">
+                <span class="bt-opt__top">
+                  <span class="bt-opt__name">Design system</span>
+                  <span class="bt-opt__box" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none"><path d="m2.5 6.2 2.3 2.3 4.7-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                </span>
+                <span class="bt-opt__meta"><span>3 weeks</span><b>from $6k</b></span>
+              </button>
+            </div>
+
+            <div class="bt-scope__incl">
+              <span class="bt-label">In every scope</span>
+              <span class="bt-scope__chips">
+                <span>Strategy</span><span>UI design</span><span>Build</span><span>Launch</span>
+              </span>
+            </div>
+
+            <div class="bt-scope__sum">
+              <div class="bt-scope__totals">
+                <span class="bt-scope__num"><b data-scope-weeks>10</b><small>weeks</small></span>
+                <span class="bt-scope__dot" aria-hidden="true"></span>
+                <span class="bt-scope__num"><b data-scope-price>$22k</b><small>from</small></span>
+              </div>
+              <a class="bt-btn bt-btn--primary bt-btn--small" data-scope-link href="mailto:hello@nyxo.dev">
+                Send this scope
+                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h9M8.5 3.5 13 8l-4.5 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+            <p class="bt-scope__status" data-scope-status aria-live="polite">Marketing website + Product interface · design fees included</p>
+          </article>
+
+          <article class="bt-tile bt-feature" data-reveal>
+            <span class="bt-label"><i aria-hidden="true"></i>Performance</span>
+            <h3 class="bt-tile__title">Sites that load first.</h3>
+            <p class="bt-tile__copy">Static-first builds, edge caching and images that don't fight the connection.</p>
+            <div class="bt-perf" aria-hidden="true">
+              <div class="bt-perf__window">
+                <span class="bt-perf__bar"><i></i><i></i><i></i><span>nyxo.build</span></span>
+                <div class="bt-perf__body">
+                  <span class="bt-perf__hero"></span>
+                  <span class="bt-perf__line"></span>
+                  <span class="bt-perf__line bt-perf__line--short"></span>
+                </div>
+              </div>
+              <div class="bt-perf__score"><b>98</b><span>Lighthouse</span></div>
+              <div class="bt-perf__rows">
+                <span><em>LCP</em><b>0.8s</b></span>
+                <span><em>CLS</em><b>0.00</b></span>
+              </div>
+            </div>
+          </article>
+
+          <article class="bt-tile bt-feature bt-feature--native" data-reveal>
+            <span class="bt-label"><i aria-hidden="true"></i>Product</span>
+            <h3 class="bt-tile__title">Apps that feel native.</h3>
+            <p class="bt-tile__copy">One design language across iOS and Android — offline-first, 60 fps, no web wrapper.</p>
+            <div class="bt-phone" aria-hidden="true">
+              <span class="bt-phone__notch"></span>
+              <span class="bt-phone__head"><i></i><b>Fold</b><em>9:41</em></span>
+              <span class="bt-phone__card"><i></i><b>Order #204</b><em>Out for delivery</em></span>
+              <span class="bt-phone__row"><i></i><i></i><i></i></span>
+              <span class="bt-phone__tabs"><i></i><i></i><i></i><i></i></span>
+            </div>
+            <span class="bt-feature__stamp">60<small>fps</small></span>
+          </article>
+
+          <article class="bt-tile bt-mini" data-reveal>
+            <span class="bt-label">Systems</span>
+            <h3 class="bt-tile__title">One source of truth.</h3>
+            <p class="bt-tile__copy">Tokens, components and docs your team can actually use.</p>
+            <div class="bt-swatches" aria-hidden="true">
+              <span style="--c:var(--accent)"></span>
+              <span style="--c:var(--accent-2)"></span>
+              <span style="--c:var(--ink)"></span>
+              <span style="--c:var(--surface-2)"></span>
+              <em>8pt · 1.25 type</em>
+            </div>
+          </article>
+
+          <article class="bt-tile bt-mini" data-reveal>
+            <span class="bt-label">Motion</span>
+            <h3 class="bt-tile__title">Movement with meaning.</h3>
+            <p class="bt-tile__copy">Every transition earns its place. Nothing decorative-only.</p>
+            <div class="bt-motion" aria-hidden="true">
+              <span class="bt-motion__track"></span>
+              <span class="bt-motion__dot"></span>
+              <span class="bt-motion__label">220<small>ms</small></span>
+            </div>
+          </article>
+
+          <article class="bt-tile bt-mini" data-reveal>
+            <span class="bt-label">Access</span>
+            <h3 class="bt-tile__title">Keyboard-first, always.</h3>
+            <p class="bt-tile__copy">WCAG 2.2 AA, visible focus and real screen-reader passes.</p>
+            <div class="bt-keys" aria-hidden="true">
+              <span class="bt-key">Tab</span>
+              <span class="bt-key">↵</span>
+              <span class="bt-key">Esc</span>
+              <em>AA</em>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="bt-section" id="process" aria-labelledby="process-title">
+      <div class="nx-container">
+        <div class="bt-shead" data-reveal>
+          <div>
+            <p class="bt-eyebrow"><span class="bt-eyebrow__no">03</span> How it works</p>
+            <h2 id="process-title">Four steps.<br><em>No mystery.</em></h2>
+          </div>
+          <div class="bt-shead__side">
+            <p>You'll always know what's being built this week, what it costs and what lands next. Every Friday, a demo — every sprint, something you can click.</p>
+            <a class="bt-arrowlink" href="#contact">
+              Start at step one
+              <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h9M8.5 3.5 13 8l-4.5 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="bt-board bt-board--process">
+          <article class="bt-tile bt-step" data-reveal>
+            <div class="bt-tile__head">
+              <span class="bt-label">01 · Brief</span>
+              <span class="bt-step__arrow" aria-hidden="true">
+                <svg viewBox="0 0 16 16" fill="none"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </div>
+            <h3 class="bt-tile__title">A call and a page.</h3>
+            <p class="bt-tile__copy">Thirty minutes, then a one-page scope. You know the price before design starts.</p>
+            <div class="bt-brief" aria-hidden="true">
+              <span class="bt-brief__head"><i></i><b>Scope · v1</b></span>
+              <span class="bt-brief__line"></span>
+              <span class="bt-brief__line"></span>
+              <span class="bt-brief__line bt-brief__line--short"></span>
+              <span class="bt-brief__foot"><em>Fixed</em><b>4–8 weeks</b></span>
+            </div>
+          </article>
+
+          <article class="bt-tile bt-step" data-reveal>
+            <div class="bt-tile__head">
+              <span class="bt-label">02 · Design</span>
+              <span class="bt-step__arrow" aria-hidden="true">
+                <svg viewBox="0 0 16 16" fill="none"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </div>
+            <h3 class="bt-tile__title">Two directions, one chosen.</h3>
+            <p class="bt-tile__copy">Live Figma, weekly demos and no big reveal. We tune the tiles with you.</p>
+            <div class="bt-design" aria-hidden="true">
+              <span class="bt-design__frame"><i></i><i></i><i></i></span>
+              <span class="bt-design__frame is-picked"><i></i><i></i><i></i><b>✓</b></span>
+            </div>
+          </article>
+
+          <article class="bt-tile bt-step" data-reveal>
+            <div class="bt-tile__head">
+              <span class="bt-label">03 · Build</span>
+              <span class="bt-step__arrow" aria-hidden="true">
+                <svg viewBox="0 0 16 16" fill="none"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </div>
+            <h3 class="bt-tile__title">Staging from week one.</h3>
+            <p class="bt-tile__copy">Typed components, real content and a link you can open every day.</p>
+            <div class="bt-build" aria-hidden="true">
+              <span class="bt-build__cmd">$ npm run build</span>
+              <span class="bt-build__track"><i></i></span>
+              <span class="bt-build__meta"><em>148 modules</em><b>1.2s</b></span>
+            </div>
+          </article>
+
+          <article class="bt-tile bt-step" data-reveal>
+            <div class="bt-tile__head">
+              <span class="bt-label">04 · Ship</span>
+              <span class="bt-step__arrow" aria-hidden="true">
+                <svg viewBox="0 0 16 16" fill="none"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </div>
+            <h3 class="bt-tile__title">Launch, then let go.</h3>
+            <p class="bt-tile__copy">We ship, measure and hand over the repo, docs and tokens. You own it.</p>
+            <div class="bt-ship" aria-hidden="true">
+              <span class="bt-ship__orbit"></span>
+              <span class="bt-ship__arrow">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M6 18 18 6M9 6h9v9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <em>handover.zip</em>
+            </div>
+          </article>
+
+          <div class="bt-guarantee" data-reveal>
+            <div class="bt-guarantee__left">
+              <span class="bt-guarantee__icon" aria-hidden="true">
+                <svg viewBox="0 0 20 20" fill="none"><path d="M10 2 16.5 4.5v5.2c0 4-2.7 6.9-6.5 8.3-3.8-1.4-6.5-4.3-6.5-8.3V4.5L10 2Z" stroke="currentColor" stroke-width="1.4"/><path d="m7 9.7 2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <p><b>Fixed scope. Weekly demos. Code you own.</b><span>If a sprint misses its Friday demo, the next week is on us.</span></p>
+            </div>
+            <a class="bt-guarantee__cta" href="#contact">
+              Start a brief
+              <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h9M8.5 3.5 13 8l-4.5 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bt-section" id="proof" aria-labelledby="proof-title">
+      <div class="nx-container">
+        <div class="bt-shead" data-reveal>
+          <div>
+            <p class="bt-eyebrow"><span class="bt-eyebrow__no">04</span> Proof</p>
+            <h2 id="proof-title">Tiles that <em>shipped.</em></h2>
+          </div>
+          <div class="bt-shead__side">
+            <p>Six-week builds, clean handovers and numbers the client can keep measuring after we leave.</p>
+          </div>
+        </div>
+
+        <div class="bt-board bt-board--proof">
+          <article class="bt-tile bt-quote" data-reveal>
+            <span class="bt-quote__mark" aria-hidden="true">“</span>
+            <blockquote>
+              NYXO rebuilt our storefront in six weeks. Conversion is up 34%, and
+              the handover was the cleanest our team has ever had — repo, docs,
+              tokens, all of it.
+            </blockquote>
+            <footer class="bt-quote__foot">
+              <span class="bt-quote__avatar" aria-hidden="true">MS</span>
+              <span class="bt-quote__who"><b>Mira Shah</b><small>Founder · Fold</small></span>
+              <span class="bt-quote__stars" aria-label="Five out of five">
+                <svg viewBox="0 0 12 12" fill="currentColor" aria-hidden="true"><path d="m6 .8 1.5 3.2 3.5.4-2.6 2.4.7 3.5L6 8.6l-3.1 1.7.7-3.5L1 4.4l3.5-.4L6 .8Z"/></svg>
+                <svg viewBox="0 0 12 12" fill="currentColor" aria-hidden="true"><path d="m6 .8 1.5 3.2 3.5.4-2.6 2.4.7 3.5L6 8.6l-3.1 1.7.7-3.5L1 4.4l3.5-.4L6 .8Z"/></svg>
+                <svg viewBox="0 0 12 12" fill="currentColor" aria-hidden="true"><path d="m6 .8 1.5 3.2 3.5.4-2.6 2.4.7 3.5L6 8.6l-3.1 1.7.7-3.5L1 4.4l3.5-.4L6 .8Z"/></svg>
+                <svg viewBox="0 0 12 12" fill="currentColor" aria-hidden="true"><path d="m6 .8 1.5 3.2 3.5.4-2.6 2.4.7 3.5L6 8.6l-3.1 1.7.7-3.5L1 4.4l3.5-.4L6 .8Z"/></svg>
+                <svg viewBox="0 0 12 12" fill="currentColor" aria-hidden="true"><path d="m6 .8 1.5 3.2 3.5.4-2.6 2.4.7 3.5L6 8.6l-3.1 1.7.7-3.5L1 4.4l3.5-.4L6 .8Z"/></svg>
+              </span>
+            </footer>
+            <div class="bt-quote__stack">
+              <span class="bt-label">Stack</span>
+              <span class="bt-quote__chips"><span>Next.js</span><span>Shopify</span><span>TypeScript</span><span>Vercel</span></span>
+            </div>
+            <div class="bt-quote__stats">
+              <span><b>+34%</b><small>conversion</small></span>
+              <span><b>6 wks</b><small>to launch</small></span>
+              <span><b>0</b><small>handover tickets</small></span>
+            </div>
+          </article>
+
+          <article class="bt-tile bt-logos" data-reveal>
+            <div class="bt-tile__head">
+              <span class="bt-label">Selected clients</span>
+              <span class="bt-logos__note">2021 — 2026</span>
+            </div>
+            <div class="bt-logos__grid">
+              <span class="bt-logo"><i class="bt-logo__mark bt-logo__mark--ring" aria-hidden="true"></i>NORTH &amp; CO</span>
+              <span class="bt-logo"><i class="bt-logo__mark bt-logo__mark--split" aria-hidden="true"></i>FOLD</span>
+              <span class="bt-logo"><i class="bt-logo__mark bt-logo__mark--dot" aria-hidden="true"></i>ORBIT PAY</span>
+              <span class="bt-logo"><i class="bt-logo__mark bt-logo__mark--bars" aria-hidden="true"></i>STILLWATER</span>
+              <span class="bt-logo"><i class="bt-logo__mark bt-logo__mark--halo" aria-hidden="true"></i>HALO</span>
+              <span class="bt-logo"><i class="bt-logo__mark bt-logo__mark--leaf" aria-hidden="true"></i>MEADOW</span>
+            </div>
+            <p class="bt-logos__foot">Commerce, fintech, travel, health and two very picky furniture brands.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="bt-section bt-section--contact" id="contact" aria-labelledby="contact-title">
+      <div class="nx-container">
+        <div class="bt-shead" data-reveal>
+          <div>
+            <p class="bt-eyebrow"><span class="bt-eyebrow__no">05</span> Start a project</p>
+            <h2 id="contact-title">Tell us the shape.<br><em>We'll build the grid.</em></h2>
+          </div>
+          <div class="bt-shead__side">
+            <p>Two slots open for Q1 2027. Send the brief and you'll hear back within one working day — with a scope, not a sales deck.</p>
+          </div>
+        </div>
+
+        <div class="bt-board bt-board--contact">
+          <article class="bt-tile bt-brief-card" data-reveal>
+            <div class="bt-tile__head">
+              <span class="bt-label"><i aria-hidden="true"></i>Project brief</span>
+              <span class="bt-tag">Takes ~2 min</span>
+            </div>
+
+            <div class="bt-brief-form-wrap" data-brief-wrap>
+              <form class="bt-form" data-brief-form novalidate>
+                <div class="bt-field bt-field--full">
+                  <label for="bt-email">Your email</label>
+                  <input id="bt-email" name="email" type="email" autocomplete="email" placeholder="you@company.com" aria-describedby="bt-email-err">
+                  <span class="bt-field__err" id="bt-email-err" data-err></span>
+                </div>
+
+                <div class="bt-field">
+                  <label for="bt-type">Project type</label>
+                  <span class="bt-field__select">
+                    <select id="bt-type" name="type" aria-describedby="bt-type-err">
+                      <option value="">Choose one</option>
+                      <option>Marketing website</option>
+                      <option>Product interface</option>
+                      <option>Mobile app</option>
+                      <option>Design system</option>
+                      <option>Something else</option>
+                    </select>
+                    <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </span>
+                  <span class="bt-field__err" id="bt-type-err" data-err></span>
+                </div>
+
+                <div class="bt-field">
+                  <label for="bt-budget">Budget</label>
+                  <span class="bt-field__select">
+                    <select id="bt-budget" name="budget" aria-describedby="bt-budget-err">
+                      <option value="">Choose a range</option>
+                      <option>$5–10k</option>
+                      <option>$10–25k</option>
+                      <option>$25–50k</option>
+                      <option>$50k +</option>
+                      <option>Not sure yet</option>
+                    </select>
+                    <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </span>
+                  <span class="bt-field__err" id="bt-budget-err" data-err></span>
+                </div>
+
+                <div class="bt-field bt-field--full">
+                  <label for="bt-message">What are you building?</label>
+                  <textarea id="bt-message" name="message" rows="3" placeholder="The product, the audience, and when it needs to ship." aria-describedby="bt-message-err"></textarea>
+                  <span class="bt-field__err" id="bt-message-err" data-err></span>
+                </div>
+
+                <div class="bt-form__foot">
+                  <button class="bt-btn bt-btn--primary bt-btn--large" type="submit">
+                    Send the brief
+                    <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h9M8.5 3.5 13 8l-4.5 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </button>
+                  <p class="bt-form__note">Demo form — nothing leaves this page. Prefer email? <a href="mailto:hello@nyxo.dev">hello@nyxo.dev</a></p>
+                </div>
+                <p class="bt-form__status" role="status" aria-live="polite" data-brief-status></p>
+              </form>
+
+              <ul class="bt-assure" aria-label="Included in every project">
+                <li><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="m2.5 6.2 2.3 2.3 4.7-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Fixed scope</li>
+                <li><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="m2.5 6.2 2.3 2.3 4.7-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Weekly demos</li>
+                <li><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="m2.5 6.2 2.3 2.3 4.7-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Full handover</li>
+              </ul>
+            </div>
+
+            <div class="bt-brief-done" data-brief-done hidden tabindex="-1" aria-labelledby="brief-done-title">
+              <span class="bt-brief-done__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="m5 12.5 4.5 4.5L19 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <h3 id="brief-done-title">Brief received.</h3>
+              <p>Thanks — we'll reply within one working day with a first scope and two questions.</p>
+              <p class="bt-brief-done__summary" data-brief-summary></p>
+              <button class="bt-btn bt-btn--small" type="button" data-brief-reset>Send another brief</button>
+            </div>
+          </article>
+
+          <aside class="bt-tile bt-contact-info" data-reveal aria-labelledby="contact-info-title">
+            <div class="bt-tile__head">
+              <span class="bt-label">Direct line</span>
+              <span class="bt-tag bt-tag--live"><i aria-hidden="true"></i>Open</span>
+            </div>
+            <a class="bt-contact-info__mail" href="mailto:hello@nyxo.dev">hello@nyxo.dev</a>
+            <p class="bt-contact-info__copy" id="contact-info-title">Read by the person who'll build it. No account managers, no handoffs.</p>
+
+            <dl class="bt-contact-rows">
+              <div><dt>Reply</dt><dd>Within one working day</dd></div>
+              <div><dt>Local time</dt><dd><span data-clock="Asia/Kolkata">—</span> IST</dd></div>
+              <div><dt>Studio</dt><dd>Koregaon Park, Pune</dd></div>
+            </dl>
+
+            <ol class="bt-contact-steps">
+              <li><span>01</span><p><b>Reply</b><small>Same day — a human, not a form mail.</small></p></li>
+              <li><span>02</span><p><b>Call</b><small>30 minutes to pressure-test the scope.</small></p></li>
+              <li><span>03</span><p><b>Plan</b><small>Fixed price, calendar and a start tile.</small></p></li>
+            </ol>
+
+            <a class="bt-contact-info__link" href="#services">
+              Not ready to write? Build a scope first
+              <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h9M8.5 3.5 13 8l-4.5 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bt-foot">
+    <div class="nx-container">
+      <div class="bt-foot__top">
+        <div class="bt-foot__brand">
+          <span class="bt-brand__mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <rect x="2" y="2" width="9" height="12" rx="2.4" fill="currentColor"/>
+              <rect x="13" y="2" width="9" height="7" rx="2.4" fill="currentColor" opacity=".45"/>
+              <rect x="13" y="11" width="9" height="11" rx="2.4" fill="currentColor" opacity=".7"/>
+              <rect x="2" y="16" width="9" height="6" rx="2.4" fill="currentColor" opacity=".28"/>
+            </svg>
+          </span>
+          <p><b>NYXO — Web &amp; App Developer</b><span>NYXO Build · a Bento Grid demonstration</span></p>
+        </div>
+        <a class="bt-btn bt-btn--primary" href="#contact">
+          Start a brief
+          <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h9M8.5 3.5 13 8l-4.5 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+
+      <div class="bt-foot__word" aria-hidden="true">NYXO<span>BUILD</span></div>
+
+      <div class="bt-foot__bottom">
+        <p>© <span data-year>2026</span> NYXO Web &amp; App Developer · Pune, IN</p>
+        <nav aria-label="Footer">
+          <a href="#board">Board</a>
+          <a href="#services">Services</a>
+          <a href="#process">Process</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <a class="bt-foot__top-link" href="#top">
+          Back to top
+          <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 13V3M3.5 7.5 8 3l4.5 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (() => {
+      "use strict";
+      const reduce = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+      /* Scope builder ------------------------------------------------------ */
+      const scopeOptions = Array.from(document.querySelectorAll("[data-scope-option]"));
+      const scopeWeeks = document.querySelector("[data-scope-weeks]");
+      const scopePrice = document.querySelector("[data-scope-price]");
+      const scopeCount = document.querySelector("[data-scope-count]");
+      const scopeStatus = document.querySelector("[data-scope-status]");
+      const scopeLink = document.querySelector("[data-scope-link]");
+
+      function updateScope() {
+        const active = scopeOptions.filter((o) => o.getAttribute("aria-pressed") === "true");
+        const weeks = active.reduce((sum, o) => sum + Number(o.dataset.weeks), 0);
+        const price = active.reduce((sum, o) => sum + Number(o.dataset.price), 0);
+        const names = active.map((o) => o.dataset.name);
+        const money = "$" + Math.round(price / 1000) + "k";
+
+        scopeWeeks.textContent = String(weeks);
+        scopePrice.textContent = money;
+        scopeCount.textContent = active.length + " of 4 tiles";
+
+        if (!active.length) {
+          scopeStatus.textContent = "Select at least one tile to send a scope.";
+          scopeLink.setAttribute("aria-disabled", "true");
+          scopeLink.classList.add("is-off");
+          scopeLink.href = "mailto:hello@nyxo.dev";
+          return;
+        }
+
+        scopeLink.removeAttribute("aria-disabled");
+        scopeLink.classList.remove("is-off");
+        scopeStatus.textContent =
+          names.join(" + ") +
+          " · " + (active.length === 4 ? "full product team" : "design fees included");
+
+        const subject = "Project scope — " + names.join(" + ");
+        const body =
+          "Hi NYXO,\n\nI'd like to talk about: " + names.join(", ") + ".\n" +
+          "Estimated scope: " + weeks + " weeks · from " + money + ".\n\n" +
+          "A bit about the project:\n";
+        scopeLink.href =
+          "mailto:hello@nyxo.dev?subject=" + encodeURIComponent(subject) +
+          "&body=" + encodeURIComponent(body);
+      }
+
+      scopeOptions.forEach((option) => {
+        option.addEventListener("click", () => {
+          const next = option.getAttribute("aria-pressed") !== "true";
+          option.setAttribute("aria-pressed", String(next));
+          updateScope();
+        });
+      });
+
+      scopeLink.addEventListener("click", (event) => {
+        if (scopeLink.getAttribute("aria-disabled") === "true") {
+          event.preventDefault();
+          scopeStatus.textContent = "Select at least one tile to send a scope.";
+          scopeOptions[0].focus();
+        }
+      });
+
+      updateScope();
+
+      /* Terminal replay ---------------------------------------------------- */
+      const term = document.querySelector(".bt-term");
+      const termRun = document.querySelector("[data-term-run]");
+      const termLive = document.querySelector("[data-term-live]");
+      const termTime = document.querySelector("[data-term-time]");
+      let running = false;
+
+      function stamp() {
+        try {
+          const t = new Intl.DateTimeFormat("en-GB", {
+            timeZone: "Asia/Kolkata", hour: "2-digit", minute: "2-digit", hour12: false
+          }).format(new Date());
+          if (termTime) termTime.textContent = "deployed · " + t;
+        } catch (e) {}
+      }
+      stamp();
+
+      if (termRun && term) {
+        termRun.addEventListener("click", () => {
+          if (running) return;
+          running = true;
+          term.classList.remove("is-run");
+          void term.offsetWidth;
+          term.classList.add("is-run");
+          termLive.textContent = "Rebuilding preview.";
+          window.setTimeout(() => {
+            termLive.textContent = "Preview rebuilt in 8.4 seconds. No errors.";
+            stamp();
+            running = false;
+          }, reduce.matches ? 40 : 3000);
+        });
+      }
+
+      /* Live studio clock -------------------------------------------------- */
+      const clock = document.querySelector("[data-bt-clock]");
+      const clockDate = document.querySelector("[data-bt-date]");
+      const week = document.querySelector("[data-bt-week]");
+      const dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+      const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+      function tick() {
+        const now = new Date();
+        const parts = {};
+        try {
+          new Intl.DateTimeFormat("en-GB", {
+            timeZone: "Asia/Kolkata", hour: "2-digit", minute: "2-digit",
+            second: "2-digit", hour12: false, weekday: "short", day: "numeric",
+            month: "short"
+          }).formatToParts(now).forEach((p) => { parts[p.type] = p.value; });
+        } catch (e) {
+          parts.hour = String(now.getHours()).padStart(2, "0");
+          parts.minute = String(now.getMinutes()).padStart(2, "0");
+          parts.second = String(now.getSeconds()).padStart(2, "0");
+          parts.weekday = dayNames[now.getDay()];
+          parts.day = String(now.getDate());
+          parts.month = monthNames[now.getMonth()];
+        }
+        if (clock) {
+          clock.innerHTML = "<b>" + parts.hour + ":" + parts.minute + "</b><i>:" + parts.second + "</i>";
+        }
+        if (clockDate) clockDate.textContent = parts.weekday + " " + parts.day + " " + parts.month;
+        if (week) {
+          const index = dayNames.indexOf(parts.weekday);
+          week.querySelectorAll("[data-day]").forEach((el) => {
+            el.classList.toggle("is-today", Number(el.dataset.day) === (index < 0 ? 0 : index));
+          });
+        }
+      }
+      tick();
+      window.setInterval(tick, 1000);
+
+      /* Contact form ------------------------------------------------------- */
+      const form = document.querySelector("[data-brief-form]");
+      const wrap = document.querySelector("[data-brief-wrap]");
+      const done = document.querySelector("[data-brief-done]");
+      const summary = document.querySelector("[data-brief-summary]");
+      const status = document.querySelector("[data-brief-status]");
+      const reset = document.querySelector("[data-brief-reset]");
+
+      if (form) {
+        const email = form.querySelector("#bt-email");
+        const type = form.querySelector("#bt-type");
+        const budget = form.querySelector("#bt-budget");
+        const message = form.querySelector("#bt-message");
+
+        const config = [
+          { el: email, test: (v) => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v), message: "Enter a valid email address." },
+          { el: type, test: (v) => v.trim() !== "", message: "Choose a project type." },
+          { el: budget, test: (v) => v.trim() !== "", message: "Choose a budget range." },
+          { el: message, test: (v) => v.trim().length >= 10, message: "A sentence or two helps — at least 10 characters." }
+        ];
+
+        function setError(field, text) {
+          const box = field.closest(".bt-field");
+          const err = box.querySelector("[data-err]");
+          box.classList.toggle("has-error", Boolean(text));
+          field.setAttribute("aria-invalid", text ? "true" : "false");
+          if (err) err.textContent = text || "";
+        }
+
+        form.addEventListener("submit", (event) => {
+          event.preventDefault();
+          status.textContent = "";
+          let firstBad = null;
+
+          config.forEach(({ el, test, message: text }) => {
+            const bad = !test(el.value);
+            setError(el, bad ? text : "");
+            if (bad && !firstBad) firstBad = el;
+          });
+
+          if (firstBad) {
+            status.textContent = "Please fix the highlighted fields.";
+            firstBad.focus();
+            return;
+          }
+
+          summary.textContent =
+            type.value + " · " + budget.value + " · reply within one working day";
+          wrap.hidden = true;
+          done.hidden = false;
+          done.focus({ preventScroll: true });
+          status.textContent = "Brief received. Nothing was sent — this is a demonstration form.";
+        });
+
+        config.forEach(({ el }) => {
+          el.addEventListener("input", () => {
+            if (el.closest(".bt-field").classList.contains("has-error")) setError(el, "");
+          });
+          el.addEventListener("change", () => {
+            if (el.closest(".bt-field").classList.contains("has-error")) setError(el, "");
+          });
+        });
+
+        reset.addEventListener("click", () => {
+          form.reset();
+          config.forEach(({ el }) => setError(el, ""));
+          done.hidden = true;
+          wrap.hidden = false;
+          status.textContent = "";
+          email.focus();
+        });
+      }
+
+      /* Cursor spotlight on tiles ----------------------------------------- */
+      if (window.matchMedia("(pointer: fine)").matches && !reduce.matches) {
+        document.querySelectorAll(".bt-tile").forEach((tile) => {
+          tile.addEventListener("pointermove", (event) => {
+            const rect = tile.getBoundingClientRect();
+            tile.style.setProperty("--tx", (event.clientX - rect.left).toFixed(0) + "px");
+            tile.style.setProperty("--ty", (event.clientY - rect.top).toFixed(0) + "px");
+          }, { passive: true });
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

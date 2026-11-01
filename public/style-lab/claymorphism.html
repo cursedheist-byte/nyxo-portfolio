@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en" data-page="claymorphism">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff2e2">
+  <meta name="description" content="NYXO Sprout — ten-minute lessons for curious kids. A claymorphism demonstration by NYXO Web &amp; App Developer.">
+  <title>NYXO Sprout — Claymorphism · NYXO Style Lab</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/claymorphism.css">
+  <script>
+    document.documentElement.classList.add('js');
+    try {
+      var p = localStorage.getItem('nyxo.palette.' + document.documentElement.dataset.page);
+      if (p) document.documentElement.dataset.palette = p;
+    } catch (e) {}
+  </script>
+  <script src="assets/js/app.js" defer></script>
+</head>
+<body class="sprout-page">
+  <a class="nx-skip" href="#main">Skip to content</a>
+  <header id="nx-bar" class="nx-bar" aria-label="Style lab controls"></header>
+
+  <header class="cph">
+    <div class="cph__inner nx-container">
+      <a class="cph__brand" href="#top" aria-label="NYXO Sprout home">
+        <span class="cph__mark" aria-hidden="true">
+          <span class="cph__leaf"></span>
+          <span class="cph__face"><i></i><i></i></span>
+        </span>
+        <span class="cph__name">NYXO <small>Sprout</small></span>
+      </a>
+      <nav class="cph__nav" aria-label="Primary">
+        <a href="#why">Why Sprout</a>
+        <a href="#lesson">A tiny lesson</a>
+        <a href="#path">Learning path</a>
+        <a href="#parents">For parents</a>
+      </nav>
+      <div class="cph__actions">
+        <a class="cph__login" href="#start">Log in</a>
+        <a class="clay-btn clay-btn--sm clay-btn--primary" href="#start">Start free</a>
+        <button class="cph__menu" type="button" data-menu-toggle aria-controls="cph-sheet" aria-expanded="false" aria-label="Open menu">
+          <svg viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 5.5h12M3 9h12M3 12.5h7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="cph__sheet" id="cph-sheet">
+      <a href="#why">Why Sprout</a>
+      <a href="#lesson">A tiny lesson</a>
+      <a href="#path">Learning path</a>
+      <a href="#parents">For parents</a>
+      <a href="#start">Start free</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <span class="blob blob--one" aria-hidden="true"></span>
+      <span class="blob blob--two" aria-hidden="true"></span>
+      <span class="blob blob--three" aria-hidden="true"></span>
+
+      <div class="nx-container hero__grid">
+        <div class="hero__copy">
+          <p class="sprout-badge" data-reveal>
+            <span class="sprout-badge__dot" aria-hidden="true"></span>
+            Made with teachers · Ages 4–9
+          </p>
+          <h1 id="hero-title" data-reveal style="--reveal-delay:60ms">
+            Big feelings. <em>Small steps.</em> One brave little sprout.
+          </h1>
+          <p class="hero__lead" data-reveal style="--reveal-delay:120ms">
+            Ten-minute lessons that help little kids tackle letters, numbers and big feelings —
+            without ads, autoplay, or the end-of-screen meltdown.
+          </p>
+          <div class="hero__actions" data-reveal style="--reveal-delay:170ms">
+            <a class="clay-btn clay-btn--primary" href="#start" data-magnetic="4">
+              Start 14 days free
+              <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h9M8.5 3.5 13 8l-4.5 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a class="clay-btn clay-btn--ghost" href="#lesson">Try a tiny lesson</a>
+          </div>
+          <div class="hero__trust" data-reveal style="--reveal-delay:220ms">
+            <div class="avatars" aria-hidden="true">
+              <span>MK</span><span>AR</span><span>JS</span><span>+</span>
+            </div>
+            <p><b>4.9</b> from 6,200 parents<br><span>No ads. No autoplay. Ever.</span></p>
+          </div>
+        </div>
+
+        <div class="stage" data-reveal style="--reveal-delay:200ms">
+          <span class="stage__blob" aria-hidden="true"></span>
+
+          <div class="sticker sticker--star" aria-hidden="true">
+            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.6l2.3 4.9 5.2.7-3.8 3.7.9 5.2-4.6-2.5-4.6 2.5.9-5.2L2.5 7.2l5.2-.7L10 1.6Z"/></svg>
+            <span><b>You did it!</b><small>+ 1 star</small></span>
+          </div>
+
+          <div class="sticker sticker--streak" aria-hidden="true">
+            <span class="sticker__flame">
+              <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5c.6 3.4-2.6 4.4-2.6 7.1 0 1.2.7 2 1.7 2.2-.2-1.8 1.2-2.7 1.2-2.7.9 1.1 2.9 2.9 2.9 5.4a4.6 4.6 0 0 1-9.2 0C4 9.9 8.2 8.4 10 1.5Z"/></svg>
+            </span>
+            <span><b>7 day streak</b><small>Little and often</small></span>
+          </div>
+
+          <div class="sprout sprout--hero" aria-hidden="true">
+            <span class="sprout__stem"></span>
+            <span class="sprout__leaf sprout__leaf--l"></span>
+            <span class="sprout__leaf sprout__leaf--r"></span>
+            <span class="sprout__body">
+              <span class="sprout__eye sprout__eye--l"></span>
+              <span class="sprout__eye sprout__eye--r"></span>
+              <span class="sprout__cheek sprout__cheek--l"></span>
+              <span class="sprout__cheek sprout__cheek--r"></span>
+              <span class="sprout__mouth"></span>
+            </span>
+          </div>
+
+          <div class="device" aria-hidden="true">
+            <div class="device__screen">
+              <div class="appbar">
+                <span class="mini-face" aria-hidden="true"><span class="mini-face__leaf"></span><i></i><i></i></span>
+                <div class="appbar__hi">
+                  <b>Hi, Mira!</b>
+                  <small>Ready for 10 happy minutes?</small>
+                </div>
+                <span class="appbar__streak" aria-label="7 day streak">
+                  <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.5c.6 3.4-2.6 4.4-2.6 7.1 0 1.2.7 2 1.7 2.2-.2-1.8 1.2-2.7 1.2-2.7.9 1.1 2.9 2.9 2.9 5.4a4.6 4.6 0 0 1-9.2 0C4 9.9 8.2 8.4 10 1.5Z"/></svg>
+                  7
+                </span>
+              </div>
+
+              <div class="today">
+                <div class="today__head"><span>Today’s path</span><b>3 of 5</b></div>
+                <div class="clay-progress" aria-hidden="true"><i style="--p:60%"></i></div>
+              </div>
+
+              <div class="mini-lesson">
+                <span class="mini-lesson__tag">Sound hunt</span>
+                <p class="mini-lesson__q">Which one starts with <b>sss</b>?</p>
+                <div class="mini-tiles">
+                  <span class="mini-tile is-picked"><b>S</b><small>Sun</small></span>
+                  <span class="mini-tile"><b>M</b><small>Moon</small></span>
+                  <span class="mini-tile"><b>T</b><small>Tree</small></span>
+                </div>
+                <p class="mini-lesson__praise">
+                  <svg viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7.5 5.5 11 12 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  Nice ears, Mira!
+                </p>
+              </div>
+
+              <div class="appnav" aria-hidden="true">
+                <span class="is-active"><svg viewBox="0 0 20 20" fill="none"><path d="M3.5 8.5 10 3l6.5 5.5V16a1 1 0 0 1-1 1h-3.4v-4.4H7.9V17H4.5a1 1 0 0 1-1-1V8.5Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></span>
+                <span><svg viewBox="0 0 20 20" fill="none"><circle cx="5" cy="10" r="2.2" stroke="currentColor" stroke-width="1.7"/><circle cx="10" cy="5" r="2.2" stroke="currentColor" stroke-width="1.7"/><circle cx="15" cy="10" r="2.2" stroke="currentColor" stroke-width="1.7"/><circle cx="10" cy="15" r="2.2" stroke="currentColor" stroke-width="1.7"/><path d="M10 7.2v5.6" stroke="currentColor" stroke-width="1.7"/></svg></span>
+                <span><svg viewBox="0 0 20 20" fill="none"><path d="M10 3.2l2 4.1 4.5.7-3.3 3.2.8 4.5-4-2.1-4 2.1.8-4.5-3.3-3.2 4.5-.7 2-4.1Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></span>
+                <span><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="7" r="2.8" stroke="currentColor" stroke-width="1.7"/><path d="M4.6 16.5c.6-3 2.7-4.5 5.4-4.5s4.8 1.5 5.4 4.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section why" id="why" aria-labelledby="why-title">
+      <div class="nx-container">
+        <div class="section-head" data-reveal>
+          <p class="kicker">Why grown-ups love it</p>
+          <h2 id="why-title">Designed to be <em>the good kind</em> of screen time.</h2>
+        </div>
+
+        <div class="why__grid">
+          <article class="clay-card why__card" data-reveal>
+            <span class="why__icon" style="--c:#ff8a5c" aria-hidden="true">
+              <svg viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="9.5" stroke="currentColor" stroke-width="2.4"/><path d="M14 8.5V14l3.8 2.4" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <p class="why__tag">Short by design</p>
+            <h3>Ten minutes, then done.</h3>
+            <p>A lesson is short enough to finish before attention runs out — and the app closes with a calm goodbye, not a cliffhanger.</p>
+          </article>
+
+          <article class="clay-card why__card" data-reveal style="--reveal-delay:90ms">
+            <span class="why__icon" style="--c:#3fbfa8" aria-hidden="true">
+              <svg viewBox="0 0 28 28" fill="none"><path d="M4 7.5A2.5 2.5 0 0 1 6.5 5H12v17H6.5A2.5 2.5 0 0 0 4 24.5v-17Z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="M24 7.5A2.5 2.5 0 0 0 21.5 5H16v17h5.5a2.5 2.5 0 0 1 2.5 2.5v-17Z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></svg>
+            </span>
+            <p class="why__tag">Parent view</p>
+            <h3>Grown-ups stay in the loop.</h3>
+            <p>A weekly note tells you what your child practised and one small thing to try together at the dinner table.</p>
+          </article>
+
+          <article class="clay-card why__card" data-reveal style="--reveal-delay:180ms">
+            <span class="why__icon" style="--c:#9b7bff" aria-hidden="true">
+              <svg viewBox="0 0 28 28" fill="none"><path d="M14 23.5s-9-5.3-9-11.3A4.7 4.7 0 0 1 14 9a4.7 4.7 0 0 1 9 3.2c0 6-9 11.3-9 11.3Z" stroke="currentColor" stroke-width="2.3" stroke-linejoin="round"/></svg>
+            </span>
+            <p class="why__tag">No ads, ever</p>
+            <h3>Kind by default.</h3>
+            <p>Mistakes are met with hints, not buzzers. Rewards are for effort, not for winning — and there is nothing to buy inside.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section lesson" id="lesson" aria-labelledby="lesson-title">
+      <div class="nx-container lesson__grid">
+        <div class="lesson__intro" data-reveal>
+          <p class="kicker">A tiny lesson</p>
+          <h2 id="lesson-title">Try three questions. <em>No sign-up.</em></h2>
+          <p>This is the real pace of Sprout: one idea, three gentle tries, and a cheer whoever gets there. Best for ages four to nine.</p>
+
+          <div class="lesson__mascot">
+            <div class="sprout sprout--quiz" aria-hidden="true">
+              <span class="sprout__stem"></span>
+              <span class="sprout__leaf sprout__leaf--l"></span>
+              <span class="sprout__leaf sprout__leaf--r"></span>
+              <span class="sprout__body">
+                <span class="sprout__eye sprout__eye--l"></span>
+                <span class="sprout__eye sprout__eye--r"></span>
+                <span class="sprout__cheek sprout__cheek--l"></span>
+                <span class="sprout__cheek sprout__cheek--r"></span>
+                <span class="sprout__mouth"></span>
+              </span>
+            </div>
+            <p class="lesson__bubble">I’ll cheer you on. Mistakes are just clues!</p>
+          </div>
+
+          <ul class="lesson__notes">
+            <li>Listen, choose, try again</li>
+            <li>Instant, gentle feedback</li>
+            <li>Finish in under two minutes</li>
+          </ul>
+        </div>
+
+        <div class="quiz clay-card" data-reveal style="--reveal-delay:100ms">
+          <div class="quiz__top">
+            <span class="quiz__step" data-quiz-step>Question 1 of 3</span>
+            <div class="quiz__dots" aria-hidden="true">
+              <i class="is-current"></i><i></i><i></i>
+            </div>
+          </div>
+
+          <div class="quiz__body" data-quiz-body>
+            <span class="quiz__tag" data-quiz-tag>Sound hunt</span>
+            <h3 data-quiz-question aria-live="polite"></h3>
+            <div class="quiz__options" data-quiz-options></div>
+            <p class="quiz__feedback" data-quiz-feedback role="status" aria-live="polite"></p>
+            <button class="clay-btn clay-btn--primary quiz__next" type="button" data-quiz-next hidden>Next question</button>
+          </div>
+
+          <div class="quiz__done" data-quiz-done hidden>
+            <div class="quiz__stars" aria-hidden="true">
+              <svg viewBox="0 0 22 22" fill="currentColor"><path d="M11 2l2.6 5.4 5.9.9-4.2 4.1 1 5.8L11 15.5 5.7 18.2l1-5.8L2.5 8.3l5.9-.9L11 2Z"/></svg>
+              <svg viewBox="0 0 22 22" fill="currentColor"><path d="M11 2l2.6 5.4 5.9.9-4.2 4.1 1 5.8L11 15.5 5.7 18.2l1-5.8L2.5 8.3l5.9-.9L11 2Z"/></svg>
+              <svg viewBox="0 0 22 22" fill="currentColor"><path d="M11 2l2.6 5.4 5.9.9-4.2 4.1 1 5.8L11 15.5 5.7 18.2l1-5.8L2.5 8.3l5.9-.9L11 2Z"/></svg>
+            </div>
+            <h3 data-quiz-result>You earned 3 stars!</h3>
+            <p data-quiz-message>That is a whole tiny lesson finished. Mira would be proud of you.</p>
+            <button class="clay-btn clay-btn--primary" type="button" data-quiz-replay>Play again</button>
+            <p class="quiz__demo">A real lesson has 12 questions and adapts to your child.</p>
+          </div>
+
+          <div class="quiz__confetti" data-quiz-confetti aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section path" id="path" aria-labelledby="path-title">
+      <div class="nx-container">
+        <div class="section-head" data-reveal>
+          <p class="kicker">The learning path</p>
+          <h2 id="path-title">Four little worlds, <em>one steady climb.</em></h2>
+        </div>
+
+        <div class="path__grid">
+          <article class="path__card" data-reveal>
+            <span class="path__no">01</span>
+            <div class="path__art path__art--letters" aria-hidden="true">
+              <span>a</span><span>b</span><span>c</span>
+            </div>
+            <h3>Letters &amp; sounds</h3>
+            <p>Phonics through songs, silly rhymes and sound hunts. Ages 4–6.</p>
+            <span class="path__meta">34 lessons</span>
+          </article>
+
+          <article class="path__card" data-reveal style="--reveal-delay:80ms">
+            <span class="path__no">02</span>
+            <div class="path__art path__art--numbers" aria-hidden="true">
+              <span class="path__circle"></span>
+              <span class="path__square"></span>
+              <span class="path__triangle"></span>
+            </div>
+            <h3>Numbers &amp; patterns</h3>
+            <p>Counting, shapes and the quiet logic behind everyday maths. Ages 5–7.</p>
+            <span class="path__meta">28 lessons</span>
+          </article>
+
+          <article class="path__card" data-reveal style="--reveal-delay:160ms">
+            <span class="path__no">03</span>
+            <div class="path__art path__art--feelings" aria-hidden="true">
+              <span class="path__heart"></span>
+              <span class="path__spark">✦</span>
+            </div>
+            <h3>Big feelings</h3>
+            <p>Naming emotions, taking turns, and trying again after a wobble. Ages 4–9.</p>
+            <span class="path__meta">22 lessons</span>
+          </article>
+
+          <article class="path__card" data-reveal style="--reveal-delay:240ms">
+            <span class="path__no">04</span>
+            <div class="path__art path__art--world" aria-hidden="true">
+              <span class="path__globe"></span>
+              <span class="path__leafy"></span>
+            </div>
+            <h3>Curious world</h3>
+            <p>Animals, weather and the “why?” questions that start everything. Ages 6–9.</p>
+            <span class="path__meta">30 lessons</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="numbers" aria-label="NYXO Sprout in numbers">
+      <div class="nx-container">
+        <div class="numbers__card" data-reveal>
+          <div class="numbers__item">
+            <strong><span data-count="120" data-suffix="k">120k</span></strong>
+            <span>families learning</span>
+          </div>
+          <div class="numbers__item">
+            <strong><span data-count="4.9" data-decimals="1">4.9</span></strong>
+            <span>average parent rating</span>
+          </div>
+          <div class="numbers__item">
+            <strong><span data-count="96" data-suffix="%">96%</span></strong>
+            <span>finish a lesson each week</span>
+          </div>
+          <div class="numbers__item">
+            <strong><span data-count="10">10</span><small>min</small></strong>
+            <span>and then we stop</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section parents" id="parents" aria-labelledby="parents-title">
+      <div class="nx-container parents__grid">
+        <div class="parents__copy" data-reveal>
+          <p class="kicker">For grown-ups</p>
+          <h2 id="parents-title">The good kind of <em>screen time.</em></h2>
+          <p>Sprout is built by early-years teachers and child psychologists, then tested by the only experts who matter: children who get bored quickly.</p>
+          <ul class="parents__list">
+            <li>
+              <span aria-hidden="true">01</span>
+              <p><b>No advertising, ever.</b> We are paid by families, not by attention.</p>
+            </li>
+            <li>
+              <span aria-hidden="true">02</span>
+              <p><b>No chat, no strangers.</b> One private profile per child and no social features.</p>
+            </li>
+            <li>
+              <span aria-hidden="true">03</span>
+              <p><b>Works offline.</b> On a plane, a train, or a rainy Tuesday afternoon.</p>
+            </li>
+          </ul>
+
+          <figure class="parents__quote">
+            <svg class="parents__quote-mark" viewBox="0 0 32 24" fill="currentColor" aria-hidden="true"><path d="M0 24V13.4C0 5.9 4.4 1.4 12 0l1.6 3.8C9.3 5.2 7 7.6 7 11h5v13H0Zm19 0V13.4C19 5.9 23.4 1.4 31 0l1.6 3.8C28.3 5.2 26 7.6 26 11h5v13H19Z"/></svg>
+            <blockquote>“The first app my daughter asks for that ends with her calm instead of cross.”</blockquote>
+            <figcaption><b>Priya R.</b><span>parent of Mira, age 5</span></figcaption>
+          </figure>
+        </div>
+
+        <div class="price clay-card" id="start" data-reveal style="--reveal-delay:100ms">
+          <span class="price__badge">14 days free</span>
+          <h3>One plan, every world</h3>
+          <p class="price__sub">Everything unlocked from day one. No upsells hiding in the toy box.</p>
+
+          <div class="price__toggle" role="group" aria-label="Billing period">
+            <button type="button" data-billing="monthly" aria-pressed="true">Monthly</button>
+            <button type="button" data-billing="yearly" aria-pressed="false">Yearly <span>Save 28%</span></button>
+          </div>
+
+          <p class="price__amount" aria-live="polite">
+            <span data-price>₹349</span><small data-period>/ month</small>
+          </p>
+          <p class="price__note" data-price-note>Billed monthly. Cancel anytime.</p>
+
+          <ul class="price__features">
+            <li>All four learning worlds</li>
+            <li>Up to 3 child profiles</li>
+            <li>Offline lessons</li>
+            <li>Weekly parent note</li>
+            <li>Cancel in two taps</li>
+          </ul>
+
+          <a class="clay-btn clay-btn--primary price__cta" href="mailto:hello@nyxo.dev?subject=NYXO%20Sprout%20trial" data-magnetic="4">
+            Start 14 days free
+            <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h9M8.5 3.5 13 8l-4.5 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <p class="price__small">No card needed for the trial. Demo only — no payment is taken.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq" aria-labelledby="faq-title">
+      <div class="nx-container faq__grid">
+        <div class="faq__intro" data-reveal>
+          <p class="kicker">Small print, kindly put</p>
+          <h2 id="faq-title">Questions parents <em>actually ask.</em></h2>
+          <p>Still wondering something? A real human answers within one working day.</p>
+          <a class="clay-btn clay-btn--ghost clay-btn--sm" href="mailto:hello@nyxo.dev?subject=NYXO%20Sprout%20question">Ask us anything</a>
+        </div>
+
+        <div class="faq__list" data-reveal style="--reveal-delay:80ms">
+          <details open>
+            <summary>What ages is Sprout for?<span aria-hidden="true"></span></summary>
+            <p>Most families start between four and nine. The path adapts its pace, so a five-year-old and a seven-year-old can use the same app at their own level.</p>
+          </details>
+          <details>
+            <summary>How much screen time is it?<span aria-hidden="true"></span></summary>
+            <p>One lesson is about ten minutes. After it ends, the app says a calm goodbye and closes the activity — there is no autoplay and no “just one more”.</p>
+          </details>
+          <details>
+            <summary>Is it safe for my child?<span aria-hidden="true"></span></summary>
+            <p>There are no ads, no in-app purchases and no chat features. Profiles are private, and the parent area sits behind a simple grown-up check.</p>
+          </details>
+          <details>
+            <summary>What happens after the free trial?<span aria-hidden="true"></span></summary>
+            <p>You choose monthly at ₹349 or yearly at ₹2,999. If you do nothing, access simply pauses — we do not auto-charge an expired demo.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="cfoot">
+    <div class="nx-container">
+      <div class="cfoot__top">
+        <a class="cfoot__brand" href="#top">
+          <span class="cfoot__mark" aria-hidden="true">N</span>
+          NYXO Sprout
+        </a>
+        <nav class="cfoot__nav" aria-label="Footer">
+          <a href="#why">Why Sprout</a>
+          <a href="#lesson">A tiny lesson</a>
+          <a href="#parents">For parents</a>
+          <a href="index.html">All 10 styles</a>
+        </nav>
+        <p class="cfoot__note">A NYXO demonstration · Learning design, not a real subscription</p>
+      </div>
+      <p class="cfoot__word" aria-hidden="true">Sprout</p>
+      <div class="cfoot__bottom">
+        <span>© <span data-year>2026</span> NYXO Web &amp; App Developer</span>
+        <span>Made gently in Mumbai</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (() => {
+      /* ---------------------------------------------------------------
+         Mini lesson
+         --------------------------------------------------------------- */
+      const questions = [
+        {
+          tag: 'Sound hunt',
+          prompt: 'Which word starts with the <b>sss</b> sound?',
+          options: ['Sun', 'Moon', 'Tree'],
+          correct: 0,
+          praise: 'Yes! Sun starts with sss. Clap it: sss-un.',
+          hint: 'Say each word slowly: sss-un, mmm-oon, ttt-ree. Which one begins with sss?',
+        },
+        {
+          tag: 'Number trail',
+          prompt: 'What comes next? <b>2, 4, 6, __</b>',
+          options: ['7', '8', '9'],
+          correct: 1,
+          praise: 'You spotted the pattern. Each number jumps two steps.',
+          hint: 'Each number is two more than the one before. Count on from six.',
+        },
+        {
+          tag: 'Big feelings',
+          prompt: 'Milo finished a puzzle that felt <b>very hard</b>. How might he feel?',
+          options: ['Proud', 'Sleepy', 'Angry'],
+          correct: 0,
+          praise: 'Exactly. Proud is a big, warm feeling — and he earned it.',
+          hint: 'He kept trying and finished it. That usually feels warm and tall inside.',
+        },
+      ];
+
+      const stepLabel = document.querySelector('[data-quiz-step]');
+      const dots = Array.from(document.querySelectorAll('.quiz__dots i'));
+      const body = document.querySelector('[data-quiz-body]');
+      const tag = document.querySelector('[data-quiz-tag]');
+      const questionEl = document.querySelector('[data-quiz-question]');
+      const optionsEl = document.querySelector('[data-quiz-options]');
+      const feedback = document.querySelector('[data-quiz-feedback]');
+      const next = document.querySelector('[data-quiz-next]');
+      const done = document.querySelector('[data-quiz-done]');
+      const resultEl = document.querySelector('[data-quiz-result]');
+      const messageEl = document.querySelector('[data-quiz-message]');
+      const replay = document.querySelector('[data-quiz-replay]');
+      const confetti = document.querySelector('[data-quiz-confetti]');
+      const quizCard = document.querySelector('.quiz');
+
+      let index = 0;
+      let score = 0;
+      let answered = false;
+
+      function setDots() {
+        dots.forEach((dot, i) => {
+          dot.classList.toggle('is-current', i === index);
+          dot.classList.toggle('is-done', i < index);
+        });
+      }
+
+      function renderQuestion() {
+        answered = false;
+        const q = questions[index];
+        stepLabel.textContent = `Question ${index + 1} of ${questions.length}`;
+        tag.textContent = q.tag;
+        questionEl.innerHTML = q.prompt;
+        optionsEl.innerHTML = '';
+        feedback.textContent = '';
+        feedback.removeAttribute('data-state');
+        next.hidden = true;
+        next.textContent = index === questions.length - 1 ? 'See my stars' : 'Next question';
+        setDots();
+
+        q.options.forEach((text, i) => {
+          const button = document.createElement('button');
+          button.type = 'button';
+          button.className = 'quiz__option';
+          const key = document.createElement('span');
+          key.className = 'quiz__key';
+          key.textContent = String.fromCharCode(65 + i);
+          const label = document.createElement('span');
+          label.textContent = text;
+          button.append(key, label);
+          button.addEventListener('click', () => answer(i, button, q));
+          optionsEl.append(button);
+        });
+      }
+
+      function answer(choice, button, q) {
+        if (answered) return;
+        answered = true;
+        const correct = choice === q.correct;
+        if (correct) score += 1;
+
+        Array.from(optionsEl.children).forEach((option, i) => {
+          option.disabled = true;
+          if (i === q.correct) option.classList.add('is-correct');
+          if (i === choice && !correct) option.classList.add('is-wrong');
+        });
+        button.classList.add(correct ? 'is-correct' : 'is-wrong');
+
+        feedback.textContent = correct ? q.praise : `Not quite — ${q.hint}`;
+        feedback.dataset.state = correct ? 'good' : 'try';
+        next.hidden = false;
+        next.focus({ preventScroll: true });
+      }
+
+      function finish() {
+        body.hidden = true;
+        done.hidden = false;
+        stepLabel.textContent = 'Lesson complete';
+        const total = questions.length;
+        resultEl.textContent = `You earned ${score} of ${total} stars!`;
+        messageEl.textContent =
+          score === total
+            ? 'A perfect little lesson. You listened, thought and kept going.'
+            : score >= 2
+              ? 'Lovely work. Every try is a clue — and you kept going.'
+              : 'You finished the whole lesson. That is the brave part. Try it again whenever you like.';
+        dots.forEach((dot) => {
+          dot.classList.add('is-done');
+          dot.classList.remove('is-current');
+        });
+        quizCard.classList.add('is-celebrating');
+        spawnConfetti();
+        replay.focus({ preventScroll: true });
+      }
+
+      function spawnConfetti() {
+        confetti.innerHTML = '';
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+        const colors = ['var(--accent)', 'var(--accent-2)', 'var(--sun)', 'var(--mint)'];
+        for (let i = 0; i < 28; i += 1) {
+          const piece = document.createElement('i');
+          piece.style.setProperty('--x', `${Math.random() * 100}%`);
+          piece.style.setProperty('--r', `${Math.random() * 360}deg`);
+          piece.style.setProperty('--d', `${0.55 + Math.random() * 1.1}s`);
+          piece.style.setProperty('--delay', `${Math.random() * 0.35}s`);
+          piece.style.setProperty('--c', colors[i % colors.length]);
+          confetti.append(piece);
+        }
+      }
+
+      if (stepLabel) {
+        next.addEventListener('click', () => {
+          if (index === questions.length - 1) {
+            finish();
+            return;
+          }
+          index += 1;
+          renderQuestion();
+          const firstOption = optionsEl.querySelector('button');
+          if (firstOption) firstOption.focus({ preventScroll: true });
+        });
+
+        replay.addEventListener('click', () => {
+          index = 0;
+          score = 0;
+          done.hidden = true;
+          body.hidden = false;
+          quizCard.classList.remove('is-celebrating');
+          confetti.innerHTML = '';
+          renderQuestion();
+          const firstOption = optionsEl.querySelector('button');
+          if (firstOption) firstOption.focus({ preventScroll: true });
+        });
+
+        renderQuestion();
+      }
+
+      /* ---------------------------------------------------------------
+         Billing toggle
+         --------------------------------------------------------------- */
+      const plans = {
+        monthly: { price: '₹349', period: '/ month', note: 'Billed monthly. Cancel anytime.' },
+        yearly: { price: '₹2,999', period: '/ year', note: 'That is ₹250 a month, billed yearly. Save 28%.' },
+      };
+      const price = document.querySelector('[data-price]');
+      const period = document.querySelector('[data-period]');
+      const note = document.querySelector('[data-price-note]');
+      const billingButtons = Array.from(document.querySelectorAll('[data-billing]'));
+
+      billingButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+          const plan = plans[button.dataset.billing];
+          billingButtons.forEach((item) => item.setAttribute('aria-pressed', String(item === button)));
+          price.textContent = plan.price;
+          period.textContent = plan.period;
+          note.textContent = plan.note;
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en" data-page="neumorphism">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#e8eef5">
+  <meta name="description" content="NYXO Pulse — a soft-surface sleep, recovery and focus dashboard. A neumorphism demonstration by NYXO Web &amp; App Developer.">
+  <title>NYXO Pulse — Neumorphism · NYXO Style Lab</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/neumorphism.css">
+  <script>
+    document.documentElement.classList.add('js');
+    try {
+      var p = localStorage.getItem('nyxo.palette.' + document.documentElement.dataset.page);
+      if (p) document.documentElement.dataset.palette = p;
+    } catch (e) {}
+  </script>
+  <script src="assets/js/app.js" defer></script>
+</head>
+<body class="neu">
+  <a class="nx-skip" href="#main">Skip to content</a>
+  <header id="nx-bar" class="nx-bar" aria-label="Style lab controls"></header>
+
+  <header class="neu-hdr">
+    <div class="neu-hdr__inner nx-container">
+      <a class="neu-hdr__brand" href="#today" aria-label="NYXO Pulse home">
+        <span class="neu-hdr__mark" aria-hidden="true">N</span>
+        <span class="neu-hdr__name">NYXO <small>Pulse</small></span>
+      </a>
+      <nav class="neu-hdr__nav" aria-label="Primary">
+        <a href="#today">Today</a>
+        <a href="#features">Rhythm</a>
+        <a href="#sounds">Sounds</a>
+        <a href="#reset">Program</a>
+      </nav>
+      <div class="neu-hdr__actions">
+        <span class="neu-hdr__clock"><i aria-hidden="true"></i><span data-clock>--:--</span> IST</span>
+        <a class="btn btn--primary btn--small" href="#reset">Start tonight</a>
+        <button class="neu-hdr__menu" type="button" data-menu-toggle aria-controls="neu-sheet" aria-expanded="false" aria-label="Open menu">
+          <svg viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 5.5h12M3 9h12M3 12.5h7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="neu-sheet" id="neu-sheet">
+      <a href="#today">Today</a>
+      <a href="#features">Your rhythm</a>
+      <a href="#sounds">Soundscapes</a>
+      <a href="#reset">The 7-day reset</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="today" aria-labelledby="today-title">
+      <div class="hero__orb hero__orb--one" aria-hidden="true"></div>
+      <div class="hero__orb hero__orb--two" aria-hidden="true"></div>
+      <div class="nx-container">
+        <div class="hero__head" data-reveal>
+          <div>
+            <p class="kicker">Sunday · 6 November · Day 6 of 7</p>
+            <h1 id="today-title">Good evening, <span>Aarav.</span></h1>
+            <p class="hero__lead">Your body is asking for a quieter night. We have moved tomorrow's alarm by twenty minutes and dimmed the plan.</p>
+          </div>
+          <div class="hero__weather" aria-label="Weather in Mumbai: 27 degrees, clear night">
+            <span class="hero__weather-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+            </span>
+            <span><b>27°</b><small>Clear night · Mumbai</small></span>
+          </div>
+        </div>
+
+        <div class="dash">
+          <article class="panel panel--readiness" data-reveal>
+            <div class="panel__head">
+              <h2>Readiness</h2>
+              <span class="chip chip--good">Primed</span>
+            </div>
+
+            <div class="ring" style="--p:84" role="img" aria-label="Readiness score 84 out of 100">
+              <span class="ring__groove" aria-hidden="true"></span>
+              <svg class="ring__svg" viewBox="0 0 200 200" aria-hidden="true">
+                <defs>
+                  <linearGradient id="ringGrad" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" style="stop-color:var(--accent)"/>
+                    <stop offset="1" style="stop-color:var(--accent-2)"/>
+                  </linearGradient>
+                </defs>
+                <circle class="ring__track" cx="100" cy="100" r="82"/>
+                <circle class="ring__value" cx="100" cy="100" r="82" stroke="url(#ringGrad)"/>
+              </svg>
+              <div class="ring__center">
+                <strong><span data-count="84">84</span></strong>
+                <span>readiness / 100</span>
+                <small>+6 from yesterday</small>
+              </div>
+            </div>
+
+            <ul class="readiness__stats">
+              <li>
+                <span class="readiness__icon" aria-hidden="true">
+                  <svg viewBox="0 0 20 20" fill="none"><path d="M3 10h2.5l1.8-4.5L10 15l1.7-5H16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+                <span><b>68</b> ms <small>HRV</small></span>
+              </li>
+              <li>
+                <span class="readiness__icon" aria-hidden="true">
+                  <svg viewBox="0 0 20 20" fill="none"><path d="M10 16.2S3.8 12.4 3.8 7.9A3.4 3.4 0 0 1 10 5.8a3.4 3.4 0 0 1 6.2 2.1c0 4.5-6.2 8.3-6.2 8.3Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+                </span>
+                <span><b>52</b> bpm <small>Resting</small></span>
+              </li>
+              <li>
+                <span class="readiness__icon" aria-hidden="true">
+                  <svg viewBox="0 0 20 20" fill="none"><path d="M10 3.2v13.6M6.4 6.6h5.2a2.4 2.4 0 0 1 0 4.8H7.8a2.2 2.2 0 0 0 0 4.4h5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                </span>
+                <span><b>+0.2</b>°C <small>Skin temp</small></span>
+              </li>
+            </ul>
+
+            <div class="readiness__insight">
+              <span>Pulse insight</span>
+              <p>Your deep sleep ran 22 minutes longer than usual. Keep the room cool tonight and it should repeat.</p>
+            </div>
+
+            <div class="readiness__bed">
+              <span class="readiness__moon" aria-hidden="true">
+                <svg viewBox="0 0 20 20" fill="none"><path d="M15.8 12.2A6.4 6.4 0 0 1 7.8 4.2a6.4 6.4 0 1 0 8 8Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+              </span>
+              <span><small>Suggested bedtime</small><b>22:45</b></span>
+              <span class="readiness__in">in 3h 12m</span>
+            </div>
+          </article>
+
+          <article class="panel panel--sleep" data-reveal style="--reveal-delay:70ms">
+            <div class="panel__head">
+              <div>
+                <p class="panel__eyebrow">Last 7 nights</p>
+                <h2>Sleep duration</h2>
+              </div>
+              <div class="seg" role="group" aria-label="Choose a recovery metric">
+                <button type="button" class="seg__btn is-active" data-chart-key="sleep" aria-pressed="true">Sleep</button>
+                <button type="button" class="seg__btn" data-chart-key="recovery" aria-pressed="false">Recovery</button>
+                <button type="button" class="seg__btn" data-chart-key="focus" aria-pressed="false">Focus</button>
+              </div>
+            </div>
+
+            <div class="sleep__summary">
+              <p><strong data-chart-summary>7h 12m</strong><span data-chart-label>average sleep</span></p>
+              <span class="chip chip--accent" data-chart-delta>+18m this week</span>
+              <span class="sleep__goal-label">Goal <b>8h</b></span>
+            </div>
+
+            <div class="sleep__chart" role="img" aria-label="Sleep duration across the last seven days, averaging 7 hours 12 minutes." data-chart>
+              <div class="sleep__plot" aria-hidden="true">
+                <span class="sleep__goal" data-chart-goal></span>
+                <ol class="sleep__bars">
+                  <li style="--h:62%"><span class="sleep__bar"><i></i></span><b>Mon</b></li>
+                  <li style="--h:74%"><span class="sleep__bar"><i></i></span><b>Tue</b></li>
+                  <li style="--h:66%"><span class="sleep__bar"><i></i></span><b>Wed</b></li>
+                  <li style="--h:88%"><span class="sleep__bar"><i></i></span><b>Thu</b></li>
+                  <li style="--h:78%"><span class="sleep__bar"><i></i></span><b>Fri</b></li>
+                  <li style="--h:70%"><span class="sleep__bar"><i></i></span><b>Sat</b></li>
+                  <li style="--h:84%"><span class="sleep__bar"><i></i></span><b>Sun</b></li>
+                </ol>
+              </div>
+            </div>
+
+            <ul class="sleep__legend">
+              <li><i style="--dot:var(--accent)" aria-hidden="true"></i>Deep <b>1h 42m</b></li>
+              <li><i style="--dot:var(--accent-2)" aria-hidden="true"></i>REM <b>1h 55m</b></li>
+              <li><i style="--dot:var(--muted)" aria-hidden="true"></i>Light <b>3h 35m</b></li>
+            </ul>
+          </article>
+
+          <article class="panel panel--sounds" data-reveal style="--reveal-delay:120ms">
+            <div class="panel__head">
+              <div>
+                <p class="panel__eyebrow">Wind down</p>
+                <h2>Soundscape mixer</h2>
+              </div>
+              <button class="round-btn" type="button" data-mixer-toggle aria-pressed="false" aria-label="Play the soundscape mix">
+                <svg class="icon-play" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5.5 3.6v8.8L12.4 8 5.5 3.6Z" fill="currentColor"/></svg>
+                <svg class="icon-pause" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5.5 3.5v9M10.5 3.5v9" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              </button>
+            </div>
+            <div class="sounds__status">
+              <span class="sounds__eq" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+              <span data-mixer-status>Mix paused</span>
+            </div>
+            <div class="mixer">
+              <div class="mixer__row">
+                <label for="mix-rain">Rain</label>
+                <input id="mix-rain" type="range" min="0" max="100" value="70" data-mix>
+                <output for="mix-rain" data-mix-output>70</output>
+              </div>
+              <div class="mixer__row">
+                <label for="mix-forest">Forest</label>
+                <input id="mix-forest" type="range" min="0" max="100" value="45" data-mix>
+                <output for="mix-forest" data-mix-output>45</output>
+              </div>
+              <div class="mixer__row">
+                <label for="mix-piano">Slow piano</label>
+                <input id="mix-piano" type="range" min="0" max="100" value="25" data-mix>
+                <output for="mix-piano" data-mix-output>25</output>
+              </div>
+            </div>
+          </article>
+
+          <article class="panel panel--tonight" data-reveal style="--reveal-delay:160ms">
+            <div class="panel__head">
+              <div>
+                <p class="panel__eyebrow">Sunday plan</p>
+                <h2>Tonight</h2>
+              </div>
+              <span class="chip">3 steps</span>
+            </div>
+            <ol class="plan">
+              <li class="plan__step is-done">
+                <span class="plan__time">19:40</span>
+                <span class="plan__dot" aria-hidden="true"></span>
+                <span><b>Last coffee</b><small>Done · 1 glass of water instead</small></span>
+              </li>
+              <li class="plan__step is-next">
+                <span class="plan__time">21:30</span>
+                <span class="plan__dot" aria-hidden="true"></span>
+                <span><b>Wind-down lights</b><small>Next · screens to amber</small></span>
+              </li>
+              <li class="plan__step">
+                <span class="plan__time">22:15</span>
+                <span class="plan__dot" aria-hidden="true"></span>
+                <span><b>4-7-8 breathing</b><small>8 minutes · guided</small></span>
+              </li>
+            </ol>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section features" id="features" aria-labelledby="features-title">
+      <div class="nx-container">
+        <div class="section-head" data-reveal>
+          <div>
+            <p class="kicker">Your rhythm</p>
+            <h2 id="features-title">Soft on the eyes, <span>honest with the data.</span></h2>
+          </div>
+          <p>Pulse reads the signals your body already sends — then makes one small, kind adjustment at a time.</p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature" data-reveal>
+            <span class="feature__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M17 3.5v3M15.5 5h3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+            </span>
+            <h3>Wind-down reminders</h3>
+            <p>One nudge, forty minutes before bed. No streak guilt, no red badges — just the next gentle step.</p>
+            <span class="feature__meta">Built into every plan</span>
+          </article>
+          <article class="feature" data-reveal style="--reveal-delay:80ms">
+            <span class="feature__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M4 14.5h2.5l1.6-4.6 2.4 8 2-6.2 1.6 3.3H20" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 19h16" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" opacity=".45"/></svg>
+            </span>
+            <h3>A smart alarm</h3>
+            <p>Wake inside a soft twenty-minute window, when your body is already closest to the surface.</p>
+            <span class="feature__meta">Adjusts to your sleep debt</span>
+          </article>
+          <article class="feature" data-reveal style="--reveal-delay:160ms">
+            <span class="feature__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><rect x="3.5" y="5" width="17" height="15" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M3.5 10h17M8 3v4M16 3v4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </span>
+            <h3>The weekly letter</h3>
+            <p>A Sunday note with what changed, what helped and one thing worth keeping next week.</p>
+            <span class="feature__meta">Written in plain language</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section sounds-section" id="sounds" aria-labelledby="sounds-title">
+      <div class="nx-container">
+        <div class="section-head" data-reveal>
+          <div>
+            <p class="kicker">Sound library</p>
+            <h2 id="sounds-title">Four rooms to <span>leave the day in.</span></h2>
+          </div>
+          <p>Each soundscape is mixed for low volume: no sudden swells, no bright edges, nothing that asks for attention.</p>
+        </div>
+
+        <div class="scapes">
+          <article class="scape" data-scape>
+            <div class="scape__visual" aria-hidden="true" style="--shift:0deg">
+              <span class="scape__ripple"></span>
+              <span class="scape__ripple scape__ripple--two"></span>
+              <span class="scape__bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+            </div>
+            <div class="scape__body">
+              <p class="scape__tag">Rain · 24 min</p>
+              <h3>Rainfall</h3>
+              <p>Soft rain on a canvas roof, a room away.</p>
+              <button class="scape__play" type="button" aria-pressed="false" aria-label="Preview Rainfall soundscape">
+                <svg class="icon-play" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5.5 3.6v8.8L12.4 8 5.5 3.6Z" fill="currentColor"/></svg>
+                <svg class="icon-pause" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5.5 3.5v9M10.5 3.5v9" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                <span>Preview</span>
+              </button>
+            </div>
+          </article>
+
+          <article class="scape" data-scape>
+            <div class="scape__visual" aria-hidden="true" style="--shift:22deg">
+              <span class="scape__ripple"></span>
+              <span class="scape__ripple scape__ripple--two"></span>
+              <span class="scape__bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+            </div>
+            <div class="scape__body">
+              <p class="scape__tag">Forest · 32 min</p>
+              <h3>Deep forest</h3>
+              <p>Late birdsong and a slow, distant stream.</p>
+              <button class="scape__play" type="button" aria-pressed="false" aria-label="Preview Deep forest soundscape">
+                <svg class="icon-play" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5.5 3.6v8.8L12.4 8 5.5 3.6Z" fill="currentColor"/></svg>
+                <svg class="icon-pause" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5.5 3.5v9M10.5 3.5v9" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                <span>Preview</span>
+              </button>
+            </div>
+          </article>
+
+          <article class="scape" data-scape>
+            <div class="scape__visual" aria-hidden="true" style="--shift:-20deg">
+              <span class="scape__ripple"></span>
+              <span class="scape__ripple scape__ripple--two"></span>
+              <span class="scape__bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+            </div>
+            <div class="scape__body">
+              <p class="scape__tag">Piano · 18 min</p>
+              <h3>Slow piano</h3>
+              <p>Felt keys, a long decay, plenty of room.</p>
+              <button class="scape__play" type="button" aria-pressed="false" aria-label="Preview Slow piano soundscape">
+                <svg class="icon-play" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5.5 3.6v8.8L12.4 8 5.5 3.6Z" fill="currentColor"/></svg>
+                <svg class="icon-pause" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5.5 3.5v9M10.5 3.5v9" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                <span>Preview</span>
+              </button>
+            </div>
+          </article>
+
+          <article class="scape" data-scape>
+            <div class="scape__visual" aria-hidden="true" style="--shift:42deg">
+              <span class="scape__ripple"></span>
+              <span class="scape__ripple scape__ripple--two"></span>
+              <span class="scape__bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+            </div>
+            <div class="scape__body">
+              <p class="scape__tag">Night train · 40 min</p>
+              <h3>Night train</h3>
+              <p>A low carriage hum, moving through somewhere.</p>
+              <button class="scape__play" type="button" aria-pressed="false" aria-label="Preview Night train soundscape">
+                <svg class="icon-play" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5.5 3.6v8.8L12.4 8 5.5 3.6Z" fill="currentColor"/></svg>
+                <svg class="icon-pause" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5.5 3.5v9M10.5 3.5v9" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                <span>Preview</span>
+              </button>
+            </div>
+          </article>
+        </div>
+        <p class="nx-sr-only" role="status" aria-live="polite" data-scape-status></p>
+      </div>
+    </section>
+
+    <section class="section reset" id="reset" aria-labelledby="reset-title">
+      <div class="nx-container">
+        <div class="reset__card" data-reveal>
+          <div class="reset__copy">
+            <p class="kicker">The 7-day reset</p>
+            <h2 id="reset-title">Seven quiet evenings. <span>One small habit each.</span></h2>
+            <p>No 5 a.m. cold plunge. No score to chase. A week of moving bedtime twenty minutes earlier, with a sound at the end of each day.</p>
+            <ul class="reset__points">
+              <li><i aria-hidden="true"></i>One email each evening</li>
+              <li><i aria-hidden="true"></i>Fits around your current sleep</li>
+              <li><i aria-hidden="true"></i>Ends with a written summary</li>
+            </ul>
+          </div>
+          <div class="reset__form-wrap">
+            <p class="reset__form-title">Start on Monday</p>
+            <form class="reset__form" novalidate data-reset-form>
+              <label for="reset-email">Email address</label>
+              <input id="reset-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" aria-describedby="reset-note" required>
+              <button class="btn btn--primary" type="submit">
+                Start the reset
+                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h9M8.5 3.5 13 8l-4.5 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+              <p class="reset__status" data-reset-status role="status" aria-live="polite"></p>
+            </form>
+            <p class="reset__note" id="reset-note">No noise. One email, then a quiet week.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="nfoot">
+    <div class="nx-container">
+      <div class="nfoot__top">
+        <a class="nfoot__brand" href="#today"><span aria-hidden="true">N</span> NYXO Pulse</a>
+        <nav class="nfoot__nav" aria-label="Footer">
+          <a href="#today">Today</a>
+          <a href="#features">Your rhythm</a>
+          <a href="#sounds">Sounds</a>
+          <a href="index.html">All 10 styles</a>
+        </nav>
+        <p class="nfoot__note">A NYXO demonstration · Not medical advice</p>
+      </div>
+      <p class="nfoot__word" aria-hidden="true">Pulse</p>
+      <div class="nfoot__bottom">
+        <span>© <span data-year>2026</span> NYXO Web &amp; App Developer</span>
+        <span>Sleep data shown is illustrative</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (() => {
+      const chartData = {
+        sleep: { bars: [62, 74, 66, 88, 78, 70, 84], summary: '7h 12m', label: 'average sleep', delta: '+18m this week', aria: 'Sleep duration across the last seven days, averaging 7 hours 12 minutes.' },
+        recovery: { bars: [58, 66, 72, 80, 74, 68, 76], summary: '76 / 100', label: 'recovery score', delta: '+4 pts this week', aria: 'Recovery score across the last seven days, averaging 76 out of 100.' },
+        focus: { bars: [70, 82, 64, 90, 72, 66, 80], summary: '4h 05m', label: 'deep focus', delta: '+22m this week', aria: 'Deep focus across the last seven days, averaging 4 hours 5 minutes a day.' }
+      };
+
+      const chart = document.querySelector('[data-chart]');
+      const bars = Array.from(document.querySelectorAll('.sleep__bars li'));
+      const summary = document.querySelector('[data-chart-summary]');
+      const label = document.querySelector('[data-chart-label]');
+      const delta = document.querySelector('[data-chart-delta]');
+      const goal = document.querySelector('[data-chart-goal]');
+
+      document.querySelectorAll('[data-chart-key]').forEach((button) => {
+        button.addEventListener('click', () => {
+          const key = button.dataset.chartKey;
+          const data = chartData[key];
+          if (!data) return;
+
+          document.querySelectorAll('[data-chart-key]').forEach((item) => {
+            item.classList.toggle('is-active', item === button);
+            item.setAttribute('aria-pressed', String(item === button));
+          });
+
+          bars.forEach((bar, index) => {
+            bar.style.setProperty('--h', `${data.bars[index]}%`);
+          });
+
+          if (summary) summary.textContent = data.summary;
+          if (label) label.textContent = data.label;
+          if (delta) delta.textContent = data.delta;
+          if (chart) chart.setAttribute('aria-label', data.aria);
+          if (goal) goal.hidden = key !== 'sleep';
+        });
+      });
+
+      const mixer = document.querySelector('[data-mixer-toggle]');
+      const mixerStatus = document.querySelector('[data-mixer-status]');
+      const soundsPanel = document.querySelector('.panel--sounds');
+
+      if (mixer) {
+        mixer.addEventListener('click', () => {
+          const playing = mixer.getAttribute('aria-pressed') !== 'true';
+          mixer.setAttribute('aria-pressed', String(playing));
+          mixer.setAttribute('aria-label', playing ? 'Pause the soundscape mix' : 'Play the soundscape mix');
+          soundsPanel.classList.toggle('is-mixing', playing);
+          mixerStatus.textContent = playing ? 'Mix playing · 70 / 45 / 25' : 'Mix paused';
+        });
+      }
+
+      document.querySelectorAll('[data-mix]').forEach((input) => {
+        const output = input.parentElement.querySelector('[data-mix-output]');
+        const update = () => {
+          if (output) output.textContent = input.value;
+          if (mixerStatus && mixer && mixer.getAttribute('aria-pressed') === 'true') {
+            const values = Array.from(document.querySelectorAll('[data-mix]')).map((el) => el.value).join(' / ');
+            mixerStatus.textContent = `Mix playing · ${values}`;
+          }
+        };
+        input.addEventListener('input', update);
+      });
+
+      const scapeStatus = document.querySelector('[data-scape-status]');
+      document.querySelectorAll('[data-scape]').forEach((card) => {
+        const button = card.querySelector('.scape__play');
+        const label = button.querySelector('span');
+        button.addEventListener('click', () => {
+          const isActive = !card.classList.contains('is-active');
+          document.querySelectorAll('[data-scape]').forEach((other) => {
+            other.classList.remove('is-active');
+            const otherButton = other.querySelector('.scape__play');
+            otherButton.setAttribute('aria-pressed', 'false');
+            otherButton.querySelector('span').textContent = 'Preview';
+          });
+          if (isActive) {
+            card.classList.add('is-active');
+            button.setAttribute('aria-pressed', 'true');
+            label.textContent = 'Playing';
+          }
+          const title = card.querySelector('h3').textContent;
+          if (scapeStatus) scapeStatus.textContent = isActive ? `${title} preview playing` : 'Preview stopped';
+        });
+      });
+
+      const form = document.querySelector('[data-reset-form]');
+      const email = document.querySelector('#reset-email');
+      const status = document.querySelector('[data-reset-status]');
+      if (form) {
+        form.addEventListener('submit', (event) => {
+          event.preventDefault();
+          const value = email.value.trim();
+          const valid = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(value);
+          if (!valid) {
+            email.setAttribute('aria-invalid', 'true');
+            status.textContent = 'Please enter a valid email address.';
+            status.dataset.state = 'error';
+            email.focus();
+            return;
+          }
+          email.removeAttribute('aria-invalid');
+          status.textContent = 'Demo only — this form is not connected, so nothing was sent.';
+          status.dataset.state = 'ok';
+        });
+        email.addEventListener('input', () => {
+          email.removeAttribute('aria-invalid');
+          if (status.dataset.state === 'error') {
+            status.textContent = '';
+            status.dataset.state = '';
+          }
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

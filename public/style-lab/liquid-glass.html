@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en" data-page="liquid-glass">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#060a16">
+  <meta name="description" content="NYXO Aura — Aura One, a 360° glass speaker that reads the room. A liquid glass demonstration by NYXO Web &amp; App Developer.">
+  <title>NYXO Aura — Liquid Glass · NYXO Style Lab</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/liquid-glass.css">
+  <script>
+    document.documentElement.classList.add('js');
+    try {
+      var p = localStorage.getItem('nyxo.palette.' + document.documentElement.dataset.page);
+      if (p) document.documentElement.dataset.palette = p;
+    } catch (e) {}
+  </script>
+  <script src="assets/js/app.js" defer></script>
+</head>
+<body class="aura-page">
+  <a class="nx-skip" href="#main">Skip to content</a>
+  <header id="nx-bar" class="nx-bar" aria-label="Style lab controls"></header>
+
+  <header class="lg-head">
+    <div class="lg-head__inner nx-container">
+      <div class="lg-glass lg-navbar">
+        <a class="lg-brand" href="#top" aria-label="NYXO Aura — back to top">
+          <span class="lg-brand__mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="none">
+              <circle cx="16" cy="16" r="13" stroke="currentColor" stroke-width="1.2" opacity=".55"/>
+              <circle cx="16" cy="16" r="8" stroke="currentColor" stroke-width="1.2" opacity=".8"/>
+              <circle cx="16" cy="16" r="3" fill="currentColor"/>
+            </svg>
+          </span>
+          <span class="lg-brand__word">NYXO <em>Aura</em></span>
+        </a>
+
+        <nav class="lg-nav" aria-label="Primary">
+          <a href="#field">The field</a>
+          <a href="#craft">Craft</a>
+          <a href="#finishes">Finishes</a>
+          <a href="#reserve">Reserve</a>
+        </nav>
+
+        <div class="lg-head__actions">
+          <span class="lg-head__note">Aura One</span>
+          <a class="lg-btn lg-btn--small lg-btn--primary" href="#reserve">Reserve</a>
+          <button class="lg-menu" type="button" data-menu-toggle aria-controls="lg-sheet" aria-expanded="false" aria-label="Open menu">
+            <span></span><span></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="lg-glass lg-sheet" id="lg-sheet">
+        <a href="#field"><span>01</span> The field</a>
+        <a href="#craft"><span>02</span> Craft</a>
+        <a href="#finishes"><span>03</span> Finishes</a>
+        <a href="#reserve"><span>04</span> Reserve Aura One</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="lg-hero" id="top" aria-labelledby="hero-title">
+      <div class="lg-hero__inner nx-container">
+        <div class="lg-hero__copy">
+          <p class="lg-eyebrow" data-reveal>
+            <span class="lg-pill"><span class="lg-dot" aria-hidden="true"></span>Aura One · spatial speaker</span>
+            <span>NYXO Audio</span>
+          </p>
+          <h1 class="lg-hero__title" id="hero-title" data-reveal style="--reveal-delay:60ms">
+            Hear the <em>room.</em>
+          </h1>
+          <p class="lg-hero__lead" data-reveal style="--reveal-delay:130ms">
+            A speaker that stops sounding like a speaker. Aura One maps your walls
+            400 times a second, then dissolves into them — 360° sound with no sweet
+            spot and no screens.
+          </p>
+          <div class="lg-hero__actions" data-reveal style="--reveal-delay:190ms">
+            <a class="lg-btn lg-btn--primary lg-btn--large" href="#reserve" data-magnetic>
+              Reserve Aura One
+              <svg viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" stroke-width="1.6"/></svg>
+            </a>
+            <a class="lg-btn lg-btn--large" href="#field">Hear it move</a>
+          </div>
+          <p class="lg-hero__micro" data-reveal style="--reveal-delay:240ms">
+            ₹24,999 · Ships early 2027 · 30-day returns
+          </p>
+        </div>
+
+        <div class="lg-stage" data-reveal style="--reveal-delay:120ms">
+          <div class="lg-stage__halo" aria-hidden="true"></div>
+          <div class="lg-stage__rings" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </div>
+          <figure class="lg-orb" data-orb>
+            <img src="assets/img/liquid-orb.webp" width="1024" height="1024" alt="A translucent glass form with blue and violet refractions floating above a rippling dark surface" fetchpriority="high">
+          </figure>
+          <div class="lg-chip lg-chip--status">
+            <span class="lg-dot" aria-hidden="true"></span>
+            Spatial field <b>on</b>
+          </div>
+          <div class="lg-chip lg-chip--now">
+            <span class="lg-bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+            <span>
+              <em>Now playing</em>
+              Soft Geometry — NYXO Sessions
+            </span>
+          </div>
+          <div class="lg-chip lg-chip--depth">
+            <em>Depth</em>
+            <b>100%</b>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg-press nx-container" data-reveal>
+        <span class="lg-press__label">As heard in</span>
+        <span>The Quiet Review</span>
+        <span>Sonic Weekly</span>
+        <span>Form Journal</span>
+        <span>Monochrome</span>
+      </div>
+    </section>
+
+    <section class="lg-statement" aria-labelledby="statement-title">
+      <div class="lg-statement__inner nx-container">
+        <div>
+          <p class="lg-kicker" data-reveal>01 / The idea</p>
+          <h2 id="statement-title" data-reveal style="--reveal-delay:60ms">
+            Most speakers fill a room.<br>This one <em>listens</em> to it.
+          </h2>
+        </div>
+        <div class="lg-statement__side" data-reveal style="--reveal-delay:120ms">
+          <p>
+            Eight microphones read the shape of your space, then a small spatial
+            engine places every instrument where it belongs. The result is less
+            “speaker in a corner” and more “band in the room.”
+          </p>
+          <dl class="lg-stats">
+            <div><dt>Field</dt><dd><span data-count="360">360</span>°</dd></div>
+            <div><dt>Battery</dt><dd><span data-count="20">20</span> h</dd></div>
+            <div><dt>Weight</dt><dd><span data-count="42">42</span> g</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="lg-features" id="overview" aria-labelledby="features-title">
+      <div class="nx-container">
+        <header class="lg-section-head">
+          <p class="lg-kicker" data-reveal>02 / What it does</p>
+          <h2 id="features-title" data-reveal style="--reveal-delay:60ms">Quietly<br><em>clever.</em></h2>
+        </header>
+
+        <div class="lg-cards">
+          <article class="lg-glass lg-card" data-reveal>
+            <div class="lg-card__viz lg-card__viz--rings" aria-hidden="true">
+              <span></span><span></span><span></span><i></i>
+            </div>
+            <p class="lg-card__no">01</p>
+            <h3>Field mapping</h3>
+            <p class="lg-card__body">
+              Eight microphones scan your walls 400 times a second. Sound is placed
+              around you, not aimed at you.
+            </p>
+            <p class="lg-card__meta">360° · 400 scans / sec</p>
+          </article>
+
+          <article class="lg-glass lg-card" data-reveal style="--reveal-delay:70ms">
+            <div class="lg-card__viz lg-card__viz--wave" aria-hidden="true">
+              <i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+            </div>
+            <p class="lg-card__no">02</p>
+            <h3>RoomSense</h3>
+            <p class="lg-card__body">
+              Soft rooms, hard rooms, and that one terrible hotel. Aura One tunes
+              itself while the first track plays.
+            </p>
+            <p class="lg-card__meta">No setup · No measuring</p>
+          </article>
+
+          <article class="lg-glass lg-card" data-reveal style="--reveal-delay:140ms">
+            <div class="lg-card__viz lg-card__viz--moon" aria-hidden="true">
+              <span class="lg-moon"></span>
+              <span class="lg-moon-dot"></span>
+            </div>
+            <p class="lg-card__no">03</p>
+            <h3>Quiet hours</h3>
+            <p class="lg-card__body">
+              At low volume it flattens the bass for neighbours and lifts the detail
+              for you. Headphones, minus the headphones.
+            </p>
+            <p class="lg-card__meta">Late-night mode · One tap</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="lg-field" id="field" aria-labelledby="field-title">
+      <div class="nx-container">
+        <header class="lg-section-head lg-section-head--split">
+          <div>
+            <p class="lg-kicker" data-reveal>03 / Try it</p>
+            <h2 id="field-title" data-reveal style="--reveal-delay:60ms">Move the<br><em>sound.</em></h2>
+          </div>
+          <p class="lg-section-head__note" data-reveal style="--reveal-delay:120ms">
+            Change the preset or drag the field width. This is a visual simulation —
+            no audio, no app, no setup required.
+          </p>
+        </header>
+
+        <div class="lg-glass lg-demo" data-field data-reveal>
+          <div class="lg-demo__copy">
+            <p class="lg-demo__label">Field simulator</p>
+            <h3>Where should the band stand?</h3>
+            <p class="lg-demo__lede">
+              Azimuth moves the source around you. Width decides how much of the
+              room it fills.
+            </p>
+
+            <div class="lg-presets" role="group" aria-label="Sound field presets">
+              <button type="button" class="lg-preset" data-preset data-az="-35" data-width="42" aria-pressed="false">Studio</button>
+              <button type="button" class="lg-preset" data-preset data-az="20" data-width="78" aria-pressed="true">Live</button>
+              <button type="button" class="lg-preset" data-preset data-az="165" data-width="26" aria-pressed="false">Night</button>
+            </div>
+
+            <label class="lg-range" for="field-width">
+              <span>Field width</span>
+              <output data-width-out>78%</output>
+            </label>
+            <input class="lg-range__input" id="field-width" type="range" min="10" max="100" step="1" value="78" aria-describedby="field-hint">
+            <p class="nx-sr-only" id="field-hint">Adjusts how wide the simulated sound field is, from 10 to 100 percent.</p>
+
+            <label class="lg-switch">
+              <input type="checkbox" data-tracking checked>
+              <span class="lg-switch__track" aria-hidden="true"><i></i></span>
+              <span>Head tracking</span>
+            </label>
+          </div>
+
+          <div class="lg-demo__stage">
+            <div class="lg-viz" aria-hidden="true">
+              <span class="lg-viz__ring lg-viz__ring--1"></span>
+              <span class="lg-viz__ring lg-viz__ring--2"></span>
+              <span class="lg-viz__ring lg-viz__ring--3"></span>
+              <span class="lg-viz__sweep"></span>
+              <span class="lg-viz__listener"></span>
+              <span class="lg-source" data-source><i></i></span>
+              <span class="lg-source lg-source--ghost" data-ghost></span>
+            </div>
+            <div class="lg-demo__readout">
+              <span data-az-out>20° azimuth</span>
+              <span data-track-out>Head tracking on</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="lg-craft" id="craft" aria-labelledby="craft-title">
+      <div class="nx-container">
+        <header class="lg-section-head lg-section-head--split">
+          <div>
+            <p class="lg-kicker" data-reveal>04 / Craft</p>
+            <h2 id="craft-title" data-reveal style="--reveal-delay:60ms">42 grams<br>of <em>quiet.</em></h2>
+          </div>
+          <p class="lg-section-head__note" data-reveal style="--reveal-delay:120ms">
+            Hand-polished borosilicate glass around a recycled-aluminium chassis.
+            One seam, no visible screws, and a light that behaves like water.
+          </p>
+        </header>
+
+        <div class="lg-craft__grid">
+          <figure class="lg-craft__media" data-craft-media data-reveal>
+            <img src="assets/img/aura-studio.webp" width="1536" height="1024" alt="A translucent glass orb speaker glowing blue and violet on a travertine plinth in a sunlit studio" loading="lazy">
+            <figcaption>
+              <span>Aura One in Aurora · Morning light, 09:41</span>
+              <span>Material study 04</span>
+            </figcaption>
+            <span class="lg-tag lg-tag--a">Hand-polished</span>
+            <span class="lg-tag lg-tag--b">Borosilicate · 42 g</span>
+          </figure>
+
+          <div class="lg-glass lg-craft__panel" data-reveal style="--reveal-delay:100ms">
+            <p class="lg-kicker">Built to disappear</p>
+            <h3>Glass that holds<br>a little <em>weather.</em></h3>
+            <p class="lg-craft__body">
+              The shell is a single piece of borosilicate, polished for eleven hours.
+              Inside, two 24 mm drivers sit in a sealed chamber with a faint
+              iridescent membrane — enough colour to catch the light, never enough
+              to shout.
+            </p>
+
+            <dl class="lg-specs">
+              <div><dt>Drivers</dt><dd>2 × 24 mm full-range</dd></div>
+              <div><dt>Microphones</dt><dd>8, for room mapping</dd></div>
+              <div><dt>Battery</dt><dd>20 hours, USB-C</dd></div>
+              <div><dt>Weight</dt><dd>42 g</dd></div>
+              <div><dt>Materials</dt><dd>Borosilicate glass, recycled aluminium</dd></div>
+              <div><dt>Connectivity</dt><dd>Wi-Fi 7, Bluetooth 5.4, AirPlay 2</dd></div>
+            </dl>
+
+            <p class="lg-craft__note">Designed in Pune. Assembled in small batches.</p>
+          </div>
+        </div>
+
+        <div class="lg-detail" data-reveal>
+          <img src="assets/img/aura-detail.webp" width="1024" height="1024" alt="Macro detail of layered frosted and polished glass with water droplets and a small cyan light" loading="lazy">
+          <div>
+            <p class="lg-kicker">Detail 01</p>
+            <p class="lg-detail__line">A single status light, diffused through 4 mm of glass.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="lg-finishes" id="finishes" aria-labelledby="finishes-title">
+      <div class="nx-container">
+        <header class="lg-section-head">
+          <p class="lg-kicker" data-reveal>05 / Finishes</p>
+          <h2 id="finishes-title" data-reveal style="--reveal-delay:60ms">Three finishes.<br>One <em>silhouette.</em></h2>
+        </header>
+
+        <div class="lg-glass lg-finish" data-finish-panel data-finish="aurora" data-reveal>
+          <div class="lg-finish__stage">
+            <span class="lg-finish__glow" aria-hidden="true"></span>
+            <img class="lg-finish__orb" data-finish-orb src="assets/img/liquid-orb.webp" width="1024" height="1024" alt="Aura One glass speaker in the Aurora finish, glowing blue and violet">
+          </div>
+
+          <div class="lg-finish__body">
+            <p class="lg-finish__label">Selected finish</p>
+            <h3 data-finish-name>Aurora</h3>
+            <p class="lg-finish__desc" data-finish-desc>
+              Iridescent borosilicate with a blue-violet heart. The finish that
+              started it all.
+            </p>
+
+            <div class="lg-swatches" role="group" aria-label="Choose a finish">
+              <button type="button" class="lg-swatch is-active" data-finish-btn="aurora" aria-pressed="true">
+                <span class="lg-swatch__dot lg-swatch__dot--aurora" aria-hidden="true"></span>
+                Aurora
+              </button>
+              <button type="button" class="lg-swatch" data-finish-btn="frost" aria-pressed="false">
+                <span class="lg-swatch__dot lg-swatch__dot--frost" aria-hidden="true"></span>
+                Frost
+              </button>
+              <button type="button" class="lg-swatch" data-finish-btn="graphite" aria-pressed="false">
+                <span class="lg-swatch__dot lg-swatch__dot--graphite" aria-hidden="true"></span>
+                Graphite
+              </button>
+            </div>
+
+            <p class="lg-finish__note">
+              Every finish is the same 42 g of glass. The colour lives in the
+              membrane, not the shell.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="lg-reserve" id="reserve" aria-labelledby="reserve-title">
+      <div class="nx-container">
+        <div class="lg-glass lg-reserve__panel" data-reveal>
+          <div class="lg-reserve__copy">
+            <p class="lg-kicker">06 / Reserve</p>
+            <h2 id="reserve-title">Be first<br>in the <em>room.</em></h2>
+            <p class="lg-reserve__lead">
+              Aura One ships in small batches from early 2027. Reserve now and
+              you will only pay when your unit is ready to leave the studio.
+            </p>
+            <div class="lg-price">
+              <strong>₹24,999</strong>
+              <span>Aura One · Aurora<br>₹0 today</span>
+            </div>
+            <ul class="lg-reserve__list">
+              <li>Free 30-day returns, no questions</li>
+              <li>Two-year hardware warranty</li>
+              <li>Founder pricing locked at launch</li>
+            </ul>
+          </div>
+
+          <div class="lg-reserve__form-wrap">
+            <p class="lg-reserve__count"><span data-count="1204">1,204</span> people in line</p>
+            <form class="lg-form" data-reserve-form novalidate>
+              <label for="reserve-email">Email for your reservation</label>
+              <input id="reserve-email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="you@example.com" required>
+              <button class="lg-btn lg-btn--primary lg-btn--large" type="submit">
+                Reserve — ₹0 today
+                <svg viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" stroke-width="1.6"/></svg>
+              </button>
+              <p class="lg-form__small">No payment now. One email when your batch opens.</p>
+              <p class="lg-form__status" data-reserve-status aria-live="polite"></p>
+            </form>
+
+            <div class="lg-reserve__done" data-reserve-done hidden>
+              <span class="lg-done__mark" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="m5 12 5 5L20 7" stroke="currentColor" stroke-width="1.6"/></svg>
+              </span>
+              <h3>You are in the room.</h3>
+              <p data-reserve-email>We will write when your batch opens.</p>
+              <button class="lg-btn lg-btn--small" type="button" data-reserve-reset>Use a different email</button>
+            </div>
+
+            <p class="lg-form__demo">A design demonstration — no payment is taken and no email is sent.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="lg-foot">
+    <div class="nx-container">
+      <div class="lg-foot__top">
+        <a class="lg-brand" href="#top" aria-label="NYXO Aura — back to top">
+          <span class="lg-brand__mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="none">
+              <circle cx="16" cy="16" r="13" stroke="currentColor" stroke-width="1.2" opacity=".55"/>
+              <circle cx="16" cy="16" r="8" stroke="currentColor" stroke-width="1.2" opacity=".8"/>
+              <circle cx="16" cy="16" r="3" fill="currentColor"/>
+            </svg>
+          </span>
+          <span class="lg-brand__word">NYXO <em>Aura</em></span>
+        </a>
+        <nav class="lg-foot__nav" aria-label="Footer">
+          <a href="#field">The field</a>
+          <a href="#craft">Craft</a>
+          <a href="#finishes">Finishes</a>
+          <a href="#reserve">Reserve</a>
+          <a href="index.html">All NYXO styles</a>
+        </nav>
+      </div>
+      <div class="lg-foot__bottom">
+        <span>© <span data-year>2026</span> NYXO Web &amp; App Developer</span>
+        <span>A design demonstration. The product, prices and press quotes are fictional.</span>
+        <a href="mailto:hello@nyxo.dev">hello@nyxo.dev</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (() => {
+      "use strict";
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+      const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+
+      /* Orb pointer parallax. */
+      const hero = document.querySelector(".lg-hero");
+      const orb = document.querySelector("[data-orb]");
+      if (hero && orb && finePointer && !reduceMotion.matches) {
+        let frame = 0;
+        hero.addEventListener("pointermove", (event) => {
+          if (event.pointerType === "touch") return;
+          if (frame) return;
+          frame = requestAnimationFrame(() => {
+            orb.style.setProperty("--px", (event.clientX / window.innerWidth - 0.5).toFixed(3));
+            orb.style.setProperty("--py", (event.clientY / window.innerHeight - 0.5).toFixed(3));
+            frame = 0;
+          });
+        }, { passive: true });
+      }
+
+      /* Field simulator. */
+      const field = document.querySelector("[data-field]");
+      if (field) {
+        const source = field.querySelector("[data-source]");
+        const ghost = field.querySelector("[data-ghost]");
+        const range = field.querySelector("#field-width");
+        const widthOut = field.querySelector("[data-width-out]");
+        const azOut = field.querySelector("[data-az-out]");
+        const trackOut = field.querySelector("[data-track-out]");
+        const tracking = field.querySelector("[data-tracking]");
+        const presets = [...field.querySelectorAll("[data-preset]")];
+        let azimuth = 20;
+
+        function paint() {
+          const width = Number(range.value);
+          const rad = (azimuth * Math.PI) / 180;
+          const radius = 27 + width * 0.19;
+          source.style.left = (50 + Math.cos(rad) * radius).toFixed(2) + "%";
+          source.style.top = (50 + Math.sin(rad) * radius).toFixed(2) + "%";
+          ghost.style.left = (50 - Math.cos(rad) * radius * 0.62).toFixed(2) + "%";
+          ghost.style.top = (50 - Math.sin(rad) * radius * 0.62).toFixed(2) + "%";
+          field.style.setProperty("--spread", (width / 100).toFixed(2));
+          field.style.setProperty("--az", azimuth + "deg");
+          widthOut.textContent = width + "%";
+          azOut.textContent = azimuth + "° azimuth";
+          const on = tracking.checked;
+          field.classList.toggle("is-untracked", !on);
+          trackOut.textContent = on ? "Head tracking on" : "Head tracking off";
+          presets.forEach((button) => {
+            const match = Number(button.dataset.az) === azimuth && Number(button.dataset.width) === width;
+            button.setAttribute("aria-pressed", String(match));
+          });
+        }
+
+        range.addEventListener("input", () => {
+          paint();
+          range.setAttribute("aria-valuetext", range.value + " percent wide");
+        });
+
+        presets.forEach((button) => {
+          button.addEventListener("click", () => {
+            azimuth = Number(button.dataset.az);
+            range.value = button.dataset.width;
+            paint();
+            range.setAttribute("aria-valuetext", range.value + " percent wide");
+          });
+        });
+
+        tracking.addEventListener("change", paint);
+        paint();
+      }
+
+      /* Finish switcher. */
+      const finishPanel = document.querySelector("[data-finish-panel]");
+      if (finishPanel) {
+        const finishName = finishPanel.querySelector("[data-finish-name]");
+        const finishDesc = finishPanel.querySelector("[data-finish-desc]");
+        const finishButtons = [...finishPanel.querySelectorAll("[data-finish-btn]")];
+        const copies = {
+          aurora: {
+            name: "Aurora",
+            desc: "Iridescent borosilicate with a blue-violet heart. The finish that started it all.",
+          },
+          frost: {
+            name: "Frost",
+            desc: "Satin-etched glass that disappears in daylight, with a soft mint edge at the seam.",
+          },
+          graphite: {
+            name: "Graphite",
+            desc: "Smoked glass over recycled aluminium. Quiet in a dark room, almost invisible by day.",
+          },
+        };
+
+        finishButtons.forEach((button) => {
+          button.addEventListener("click", () => {
+            const finish = button.dataset.finishBtn;
+            finishPanel.dataset.finish = finish;
+            finishName.textContent = copies[finish].name;
+            finishDesc.textContent = copies[finish].desc;
+            finishButtons.forEach((entry) => {
+              const active = entry === button;
+              entry.classList.toggle("is-active", active);
+              entry.setAttribute("aria-pressed", String(active));
+            });
+          });
+        });
+      }
+
+      /* Reservation form. */
+      const form = document.querySelector("[data-reserve-form]");
+      if (form) {
+        const input = form.querySelector("#reserve-email");
+        const status = form.querySelector("[data-reserve-status]");
+        const done = document.querySelector("[data-reserve-done]");
+        const doneEmail = document.querySelector("[data-reserve-email]");
+        const reset = document.querySelector("[data-reserve-reset]");
+        const demoNote = document.querySelector(".lg-form__demo");
+
+        form.addEventListener("submit", (event) => {
+          event.preventDefault();
+          const value = input.value.trim();
+          if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(value)) {
+            status.textContent = "That email does not look right — check it and try again.";
+            input.setAttribute("aria-invalid", "true");
+            input.focus();
+            return;
+          }
+          input.removeAttribute("aria-invalid");
+          form.hidden = true;
+          if (demoNote) demoNote.hidden = true;
+          done.hidden = false;
+          doneEmail.textContent = "We will write to " + value + " when your batch opens.";
+          done.querySelector("[data-reserve-reset]").focus();
+        });
+
+        reset.addEventListener("click", () => {
+          done.hidden = true;
+          form.hidden = false;
+          if (demoNote) demoNote.hidden = false;
+          status.textContent = "";
+          input.value = "";
+          input.focus();
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

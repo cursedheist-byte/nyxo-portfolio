@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en" data-page="brutalism">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#d8ff00">
+  <meta name="description" content="NYXO/DROP — small-batch streetwear built loud. A brutalism demonstration by NYXO Web &amp; App Developer.">
+  <title>NYXO/DROP — Brutalism · NYXO Style Lab</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/brutalism.css">
+  <script>
+    document.documentElement.classList.add('js');
+    try {
+      var p = localStorage.getItem('nyxo.palette.' + document.documentElement.dataset.page);
+      if (p) document.documentElement.dataset.palette = p;
+    } catch (e) {}
+  </script>
+  <script src="assets/js/app.js" defer></script>
+</head>
+<body class="drop-page">
+  <a class="nx-skip" href="#main">Skip to content</a>
+  <header id="nx-bar" class="nx-bar" aria-label="Style lab controls"></header>
+
+  <header class="dr-head">
+    <div class="dr-head__inner nx-container">
+      <a class="dr-brand" href="#top" aria-label="NYXO Drop home">
+        <span class="dr-brand__box">N</span>
+        <span class="dr-brand__word">NYXO<span>/</span>DROP</span>
+      </a>
+
+      <nav class="dr-nav" aria-label="Primary">
+        <a href="#shop">Shop</a>
+        <a href="#lookbook">Lookbook</a>
+        <a href="#manifesto">Manifesto</a>
+        <a href="#list">Drop list</a>
+      </nav>
+
+      <div class="dr-head__actions">
+        <span class="dr-live" aria-hidden="true"><i></i> Drop 004 live</span>
+        <button class="dr-bag-btn" type="button" data-bag-open>
+          Bag <span data-bag-count>0</span>
+          <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 6.5h12l-1 11H5l-1-11Z" stroke="currentColor" stroke-width="2"/><path d="M7.5 6.5V5a2.5 2.5 0 0 1 5 0v1.5" stroke="currentColor" stroke-width="2"/></svg>
+        </button>
+        <button class="dr-menu" type="button" data-menu-toggle aria-controls="dr-sheet" aria-expanded="false" aria-label="Open menu">
+          <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h9" stroke="currentColor" stroke-width="2.5" stroke-linecap="square"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="dr-sheet" id="dr-sheet">
+      <a href="#shop">Shop</a>
+      <a href="#lookbook">Lookbook</a>
+      <a href="#manifesto">Manifesto</a>
+      <a href="#list">Drop list</a>
+      <button type="button" data-bag-open>Open bag <span data-bag-count>0</span></button>
+    </div>
+  </header>
+
+  <div class="dr-ticker" aria-hidden="true">
+    <div class="dr-ticker__track">
+      <span>DROP 004 — WINTER 2026</span><b>✱</b>
+      <span>SMALL BATCHES ONLY</span><b>✱</b>
+      <span>NO RESTOCKS. EVER</span><b>✱</b>
+      <span>FREE SHIPPING OVER ₹4,999</span><b>✱</b>
+      <span>WEAR THE SIGNAL</span><b>✱</b>
+      <span>DROP 004 — WINTER 2026</span><b>✱</b>
+      <span>SMALL BATCHES ONLY</span><b>✱</b>
+      <span>NO RESTOCKS. EVER</span><b>✱</b>
+      <span>FREE SHIPPING OVER ₹4,999</span><b>✱</b>
+      <span>WEAR THE SIGNAL</span><b>✱</b>
+    </div>
+  </div>
+
+  <main id="main">
+    <section class="dr-hero" id="top" aria-labelledby="hero-title">
+      <div class="dr-hero__grid nx-container">
+        <div class="dr-hero__copy">
+          <p class="dr-tag" data-reveal>
+            <span>Drop 004</span> Winter 2026 · 500 pieces
+          </p>
+          <h1 class="dr-hero__title" id="hero-title" data-reveal style="--reveal-delay:60ms">
+            <span>WEAR</span>
+            <span>THE <em data-text="GLITCH">GLITCH</em></span>
+          </h1>
+          <p class="dr-hero__lead" data-reveal style="--reveal-delay:120ms">
+            Heavyweight streetwear for people who would rather be seen than scrolled past.
+            Built in small batches, cut boxy, and finished with exactly zero decorative logos.
+          </p>
+          <div class="dr-hero__cta" data-reveal style="--reveal-delay:170ms">
+            <a class="dr-btn dr-btn--ink" href="#shop">
+              Shop the drop
+              <svg viewBox="0 0 22 22" fill="none" aria-hidden="true"><path d="M4 11h14M12 5l6 6-6 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="square"/></svg>
+            </a>
+            <a class="dr-btn dr-btn--line" href="#lookbook">Lookbook 004</a>
+          </div>
+          <dl class="dr-hero__meta" data-reveal style="--reveal-delay:220ms">
+            <div><dt>Weight</dt><dd>240–480 GSM</dd></div>
+            <div><dt>Batch</dt><dd>40 per style</dd></div>
+            <div><dt>Restock</dt><dd>Never</dd></div>
+          </dl>
+        </div>
+
+        <div class="dr-hero__visual" data-reveal style="--reveal-delay:120ms">
+          <article class="dr-poster" data-tilt aria-label="Drop 004 hero piece: Void Hoodie">
+            <header class="dr-poster__bar">
+              <span>001 / VOID HOODIE</span>
+              <span>FW26</span>
+            </header>
+            <div class="dr-poster__stage">
+              <span class="dr-poster__ghost" aria-hidden="true">004</span>
+              <svg class="dr-poster__svg" viewBox="0 0 320 320" fill="none" aria-hidden="true">
+                <path d="M96 112 128 94h64l32 18 18 100-32 10-6 82H114l-6-82-32-10 20-100Z" fill="#0a0a0a"/>
+                <path d="M96 112 58 138 42 226l34 8 20-84Z" fill="#0a0a0a"/>
+                <path d="M224 112l38 26 16 88-34 8-20-84Z" fill="#0a0a0a"/>
+                <path d="M126 100c-8-46 76-46 68 0-8 22-60 22-68 0Z" fill="#0a0a0a"/>
+                <path d="M138 94c6-28 38-28 44 0-8 15-36 15-44 0Z" fill="#d8ff00" fill-opacity=".22"/>
+                <path d="M150 106v34M170 106v28" stroke="#d8ff00" stroke-width="4" stroke-linecap="square"/>
+                <rect x="128" y="190" width="64" height="52" fill="#d8ff00"/>
+                <path d="M114 290h92l3 14h-98l3-14Z" fill="#d8ff00" fill-opacity=".25"/>
+                <text x="160" y="222" text-anchor="middle" font-family="Archivo Black, sans-serif" font-size="17" fill="#0a0a0a">NYXO</text>
+                <text x="160" y="237" text-anchor="middle" font-family="Space Mono, monospace" font-size="7" letter-spacing="1.5" fill="#0a0a0a">NO RESTOCK</text>
+              </svg>
+              <span class="dr-sticker dr-sticker--one" aria-hidden="true">DROP<br>004</span>
+              <span class="dr-sticker dr-sticker--two" aria-hidden="true">100%<br>SIGNAL</span>
+              <span class="dr-poster__barcode" aria-hidden="true">
+                <i style="--w:2px"></i><i style="--w:1px"></i><i style="--w:4px"></i><i style="--w:2px"></i><i style="--w:1px"></i><i style="--w:3px"></i><i style="--w:1px"></i><i style="--w:2px"></i><i style="--w:4px"></i><i style="--w:1px"></i><i style="--w:2px"></i><i style="--w:3px"></i>
+                <b>7 004 2026</b>
+              </span>
+            </div>
+            <footer class="dr-poster__foot">
+              <div><span>Heavyweight hoodie</span><strong>₹4,900</strong></div>
+              <span class="dr-poster__status"><i></i> In stock</span>
+            </footer>
+          </article>
+          <p class="dr-hero__note" aria-hidden="true">Fig. 01 — Void Hoodie, 480 GSM loopback cotton. Photographed on a Tuesday.</p>
+        </div>
+      </div>
+
+      <div class="dr-hero__edge nx-container" aria-hidden="true">
+        <span>SCROLL / 004</span>
+        <span>NYXO WEB &amp; APP DEVELOPER — STYLE LAB</span>
+      </div>
+    </section>
+
+    <section class="dr-shop" id="shop" aria-labelledby="shop-title">
+      <div class="nx-container">
+        <header class="dr-section-head" data-reveal>
+          <div>
+            <p class="dr-kicker">[ The collection ]</p>
+            <h2 id="shop-title">DROP / 004</h2>
+          </div>
+          <p class="dr-section-head__meta">6 pieces · 40 units each<br>Cut, sewn and numbered in Tirupur</p>
+        </header>
+
+        <div class="dr-filters" data-reveal>
+          <div class="dr-filters__group" role="group" aria-label="Filter products by category">
+            <button type="button" class="is-active" data-filter="all" aria-pressed="true">All <span>06</span></button>
+            <button type="button" data-filter="tops" aria-pressed="false">Tops <span>03</span></button>
+            <button type="button" data-filter="bottoms" aria-pressed="false">Bottoms <span>02</span></button>
+            <button type="button" data-filter="accessories" aria-pressed="false">Accessories <span>01</span></button>
+          </div>
+          <p class="dr-filters__status" data-filter-status aria-live="polite">Showing all 6 pieces</p>
+        </div>
+
+        <div class="dr-grid" data-product-grid>
+          <article class="dr-card" data-cat="tops" data-product="VOID HOODIE 001" data-price="4900" data-reveal>
+            <div class="dr-card__media dr-tile--accent">
+              <span class="dr-card__index" aria-hidden="true">001</span>
+              <span class="dr-card__flag">New</span>
+              <svg class="dr-garment" viewBox="0 0 320 320" fill="none" aria-hidden="true">
+                <path d="M96 112 128 94h64l32 18 18 100-32 10-6 82H114l-6-82-32-10 20-100Z" fill="var(--g-fill)"/>
+                <path d="M96 112 58 138 42 226l34 8 20-84Z" fill="var(--g-fill)"/>
+                <path d="M224 112l38 26 16 88-34 8-20-84Z" fill="var(--g-fill)"/>
+                <path d="M126 100c-8-46 76-46 68 0-8 22-60 22-68 0Z" fill="var(--g-fill)"/>
+                <path d="M138 94c6-28 38-28 44 0-8 15-36 15-44 0Z" fill="var(--g-print)" fill-opacity=".3"/>
+                <path d="M150 106v36M170 106v30" stroke="var(--g-print)" stroke-width="4" stroke-linecap="square"/>
+                <rect x="132" y="196" width="56" height="40" fill="var(--g-print)"/>
+                <text x="160" y="221" text-anchor="middle" font-family="Archivo Black, sans-serif" font-size="15" fill="var(--g-fill)">N/D</text>
+              </svg>
+            </div>
+            <div class="dr-card__body">
+              <div class="dr-card__row">
+                <h3>VOID HOODIE</h3>
+                <span class="dr-card__price">₹4,900</span>
+              </div>
+              <p class="dr-card__desc">480 GSM loopback · boxy fit · acid print</p>
+              <div class="dr-sizes" role="group" aria-label="Size for Void Hoodie">
+                <button type="button" data-size="S" aria-pressed="false">S</button>
+                <button type="button" data-size="M" aria-pressed="false">M</button>
+                <button type="button" data-size="L" aria-pressed="false">L</button>
+                <button type="button" data-size="XL" aria-pressed="false">XL</button>
+              </div>
+              <button class="dr-add" type="button" data-add data-name="VOID HOODIE 001" data-short="Void Hoodie" data-price="4900">
+                <span data-add-label>Add to bag</span>
+                <svg viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M9 3v12M3 9h12" stroke="currentColor" stroke-width="2.5" stroke-linecap="square"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <article class="dr-card" data-cat="tops" data-product="NOISE TEE 003" data-price="1900" data-reveal style="--reveal-delay:60ms">
+            <div class="dr-card__media dr-tile--ink">
+              <span class="dr-card__index" aria-hidden="true">003</span>
+              <svg class="dr-garment" viewBox="0 0 320 320" fill="none" aria-hidden="true">
+                <path d="M104 98 148 82h24l44 16 20 58-28 12v120H112V168l-28-12 20-58Z" fill="var(--g-fill)"/>
+                <path d="M148 82c6 16 18 16 24 0" stroke="var(--g-print)" stroke-width="4"/>
+                <path d="M112 288h96" stroke="var(--g-print)" stroke-width="4"/>
+                <text x="160" y="172" text-anchor="middle" font-family="Archivo Black, sans-serif" font-size="34" fill="var(--g-print)">NO</text>
+                <text x="160" y="208" text-anchor="middle" font-family="Archivo Black, sans-serif" font-size="34" fill="var(--g-print)">ISE</text>
+                <text x="160" y="226" text-anchor="middle" font-family="Space Mono, monospace" font-size="7" letter-spacing="2" fill="var(--g-print)">240 GSM / OFF-BLACK</text>
+              </svg>
+              <span class="dr-card__stamp">02/40</span>
+            </div>
+            <div class="dr-card__body">
+              <div class="dr-card__row">
+                <h3>NOISE TEE</h3>
+                <span class="dr-card__price">₹1,900</span>
+              </div>
+              <p class="dr-card__desc">240 GSM combed cotton · drop shoulder · glitch print</p>
+              <div class="dr-sizes" role="group" aria-label="Size for Noise Tee">
+                <button type="button" data-size="S" aria-pressed="false">S</button>
+                <button type="button" data-size="M" aria-pressed="false">M</button>
+                <button type="button" data-size="L" aria-pressed="false">L</button>
+                <button type="button" data-size="XL" aria-pressed="false">XL</button>
+              </div>
+              <button class="dr-add" type="button" data-add data-name="NOISE TEE 003" data-short="Noise Tee" data-price="1900">
+                <span data-add-label>Add to bag</span>
+                <svg viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M9 3v12M3 9h12" stroke="currentColor" stroke-width="2.5" stroke-linecap="square"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <article class="dr-card" data-cat="tops" data-product="GRID OVERSHIRT 005" data-price="5400" data-reveal style="--reveal-delay:120ms">
+            <div class="dr-card__media dr-tile--paper">
+              <span class="dr-card__index" aria-hidden="true">005</span>
+              <svg class="dr-garment" viewBox="0 0 320 320" fill="none" aria-hidden="true">
+                <path d="M100 96h120l16 196H84L100 96Z" fill="var(--g-fill)"/>
+                <path d="M100 96 66 118 54 250l28 8 18-136M220 96l34 22 12 132-28 8-18-136" fill="var(--g-fill)"/>
+                <path d="M134 96 160 128l26-32" stroke="var(--g-print)" stroke-width="4"/>
+                <path d="M160 128v164" stroke="var(--g-print)" stroke-width="3"/>
+                <circle cx="160" cy="158" r="3.5" fill="var(--g-print)"/>
+                <circle cx="160" cy="196" r="3.5" fill="var(--g-print)"/>
+                <circle cx="160" cy="234" r="3.5" fill="var(--g-print)"/>
+                <rect x="104" y="166" width="34" height="34" stroke="var(--g-print)" stroke-width="3"/>
+                <rect x="182" y="166" width="34" height="34" stroke="var(--g-print)" stroke-width="3"/>
+                <rect x="114" y="258" width="30" height="12" fill="var(--g-print)"/>
+              </svg>
+              <span class="dr-card__flag dr-card__flag--ink">Heavy</span>
+            </div>
+            <div class="dr-card__body">
+              <div class="dr-card__row">
+                <h3>GRID OVERSHIRT</h3>
+                <span class="dr-card__price">₹5,400</span>
+              </div>
+              <p class="dr-card__desc">Cotton twill · double pocket · boxy longline</p>
+              <div class="dr-sizes" role="group" aria-label="Size for Grid Overshirt">
+                <button type="button" data-size="S" aria-pressed="false">S</button>
+                <button type="button" data-size="M" aria-pressed="false">M</button>
+                <button type="button" data-size="L" aria-pressed="false">L</button>
+                <button type="button" data-size="XL" aria-pressed="false">XL</button>
+              </div>
+              <button class="dr-add" type="button" data-add data-name="GRID OVERSHIRT 005" data-short="Grid Overshirt" data-price="5400">
+                <span data-add-label>Add to bag</span>
+                <svg viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M9 3v12M3 9h12" stroke="currentColor" stroke-width="2.5" stroke-linecap="square"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <article class="dr-card" data-cat="bottoms" data-product="STATIC CARGO 002" data-price="3800" data-reveal>
+            <div class="dr-card__media dr-tile--bg">
+              <span class="dr-card__index" aria-hidden="true">002</span>
+              <span class="dr-card__flag">Low stock</span>
+              <svg class="dr-garment" viewBox="0 0 320 320" fill="none" aria-hidden="true">
+                <path d="M104 78h112l10 70-14 144h-42l-10-104-10 104h-42L94 148l10-70Z" fill="var(--g-fill)"/>
+                <rect x="104" y="78" width="112" height="22" fill="var(--g-fill)"/>
+                <path d="M160 100v88" stroke="var(--g-print)" stroke-width="2.5" stroke-dasharray="7 6"/>
+                <rect x="102" y="138" width="34" height="40" fill="var(--g-print)"/>
+                <rect x="184" y="138" width="34" height="40" fill="var(--g-print)"/>
+                <path d="M102 152h34M184 152h34" stroke="var(--g-fill)" stroke-width="2.5"/>
+                <path d="M120 92h30M170 92h30" stroke="var(--g-print)" stroke-width="4" stroke-linecap="square"/>
+                <path d="M132 292h26M162 292h26" stroke="var(--g-print)" stroke-width="3"/>
+              </svg>
+              <span class="dr-card__stamp">06/40</span>
+            </div>
+            <div class="dr-card__body">
+              <div class="dr-card__row">
+                <h3>STATIC CARGO</h3>
+                <span class="dr-card__price">₹3,800</span>
+              </div>
+              <p class="dr-card__desc">Ripstop cotton · six pockets · adjustable hem</p>
+              <div class="dr-sizes" role="group" aria-label="Size for Static Cargo">
+                <button type="button" data-size="28" aria-pressed="false">28</button>
+                <button type="button" data-size="30" aria-pressed="false">30</button>
+                <button type="button" data-size="32" aria-pressed="false">32</button>
+                <button type="button" data-size="34" aria-pressed="false">34</button>
+              </div>
+              <button class="dr-add" type="button" data-add data-name="STATIC CARGO 002" data-short="Static Cargo" data-price="3800">
+                <span data-add-label>Add to bag</span>
+                <svg viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M9 3v12M3 9h12" stroke="currentColor" stroke-width="2.5" stroke-linecap="square"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <article class="dr-card" data-cat="bottoms" data-product="OFFLINE SHORTS 006" data-price="2800" data-reveal style="--reveal-delay:60ms">
+            <div class="dr-card__media dr-tile--ink">
+              <span class="dr-card__index" aria-hidden="true">006</span>
+              <svg class="dr-garment" viewBox="0 0 320 320" fill="none" aria-hidden="true">
+                <path d="M98 116h124l8 44-10 96h-46l-14-88-14 88h-46l-10-96 8-44Z" fill="var(--g-fill)"/>
+                <rect x="98" y="116" width="124" height="18" fill="var(--g-fill)"/>
+                <path d="M120 128h30M170 128h30" stroke="var(--g-print)" stroke-width="4" stroke-linecap="square"/>
+                <path d="M160 134v-6" stroke="var(--g-print)" stroke-width="4"/>
+                <path d="M108 180h34v34h-34z" fill="var(--g-print)"/>
+                <path d="M112 186v22M120 186v22M128 186v22M136 186v22" stroke="var(--g-fill)" stroke-width="2"/>
+                <path d="M160 152v36" stroke="var(--g-print)" stroke-width="3"/>
+                <path d="M112 262h34M174 262h34" stroke="var(--g-print)" stroke-width="2.5"/>
+              </svg>
+              <span class="dr-card__stamp">11/40</span>
+            </div>
+            <div class="dr-card__body">
+              <div class="dr-card__row">
+                <h3>OFFLINE SHORTS</h3>
+                <span class="dr-card__price">₹2,800</span>
+              </div>
+              <p class="dr-card__desc">Nylon ripstop · 7-inch inseam · cargo pocket</p>
+              <div class="dr-sizes" role="group" aria-label="Size for Offline Shorts">
+                <button type="button" data-size="S" aria-pressed="false">S</button>
+                <button type="button" data-size="M" aria-pressed="false">M</button>
+                <button type="button" data-size="L" aria-pressed="false">L</button>
+                <button type="button" data-size="XL" aria-pressed="false">XL</button>
+              </div>
+              <button class="dr-add" type="button" data-add data-name="OFFLINE SHORTS 006" data-short="Offline Shorts" data-price="2800">
+                <span data-add-label>Add to bag</span>
+                <svg viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M9 3v12M3 9h12" stroke="currentColor" stroke-width="2.5" stroke-linecap="square"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <article class="dr-card" data-cat="accessories" data-product="SIGNAL CAP 004" data-price="1600" data-reveal style="--reveal-delay:120ms">
+            <div class="dr-card__media dr-tile--accent">
+              <span class="dr-card__index" aria-hidden="true">004</span>
+              <svg class="dr-garment" viewBox="0 0 320 320" fill="none" aria-hidden="true">
+                <path d="M92 190c0-74 136-74 136 0v18H92v-18Z" fill="var(--g-fill)"/>
+                <path d="M92 190h136c34 0 48 14 48 26H88c-10 0-12-14 4-26Z" fill="var(--g-fill)"/>
+                <path d="M160 116v92" stroke="var(--g-print)" stroke-width="2.5"/>
+                <path d="M124 128c10 12 22 18 36 20M196 128c-10 12-22 18-36 20" stroke="var(--g-print)" stroke-width="2.5"/>
+                <circle cx="160" cy="112" r="5" fill="var(--g-print)"/>
+                <text x="160" y="178" text-anchor="middle" font-family="Archivo Black, sans-serif" font-size="18" fill="var(--g-print)">N/D</text>
+                <path d="M98 208h124" stroke="var(--g-print)" stroke-width="2" stroke-dasharray="5 5"/>
+              </svg>
+              <span class="dr-card__flag dr-card__flag--ink">Last 9</span>
+            </div>
+            <div class="dr-card__body">
+              <div class="dr-card__row">
+                <h3>SIGNAL CAP</h3>
+                <span class="dr-card__price">₹1,600</span>
+              </div>
+              <p class="dr-card__desc">Washed cotton twill · 6-panel · brass clasp</p>
+              <div class="dr-sizes" role="group" aria-label="Size for Signal Cap">
+                <button type="button" data-size="OS" aria-pressed="false">One size</button>
+              </div>
+              <button class="dr-add" type="button" data-add data-name="SIGNAL CAP 004" data-short="Signal Cap" data-price="1600">
+                <span data-add-label>Add to bag</span>
+                <svg viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M9 3v12M3 9h12" stroke="currentColor" stroke-width="2.5" stroke-linecap="square"/></svg>
+              </button>
+            </div>
+          </article>
+        </div>
+
+        <p class="dr-grid__empty" data-grid-empty hidden>Nothing in this category. Try “All”.</p>
+      </div>
+    </section>
+
+    <div class="dr-marquee" aria-hidden="true">
+      <div class="dr-marquee__track">
+        <span>NO RESTOCKS</span><i>✱</i><span>SMALL BATCHES</span><i>✱</i><span>ZERO FILLER</span><i>✱</i><span>WEAR THE SIGNAL</span><i>✱</i>
+        <span>NO RESTOCKS</span><i>✱</i><span>SMALL BATCHES</span><i>✱</i><span>ZERO FILLER</span><i>✱</i><span>WEAR THE SIGNAL</span><i>✱</i>
+      </div>
+    </div>
+
+    <section class="dr-look" id="lookbook" aria-labelledby="look-title">
+      <div class="nx-container">
+        <header class="dr-section-head" data-reveal>
+          <div>
+            <p class="dr-kicker">[ Lookbook 004 ]</p>
+            <h2 id="look-title">BUILT LOUD.</h2>
+          </div>
+          <p class="dr-section-head__meta">Three ways to wear the signal.<br>Shot on a rented staircase and one very patient friend.</p>
+        </header>
+
+        <div class="dr-look__grid">
+          <figure class="dr-look__tile dr-look__tile--type" data-reveal>
+            <div class="dr-look__top"><span>Look 01</span><span>Type study</span></div>
+            <p class="dr-look__big">NO<br><em>LOGOS</em><br>ONLY<br>SIGNAL</p>
+            <figcaption>Full look — Void Hoodie over Static Cargo. Shoes: the same ones from last year.</figcaption>
+            <span class="dr-look__star" aria-hidden="true">✱</span>
+          </figure>
+
+          <figure class="dr-look__tile dr-look__tile--piece" data-reveal style="--reveal-delay:80ms">
+            <div class="dr-look__top"><span>Look 02</span><span>Utility</span></div>
+            <div class="dr-look__stage">
+              <svg viewBox="0 0 320 320" fill="none" aria-hidden="true">
+                <path d="M98 68h124l12 72-14 148h-48l-12-108-12 108h-48L86 140l12-72Z" fill="var(--ink)"/>
+                <rect x="120" y="118" width="38" height="46" fill="var(--paper)"/>
+                <rect x="162" y="118" width="38" height="46" fill="var(--paper)"/>
+                <path d="M120 132h38M162 132h38" stroke="var(--ink)" stroke-width="3"/>
+                <path d="M160 84v86" stroke="var(--paper)" stroke-width="2.5" stroke-dasharray="7 6"/>
+                <path d="M106 78h36M178 78h36" stroke="var(--paper)" stroke-width="4"/>
+                <path d="M136 296h22M162 296h22" stroke="var(--paper)" stroke-width="3"/>
+              </svg>
+              <span class="dr-look__label">Utility, in flat light</span>
+            </div>
+            <figcaption>Static Cargo, worn with the hem cinched. Pockets hold a phone and absolutely no regrets.</figcaption>
+          </figure>
+
+          <figure class="dr-look__tile dr-look__tile--poster" data-reveal style="--reveal-delay:140ms">
+            <div class="dr-look__top"><span>Look 03</span><span>After dark</span></div>
+            <p class="dr-look__outline" aria-hidden="true">004</p>
+            <p class="dr-look__quote">“If you can read this<br>from across the street,<br>good.”</p>
+            <div class="dr-look__meta" aria-hidden="true">
+              <span class="dr-poster__barcode dr-poster__barcode--light">
+                <i style="--w:2px"></i><i style="--w:1px"></i><i style="--w:4px"></i><i style="--w:2px"></i><i style="--w:1px"></i><i style="--w:3px"></i><i style="--w:1px"></i><i style="--w:2px"></i><i style="--w:4px"></i><i style="--w:2px"></i>
+                <b>NYXO / FW26</b>
+              </span>
+            </div>
+            <figcaption>The whole point, printed on the back of the Noise Tee.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="dr-manifesto" id="manifesto" aria-labelledby="manifesto-title">
+      <div class="nx-container dr-manifesto__grid">
+        <div class="dr-manifesto__intro" data-reveal>
+          <p class="dr-kicker">[ The manifesto ]</p>
+          <h2 id="manifesto-title">WE MAKE<br>CLOTHES FOR<br>THE ALGORITHM'S<br><em>BAD SIDE.</em></h2>
+          <p>No infinite scroll. No three-week shipping. No logo doing the work a garment should do.
+            Just heavy fabric, honest cuts, and forty of each thing.</p>
+          <a class="dr-btn dr-btn--line" href="#list">Get the next drop first</a>
+        </div>
+
+        <div class="dr-manifesto__list">
+          <article class="dr-rule" data-reveal>
+            <span>01</span>
+            <div>
+              <h3>Small batches, by design.</h3>
+              <p>Forty units per style. When they are gone, the pattern gets archived. We would rather sell out than mark down.</p>
+            </div>
+          </article>
+          <article class="dr-rule" data-reveal style="--reveal-delay:60ms">
+            <span>02</span>
+            <div>
+              <h3>The label stays inside.</h3>
+              <p>You are not a billboard and neither is the hoodie. If the piece needs a logo to be interesting, we do not make it.</p>
+            </div>
+          </article>
+          <article class="dr-rule" data-reveal style="--reveal-delay:120ms">
+            <span>03</span>
+            <div>
+              <h3>Price is the whole price.</h3>
+              <p>No members-only drops, no surprise duties at the door. What you see is what gets debited. Shipping is free over ₹4,999.</p>
+            </div>
+          </article>
+
+          <div class="dr-stats" data-reveal style="--reveal-delay:180ms">
+            <div><strong data-count="480" data-suffix=" GSM">480 GSM</strong><span>Loopback weight</span></div>
+            <div><strong data-count="40" data-suffix=" pcs">40 pcs</strong><span>Per style, per drop</span></div>
+            <div><strong>0</strong><span>Visible logos</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="dr-list" id="list" aria-labelledby="list-title">
+      <div class="nx-container dr-list__inner" data-reveal>
+        <div class="dr-list__copy">
+          <p class="dr-kicker">[ The drop list ]</p>
+          <h2 id="list-title">NEXT DROP<br>GOES TO THE<br>LIST FIRST.</h2>
+          <p>One email per drop. Early access for 24 hours. No “cart is waiting” nonsense.</p>
+        </div>
+        <form class="dr-form" data-drop-form novalidate>
+          <label class="dr-form__label" for="drop-email">Email address</label>
+          <div class="dr-form__row">
+            <input id="drop-email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="you@somewhere.in" required aria-describedby="drop-note drop-status">
+            <button class="dr-btn dr-btn--accent" type="submit">Join the list</button>
+          </div>
+          <p class="dr-form__note" id="drop-note">One message per drop. Unsubscribe in one click. This is a demo — nothing is stored.</p>
+          <p class="dr-form__status" id="drop-status" data-drop-status role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="dr-foot">
+    <div class="nx-container">
+      <div class="dr-foot__top">
+        <p class="dr-foot__mark" aria-label="NYXO Drop">NYXO<span>/</span>DROP</p>
+        <div class="dr-foot__cols">
+          <div>
+            <h2>Shop</h2>
+            <a href="#shop">Drop 004</a>
+            <a href="#lookbook">Lookbook</a>
+            <a href="#shop">All pieces</a>
+          </div>
+          <div>
+            <h2>Info</h2>
+            <a href="#manifesto">Manifesto</a>
+            <a href="#list">Drop list</a>
+            <a href="index.html">All NYXO styles</a>
+          </div>
+          <div>
+            <h2>Elsewhere</h2>
+            <a href="#top">Instagram ↗</a>
+            <a href="#top">Are.na ↗</a>
+            <a href="mailto:hello@nyxo.dev">hello@nyxo.dev</a>
+          </div>
+        </div>
+      </div>
+      <div class="dr-foot__bottom">
+        <span>© <span data-year>2026</span> NYXO Web &amp; App Developer</span>
+        <span>A design demonstration. Not a real store — no orders are processed.</span>
+        <span class="dr-foot__barcode" aria-hidden="true">|| | ||| || | ||| |</span>
+      </div>
+    </div>
+  </footer>
+
+  <dialog class="dr-bag" id="bag-dialog" aria-labelledby="bag-title">
+    <div class="dr-bag__panel">
+      <header class="dr-bag__head">
+        <h2 id="bag-title">YOUR BAG <span data-bag-count>0</span></h2>
+        <button class="dr-bag__close" type="button" data-bag-close aria-label="Close bag">
+          <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 4l12 12M16 4 4 16" stroke="currentColor" stroke-width="2.5" stroke-linecap="square"/></svg>
+        </button>
+      </header>
+      <p class="dr-bag__empty" data-bag-empty>Your bag is empty. The drop, however, is not.</p>
+      <ul class="dr-bag__list" data-bag-list></ul>
+      <footer class="dr-bag__foot">
+        <div class="dr-bag__total"><span>Subtotal</span><strong data-bag-total>₹0</strong></div>
+        <p class="dr-bag__note">Shipping is free over ₹4,999. This is a demonstration store — checkout does not charge anything.</p>
+        <button class="dr-btn dr-btn--ink dr-btn--wide" type="button" data-checkout>Checkout</button>
+        <p class="dr-bag__msg" data-bag-msg role="status" aria-live="polite"></p>
+      </footer>
+    </div>
+  </dialog>
+
+  <div class="dr-toast" data-toast role="status" aria-live="polite"></div>
+
+  <script>
+    (() => {
+      "use strict";
+      const money = new Intl.NumberFormat("en-IN", { style: "currency", currency: "INR", maximumFractionDigits: 0 });
+      const grid = document.querySelector("[data-product-grid]");
+      const cards = [...document.querySelectorAll(".dr-card")];
+      const filterButtons = [...document.querySelectorAll("[data-filter]")];
+      const filterStatus = document.querySelector("[data-filter-status]");
+      const gridEmpty = document.querySelector("[data-grid-empty]");
+      const bagDialog = document.getElementById("bag-dialog");
+      const bagList = document.querySelector("[data-bag-list]");
+      const bagEmpty = document.querySelector("[data-bag-empty]");
+      const bagTotal = document.querySelector("[data-bag-total]");
+      const bagMsg = document.querySelector("[data-bag-msg]");
+      const toast = document.querySelector("[data-toast]");
+      const bag = [];
+      let toastTimer = 0;
+
+      const countOf = () => bag.reduce((sum, item) => sum + item.qty, 0);
+      const totalOf = () => bag.reduce((sum, item) => sum + item.price * item.qty, 0);
+
+      function paintCounts() {
+        document.querySelectorAll("[data-bag-count]").forEach((el) => {
+          el.textContent = countOf();
+        });
+        document.querySelectorAll("[data-bag-open]").forEach((btn) => {
+          btn.setAttribute("aria-label", btn.classList.contains("dr-bag-btn")
+            ? `Open bag, ${countOf()} item${countOf() === 1 ? "" : "s"}`
+            : `Open bag, ${countOf()} items`);
+        });
+      }
+
+      function paintBag() {
+        bagList.innerHTML = bag.map((item) => `
+          <li class="dr-bag__item">
+            <div class="dr-bag__item-top">
+              <strong>${item.short}</strong>
+              <span>${money.format(item.price * item.qty)}</span>
+            </div>
+            <p>Size ${item.size} · Qty ${item.qty}</p>
+            <button type="button" data-remove="${item.key}">Remove</button>
+          </li>
+        `).join("");
+        bagEmpty.hidden = bag.length > 0;
+        bagTotal.textContent = money.format(totalOf());
+        paintCounts();
+      }
+
+      function showToast(message) {
+        toast.textContent = message;
+        toast.classList.add("is-on");
+        window.clearTimeout(toastTimer);
+        toastTimer = window.setTimeout(() => toast.classList.remove("is-on"), 3200);
+      }
+
+      function announce(message) {
+        toast.textContent = message;
+        toast.classList.add("is-on");
+        window.clearTimeout(toastTimer);
+        toastTimer = window.setTimeout(() => toast.classList.remove("is-on"), 3200);
+      }
+
+      filterButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const filter = button.dataset.filter;
+          filterButtons.forEach((other) => {
+            const active = other === button;
+            other.classList.toggle("is-active", active);
+            other.setAttribute("aria-pressed", String(active));
+          });
+          let shown = 0;
+          cards.forEach((card) => {
+            const visible = filter === "all" || card.dataset.cat === filter;
+            card.classList.toggle("is-filtered", !visible);
+            card.hidden = !visible;
+            if (visible) shown += 1;
+          });
+          filterStatus.textContent = filter === "all"
+            ? `Showing all ${shown} pieces`
+            : `Showing ${shown} piece${shown === 1 ? "" : "s"}`;
+          gridEmpty.hidden = shown > 0;
+        });
+      });
+
+      cards.forEach((card) => {
+        const sizeButtons = [...card.querySelectorAll("[data-size]")];
+        const addButton = card.querySelector("[data-add]");
+        const addLabel = card.querySelector("[data-add-label]");
+        let addTimer = 0;
+
+        sizeButtons.forEach((button) => {
+          button.addEventListener("click", () => {
+            sizeButtons.forEach((other) => other.setAttribute("aria-pressed", String(other === button)));
+            card.dataset.size = button.dataset.size;
+            card.classList.remove("is-nudge");
+            addLabel.textContent = "Add to bag";
+          });
+        });
+
+        addButton.addEventListener("click", () => {
+          const size = card.dataset.size;
+          if (!size) {
+            card.classList.remove("is-nudge");
+            void card.offsetWidth;
+            card.classList.add("is-nudge");
+            announce("Pick a size first.");
+            (sizeButtons[0] || addButton).focus();
+            return;
+          }
+          const key = card.dataset.product + "-" + size;
+          const existing = bag.find((item) => item.key === key);
+          if (existing) {
+            existing.qty += 1;
+          } else {
+            bag.push({
+              key,
+              name: card.dataset.product,
+              short: addButton.dataset.short,
+              price: Number(addButton.dataset.price),
+              size,
+              qty: 1,
+            });
+          }
+          paintBag();
+          showToast(`${addButton.dataset.short} / ${size} added to bag.`);
+          addLabel.textContent = "Added ✓";
+          window.clearTimeout(addTimer);
+          addTimer = window.setTimeout(() => { addLabel.textContent = "Add to bag"; }, 1800);
+        });
+      });
+
+      document.querySelectorAll("[data-bag-open]").forEach((button) => {
+        button.addEventListener("click", () => {
+          paintBag();
+          if (typeof bagDialog.showModal === "function") bagDialog.showModal();
+          else bagDialog.setAttribute("open", "");
+        });
+      });
+
+      document.querySelectorAll("[data-bag-close]").forEach((button) => {
+        button.addEventListener("click", () => bagDialog.close());
+      });
+
+      bagDialog.addEventListener("click", (event) => {
+        if (event.target === bagDialog) bagDialog.close();
+      });
+
+      bagList.addEventListener("click", (event) => {
+        const remove = event.target.closest("[data-remove]");
+        if (!remove) return;
+        const index = bag.findIndex((item) => item.key === remove.dataset.remove);
+        if (index === -1) return;
+        const [removed] = bag.splice(index, 1);
+        paintBag();
+        bagMsg.textContent = `${removed.short} removed.`;
+        if (!bag.length) bagMsg.textContent = "Bag is empty again.";
+      });
+
+      document.querySelector("[data-checkout]").addEventListener("click", () => {
+        bagMsg.textContent = bag.length
+          ? "Demo store — checkout is not connected. Nothing was charged."
+          : "Add a piece first, then try checkout.";
+      });
+
+      document.querySelector("[data-drop-form]").addEventListener("submit", (event) => {
+        event.preventDefault();
+        const form = event.currentTarget;
+        const input = form.querySelector("input[type=email]");
+        const status = form.querySelector("[data-drop-status]");
+        const value = input.value.trim();
+        if (!input.checkValidity() || !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(value)) {
+          status.textContent = "That address does not look right. Try name@domain.com.";
+          form.classList.add("is-error");
+          input.focus();
+          return;
+        }
+        form.classList.remove("is-error");
+        status.textContent = `You are on the list for Drop 005. We will use ${value} for this demo only.`;
+        form.reset();
+        form.classList.add("is-done");
+        window.setTimeout(() => form.classList.remove("is-done"), 900);
+      });
+
+      paintCounts();
+      paintBag();
+    })();
+  </script>
+</body>
+</html>

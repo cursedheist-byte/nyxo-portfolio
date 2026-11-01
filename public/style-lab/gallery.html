@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en" data-page="hub-embed">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#08090c">
+  <meta name="robots" content="noindex">
+  <title>NYXO — UI/UX style samples</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/hub.css">
+  <script>document.documentElement.classList.add("js");</script>
+  <style>
+    html, body { overflow: hidden; height: auto !important; min-height: 0 !important; }
+    .is-embed .gallery { padding-block: 0; }
+    .is-embed .gal-grid { padding-bottom: 4px; }
+  </style>
+  <script src="assets/js/app.js" defer></script>
+</head>
+<body class="hub is-embed">
+  <main id="main">
+    <section class="section gallery" id="gallery" aria-labelledby="gallery-title">
+      <div class="nx-container">
+        <div class="filters">
+          <div class="filters__buttons" role="group" aria-label="Filter styles by intent">
+            <button class="filter is-active" type="button" data-filter="all" aria-pressed="true">All <span>10</span></button>
+            <button class="filter" type="button" data-filter="tactile" aria-pressed="false">Tactile <span>03</span></button>
+            <button class="filter" type="button" data-filter="campaign" aria-pressed="false">Campaign <span>03</span></button>
+            <button class="filter" type="button" data-filter="interface" aria-pressed="false">Interface <span>04</span></button>
+          </div>
+          <p class="filters__status" data-filter-status aria-live="polite">Showing all 10 styles</p>
+        </div>
+
+        <div class="gal-grid" data-gal-grid>
+          <!-- 01 Skeuomorphism -->
+          <article class="gal-card" data-cat="tactile" data-reveal>
+            <a class="gal-card__link" href="skeuomorphism.html" target="_blank" rel="noreferrer">
+              <div class="gal-card__preview">
+                <div class="mini mini-skeuo" aria-hidden="true">
+                  <div class="ms-panel">
+                    <div class="ms-head"><span>NYXO</span><span>SOUNDWORKS</span></div>
+                    <div class="ms-deck">
+                      <div class="ms-window"><span></span><span></span></div>
+                      <div class="ms-knobs"><span class="ms-knob"></span><span class="ms-knob"></span></div>
+                    </div>
+                    <div class="ms-meters"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+                  </div>
+                </div>
+                <span class="gal-card__no">01</span>
+                <span class="gal-card__open">Open demo
+                  <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2.5 8h10M8.5 3.5 13 8l-4.5 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+              </div>
+              <div class="gal-card__meta">
+                <div>
+                  <h3>Skeuomorphism</h3>
+                  <p class="gal-card__tag">Tactile · Analog craft</p>
+                  <p class="gal-card__best">Best for audio, hardware and heritage brands.</p>
+                </div>
+                <div class="gal-card__dots" aria-hidden="true">
+                  <i style="--c:#2a1a12"></i><i style="--c:#e9dfcd"></i><i style="--c:#c98a3e"></i><i style="--c:#6ee7ff"></i>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <!-- 02 Neumorphism -->
+          <article class="gal-card" data-cat="tactile" data-reveal>
+            <a class="gal-card__link" href="neumorphism.html" target="_blank" rel="noreferrer">
+              <div class="gal-card__preview">
+                <div class="mini mini-neu" aria-hidden="true">
+                  <div class="mn-top"><span>PULSE</span><span class="mn-dot"></span></div>
+                  <div class="mn-ring"><span>84</span><small>ready</small></div>
+                  <div class="mn-row"><span class="mn-toggle"></span><span class="mn-lines"><i></i><i></i></span></div>
+                  <div class="mn-bars"><i></i><i></i><i></i><i></i><i></i></div>
+                </div>
+                <span class="gal-card__no">02</span>
+                <span class="gal-card__open">Open demo
+                  <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2.5 8h10M8.5 3.5 13 8l-4.5 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+              </div>
+              <div class="gal-card__meta">
+                <div>
+                  <h3>Neumorphism</h3>
+                  <p class="gal-card__tag">Tactile · Soft interface</p>
+                  <p class="gal-card__best">Best for wellness, health and calm dashboards.</p>
+                </div>
+                <div class="gal-card__dots" aria-hidden="true">
+                  <i style="--c:#e8eef5"></i><i style="--c:#4c7cf3"></i><i style="--c:#f4e8ea"></i><i style="--c:#1c222b"></i>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <!-- 03 Glassmorphism -->
+          <article class="gal-card" data-cat="campaign" data-reveal>
+            <a class="gal-card__link" href="glassmorphism.html" target="_blank" rel="noreferrer">
+              <div class="gal-card__preview">
+                <div class="mini mini-glass" aria-hidden="true">
+                  <div class="mg-nav"><span></span><i></i><i></i></div>
+                  <div class="mg-hero"><span class="mg-eyebrow">Alpine escapes</span><strong>Reset in the wild.</strong><span class="mg-line"></span><span class="mg-btn"></span></div>
+                  <div class="mg-chip"></div>
+                </div>
+                <span class="gal-card__no">03</span>
+                <span class="gal-card__open">Open demo
+                  <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2.5 8h10M8.5 3.5 13 8l-4.5 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+              </div>
+              <div class="gal-card__meta">
+                <div>
+                  <h3>Glassmorphism</h3>
+                  <p class="gal-card__tag">Campaign · Atmosphere</p>
+                  <p class="gal-card__best">Best for travel, hospitality and image-led launches.</p>
+                </div>
+                <div class="gal-card__dots" aria-hidden="true">
+                  <i style="--c:#8fd3ff"></i><i style="--c:#ffb56b"></i><i style="--c:#c9a8ff"></i><i style="--c:#0f1419"></i>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <!-- 04 Claymorphism -->
+          <article class="gal-card" data-cat="tactile" data-reveal>
+            <a class="gal-card__link" href="claymorphism.html" target="_blank" rel="noreferrer">
+              <div class="gal-card__preview">
+                <div class="mini mini-clay" aria-hidden="true">
+                  <i class="mc-blob mc-blob--1"></i><i class="mc-blob mc-blob--2"></i>
+                  <div class="mc-card">
+                    <span class="mc-face"><i></i><i></i><b></b></span>
+                    <strong>Play. Learn. Grow.</strong>
+                    <span class="mc-pill"></span>
+                  </div>
+                  <span class="mc-star"></span>
+                </div>
+                <span class="gal-card__no">04</span>
+                <span class="gal-card__open">Open demo
+                  <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2.5 8h10M8.5 3.5 13 8l-4.5 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+              </div>
+              <div class="gal-card__meta">
+                <div>
+                  <h3>Claymorphism</h3>
+                  <p class="gal-card__tag">Tactile · Playful</p>
+                  <p class="gal-card__best">Best for learning apps, kids and friendly products.</p>
+                </div>
+                <div class="gal-card__dots" aria-hidden="true">
+                  <i style="--c:#ffd9b3"></i><i style="--c:#ff8a5c"></i><i style="--c:#7ed6c4"></i><i style="--c:#b28cff"></i>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <!-- 05 Brutalism -->
+          <article class="gal-card" data-cat="campaign" data-reveal>
+            <a class="gal-card__link" href="brutalism.html" target="_blank" rel="noreferrer">
+              <div class="gal-card__preview">
+                <div class="mini mini-brutal" aria-hidden="true">
+                  <div class="mb-bar"><span>NYXO/DROP</span><span>004</span></div>
+                  <div class="mb-type">RAW<br><span>MODE</span></div>
+                  <span class="mb-sticker">LIMITED</span>
+                  <div class="mb-tiles"><i></i><i></i><i></i></div>
+                </div>
+                <span class="gal-card__no">05</span>
+                <span class="gal-card__open">Open demo
+                  <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2.5 8h10M8.5 3.5 13 8l-4.5 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+              </div>
+              <div class="gal-card__meta">
+                <div>
+                  <h3>Brutalism</h3>
+                  <p class="gal-card__tag">Campaign · Raw</p>
+                  <p class="gal-card__best">Best for streetwear drops, music and counter-culture.</p>
+                </div>
+                <div class="gal-card__dots" aria-hidden="true">
+                  <i style="--c:#d8ff00"></i><i style="--c:#ff3b00"></i><i style="--c:#0038ff"></i><i style="--c:#e8e5df"></i>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <!-- 06 Minimalism -->
+          <article class="gal-card" data-cat="interface" data-reveal>
+            <a class="gal-card__link" href="minimalism.html" target="_blank" rel="noreferrer">
+              <div class="gal-card__preview">
+                <div class="mini mini-minimal" aria-hidden="true">
+                  <div class="mm-head"><span>FORMA</span><span>EST. 2018</span></div>
+                  <div class="mm-type">Quiet<br><em>form.</em></div>
+                  <div class="mm-img"></div>
+                  <div class="mm-rule"></div>
+                </div>
+                <span class="gal-card__no">06</span>
+                <span class="gal-card__open">Open demo
+                  <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2.5 8h10M8.5 3.5 13 8l-4.5 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+              </div>
+              <div class="gal-card__meta">
+                <div>
+                  <h3>Minimalism</h3>
+                  <p class="gal-card__tag">Interface · Editorial</p>
+                  <p class="gal-card__best">Best for architecture, studios and considered brands.</p>
+                </div>
+                <div class="gal-card__dots" aria-hidden="true">
+                  <i style="--c:#f4f1ea"></i><i style="--c:#16160f"></i><i style="--c:#e7e9e8"></i><i style="--c:#f0efe4"></i>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <!-- 07 Maximalism -->
+          <article class="gal-card" data-cat="campaign" data-reveal>
+            <a class="gal-card__link" href="maximalism.html" target="_blank" rel="noreferrer">
+              <div class="gal-card__preview">
+                <div class="mini mini-maximal" aria-hidden="true">
+                  <i class="mx-blob mx-blob--1"></i><i class="mx-blob mx-blob--2"></i>
+                  <span class="mx-sticker">3 DAYS<br>40 ARTISTS</span>
+                  <div class="mx-type">FEST<br><em>'26</em></div>
+                  <div class="mx-ticket"><span>NYXO FEST</span><i></i></div>
+                </div>
+                <span class="gal-card__no">07</span>
+                <span class="gal-card__open">Open demo
+                  <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2.5 8h10M8.5 3.5 13 8l-4.5 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+              </div>
+              <div class="gal-card__meta">
+                <div>
+                  <h3>Maximalism</h3>
+                  <p class="gal-card__tag">Campaign · Energy</p>
+                  <p class="gal-card__best">Best for festivals, entertainment and big personalities.</p>
+                </div>
+                <div class="gal-card__dots" aria-hidden="true">
+                  <i style="--c:#1a0b2e"></i><i style="--c:#ff5e3a"></i><i style="--c:#ff2e93"></i><i style="--c:#ffd23f"></i>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <!-- 08 Liquid Glass -->
+          <article class="gal-card" data-cat="interface" data-reveal>
+            <a class="gal-card__link" href="liquid-glass.html" target="_blank" rel="noreferrer">
+              <div class="gal-card__preview">
+                <div class="mini mini-liquid" aria-hidden="true">
+                  <div class="ml-orb"></div>
+                  <span class="ml-chip">AURA · 01</span>
+                  <div class="ml-card"><strong>Sound,<br>in liquid form.</strong><span></span></div>
+                  <div class="ml-dock"><i></i><i></i><i></i></div>
+                </div>
+                <span class="gal-card__no">08</span>
+                <span class="gal-card__open">Open demo
+                  <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2.5 8h10M8.5 3.5 13 8l-4.5 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+              </div>
+              <div class="gal-card__meta">
+                <div>
+                  <h3>Liquid Glass</h3>
+                  <p class="gal-card__tag">Interface · Premium</p>
+                  <p class="gal-card__best">Best for hardware, audio and futuristic product pages.</p>
+                </div>
+                <div class="gal-card__dots" aria-hidden="true">
+                  <i style="--c:#060a16"></i><i style="--c:#7fd8ff"></i><i style="--c:#a78bfa"></i><i style="--c:#eef1f5"></i>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <!-- 09 Spatial UI -->
+          <article class="gal-card" data-cat="interface" data-reveal>
+            <a class="gal-card__link" href="spatial-ui.html" target="_blank" rel="noreferrer">
+              <div class="gal-card__preview">
+                <div class="mini mini-spatial" aria-hidden="true">
+                  <div class="msp-window">
+                    <div class="msp-img"></div>
+                    <div class="msp-meta"><span>ATLAS / 03</span><strong>Kyoto, after rain</strong><i></i></div>
+                  </div>
+                  <span class="msp-pill">Spatial gallery</span>
+                  <div class="msp-dock"><i></i><i></i><i></i></div>
+                </div>
+                <span class="gal-card__no">09</span>
+                <span class="gal-card__open">Open demo
+                  <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2.5 8h10M8.5 3.5 13 8l-4.5 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+              </div>
+              <div class="gal-card__meta">
+                <div>
+                  <h3>Spatial UI</h3>
+                  <p class="gal-card__tag">Interface · Immersive</p>
+                  <p class="gal-card__best">Best for galleries, property and 3D storytelling.</p>
+                </div>
+                <div class="gal-card__dots" aria-hidden="true">
+                  <i style="--c:#0e1118"></i><i style="--c:#9ec5ff"></i><i style="--c:#d3b8ff"></i><i style="--c:#ffb36b"></i>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <!-- 10 Bento Grid -->
+          <article class="gal-card" data-cat="interface" data-reveal>
+            <a class="gal-card__link" href="bento-grid.html" target="_blank" rel="noreferrer">
+              <div class="gal-card__preview">
+                <div class="mini mini-bento" aria-hidden="true">
+                  <span class="mbe mbe--a"><b>NYXO</b><i></i></span>
+                  <span class="mbe mbe--b"></span>
+                  <span class="mbe mbe--c"><i></i><i></i><i></i></span>
+                  <span class="mbe mbe--d"></span>
+                  <span class="mbe mbe--e"></span>
+                </div>
+                <span class="gal-card__no">10</span>
+                <span class="gal-card__open">Open demo
+                  <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2.5 8h10M8.5 3.5 13 8l-4.5 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+              </div>
+              <div class="gal-card__meta">
+                <div>
+                  <h3>Bento Grid</h3>
+                  <p class="gal-card__tag">Interface · Structured</p>
+                  <p class="gal-card__best">Best for SaaS, studios and product-first websites.</p>
+                </div>
+                <div class="gal-card__dots" aria-hidden="true">
+                  <i style="--c:#f2f0eb"></i><i style="--c:#08090b"></i><i style="--c:#ff5c35"></i><i style="--c:#007c91"></i>
+                </div>
+              </div>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    (() => {
+      "use strict";
+
+      const filterButtons = document.querySelectorAll("[data-filter]");
+      const cards = Array.from(document.querySelectorAll(".gal-card"));
+      const status = document.querySelector("[data-filter-status]");
+
+      filterButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const filter = button.dataset.filter;
+          filterButtons.forEach((item) => {
+            const active = item === button;
+            item.classList.toggle("is-active", active);
+            item.setAttribute("aria-pressed", String(active));
+          });
+
+          let visible = 0;
+          cards.forEach((card) => {
+            const show = filter === "all" || card.dataset.cat === filter;
+            card.hidden = !show;
+            if (show) {
+              visible += 1;
+              card.style.animationDelay = `${Math.min(visible * 45, 280)}ms`;
+              card.classList.remove("is-pop");
+              void card.offsetWidth;
+              card.classList.add("is-pop");
+            }
+          });
+
+          if (status) {
+            status.textContent =
+              filter === "all"
+                ? `Showing all ${visible} styles`
+                : `Showing ${visible} ${filter} style${visible === 1 ? "" : "s"}`;
+          }
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

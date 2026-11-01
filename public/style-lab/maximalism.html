@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en" data-page="maximalism">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#180a2b">
+  <meta name="description" content="NYXO FEST '26 — three nights, five stages and forty-two acts in Pune. A maximalism demonstration by NYXO Web &amp; App Developer.">
+  <title>NYXO FEST '26 — Maximalism · NYXO Style Lab</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&family=Unbounded:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/maximalism.css">
+  <script>
+    document.documentElement.classList.add('js');
+    try {
+      var p = localStorage.getItem('nyxo.palette.' + document.documentElement.dataset.page);
+      if (p) document.documentElement.dataset.palette = p;
+    } catch (e) {}
+  </script>
+  <script src="assets/js/app.js" defer></script>
+</head>
+<body class="max-page">
+  <a class="nx-skip" href="#main">Skip to content</a>
+  <header id="nx-bar" class="nx-bar" aria-label="Style lab controls"></header>
+
+  <header class="mx-head">
+    <div class="mx-head__inner nx-container">
+      <a class="mx-brand" href="#top" aria-label="NYXO Fest 2026 — back to top">
+        <span class="mx-brand__burst" aria-hidden="true">
+          <svg viewBox="0 0 40 40"><path d="M20 0l4.2 13.4L36 8l-7 12.3L40 24l-13.7 3.1L30 40l-11-9.2L8 40l3.7-12.9L0 24l10.8-3.7L4 8l11.8 5.4L20 0Z" fill="currentColor"/></svg>
+        </span>
+        <span class="mx-brand__word">NYXO <b>FEST</b> <em>’26</em></span>
+      </a>
+
+      <nav class="mx-nav" aria-label="Primary">
+        <a href="#lineup">Lineup</a>
+        <a href="#world">The world</a>
+        <a href="#tickets">Tickets</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <div class="mx-head__actions">
+        <a class="mx-saved" href="#lineup" aria-label="My lineup">
+          <svg viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M9 2.5 11 6.6l4.5.6-3.3 3.2.8 4.5L9 12.8 5 15l.8-4.6L2.5 7.2 7 6.6 9 2.5Z" stroke="currentColor" stroke-width="1.4"/></svg>
+          My lineup <b data-lineup-count>0</b>
+        </a>
+        <a class="mx-btn mx-btn--accent" href="#tickets">Get tickets</a>
+        <button class="mx-menu" type="button" data-menu-toggle aria-controls="mx-sheet" aria-expanded="false" aria-label="Open menu">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="mx-sheet" id="mx-sheet">
+      <a href="#lineup"><span>01</span> Lineup</a>
+      <a href="#world"><span>02</span> The world</a>
+      <a href="#tickets"><span>03</span> Tickets</a>
+      <a href="#faq"><span>04</span> FAQ</a>
+      <a class="mx-sheet__cta" href="#tickets"><span>05</span> Get tickets ↗</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="mx-hero" id="top" aria-labelledby="hero-title">
+      <div class="mx-hero__grain" aria-hidden="true"></div>
+      <div class="mx-hero__inner nx-container">
+        <div class="mx-hero__copy">
+          <p class="mx-eyebrow" data-reveal>
+            <span class="mx-pill"><span class="mx-dot" aria-hidden="true"></span><span data-countdown>13–15 NOV 2026</span></span>
+            <span>Mahalaxmi Lawns · Pune</span>
+          </p>
+          <h1 class="mx-hero__title" id="hero-title" data-reveal style="--reveal-delay:60ms">
+            <span>Make</span>
+            <span>some <em>noise.</em></span>
+          </h1>
+          <p class="mx-hero__lead" data-reveal style="--reveal-delay:140ms">
+            Three nights, five stages and forty-two acts that refuse to whisper.
+            Pune’s loudest lawn becomes a city inside a city — come for the bass,
+            stay for the breakfast.
+          </p>
+          <div class="mx-hero__actions" data-reveal style="--reveal-delay:200ms">
+            <a class="mx-btn mx-btn--accent mx-btn--lg" href="#tickets">
+              Get tickets
+              <svg viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" stroke-width="2"/></svg>
+            </a>
+            <a class="mx-btn mx-btn--ghost mx-btn--lg" href="#lineup">See the lineup</a>
+          </div>
+          <ul class="mx-hero__facts" data-reveal style="--reveal-delay:260ms">
+            <li>3 nights</li>
+            <li>5 stages</li>
+            <li>42 artists</li>
+            <li>0 quiet corners</li>
+          </ul>
+        </div>
+
+        <figure class="mx-poster" data-poster data-reveal style="--reveal-delay:120ms">
+          <span class="mx-tape mx-tape--a" aria-hidden="true"></span>
+          <span class="mx-tape mx-tape--b" aria-hidden="true"></span>
+          <div class="mx-poster__frame">
+            <img src="assets/img/fest-hero.webp" width="1024" height="1280" alt="A colossal mirrored head sculpture above a festival crowd at sunset, with confetti and palm trees" fetchpriority="high">
+            <span class="mx-poster__label">The Big Face · Main stage</span>
+            <span class="mx-poster__barcode" aria-hidden="true"><i></i><em>NX–26 / 0042</em></span>
+          </div>
+          <figcaption class="mx-poster__cap">
+            <span>Poster 026 — “The face that ate the skyline”</span>
+            <span>Silk screen · 4 colours</span>
+          </figcaption>
+          <span class="mx-sticker mx-sticker--date" aria-hidden="true">13—15<br><b>NOV</b></span>
+          <span class="mx-sticker mx-sticker--count" aria-hidden="true"><b>42</b><br>acts</span>
+          <span class="mx-spin" aria-hidden="true">
+            <svg viewBox="0 0 120 120">
+              <defs><path id="mx-spin-path" d="M60,60 m-42,0 a42,42 0 1,1 84,0 a42,42 0 1,1 -84,0"></path></defs>
+              <text><textPath href="#mx-spin-path">NYXO FEST · MAKE SOME NOISE · PUNE 2026 · </textPath></text>
+            </svg>
+            <i aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 0l2.6 8.3L23 5.1l-5.4 6.9L23 19l-8.4-3.2L12 24l-2.6-8.2L1 19l5.4-7L1 5.1l8.4 3.2L12 0Z" fill="currentColor"/></svg>
+            </i>
+          </span>
+        </figure>
+      </div>
+
+      <div class="mx-ticker" aria-hidden="true">
+        <div class="mx-ticker__inner">
+          <div class="mx-ticker__group">
+            <span>Make some noise</span><i class="mx-star"></i>
+            <span>3 nights</span><i class="mx-star"></i>
+            <span>5 stages</span><i class="mx-star"></i>
+            <span>42 artists</span><i class="mx-star"></i>
+            <span>Pune · Nov 13–15</span><i class="mx-star"></i>
+          </div>
+          <div class="mx-ticker__group">
+            <span>Make some noise</span><i class="mx-star"></i>
+            <span>3 nights</span><i class="mx-star"></i>
+            <span>5 stages</span><i class="mx-star"></i>
+            <span>42 artists</span><i class="mx-star"></i>
+            <span>Pune · Nov 13–15</span><i class="mx-star"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mx-lineup" id="lineup" aria-labelledby="lineup-title">
+      <div class="nx-container">
+        <header class="mx-sect-head">
+          <div>
+            <p class="mx-kicker" data-reveal>01 / The lineup</p>
+            <h2 id="lineup-title" data-reveal style="--reveal-delay:60ms">Louder than<br>your <span class="mx-mark">group chat.</span></h2>
+          </div>
+          <p class="mx-sect-head__note" data-reveal style="--reveal-delay:120ms">
+            Forty-two acts across five stages, from hyperpop chaos to 4 a.m. drum &amp; bass.
+            Here are the twelve we put on the poster.
+          </p>
+        </header>
+
+        <div class="mx-days" role="group" aria-label="Filter lineup by day" data-reveal>
+          <button type="button" class="mx-day" data-day="all" aria-pressed="true">All days <span>12</span></button>
+          <button type="button" class="mx-day" data-day="fri" aria-pressed="false">Fri 13 <span>4</span></button>
+          <button type="button" class="mx-day" data-day="sat" aria-pressed="false">Sat 14 <span>4</span></button>
+          <button type="button" class="mx-day" data-day="sun" aria-pressed="false">Sun 15 <span>4</span></button>
+          <p class="mx-days__status" data-filter-status aria-live="polite">Showing all 12 artists.</p>
+        </div>
+
+        <div class="mx-artists">
+          <article class="mx-artist tone--a" data-day="fri">
+            <button type="button" class="mx-artist__hit" data-artist
+              aria-label="Open artist details: Rani Rewire"
+              data-id="rani-rewire" data-name="Rani Rewire" data-initials="RR" data-tone="a"
+              data-genre="Hyperpop" data-stage="The Big Face" data-day-name="Friday 13 Nov" data-time="21:30"
+              data-bio="Three synthesizers, one vocoder and absolutely no restraint. Rani Rewire turns hyperpop into a contact sport — expect pitched vocals, broken beats and a cover you will not see coming.">
+              <span class="mx-artist__no">01</span>
+              <span class="mx-artist__flag" hidden>
+                <svg viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M9 2.5 11 6.6l4.5.6-3.3 3.2.8 4.5L9 12.8 5 15l.8-4.6L2.5 7.2 7 6.6 9 2.5Z" fill="currentColor"/></svg>
+              </span>
+              <h3>Rani<br>Rewire</h3>
+              <p class="mx-artist__genre">Hyperpop · Live</p>
+              <span class="mx-artist__meta">Fri · 21:30 · Big Face</span>
+            </button>
+          </article>
+
+          <article class="mx-artist tone--d" data-day="fri">
+            <button type="button" class="mx-artist__hit" data-artist
+              aria-label="Open artist details: Kali Circuit"
+              data-id="kali-circuit" data-name="Kali Circuit" data-initials="KC" data-tone="d"
+              data-genre="Techno" data-stage="The Basement" data-day-name="Friday 13 Nov" data-time="23:45"
+              data-bio="Kali Circuit builds sets like a temple: slow foundations, ruthless repetition, one moment of total release. Four hours of hardware techno for people who brought sensible shoes.">
+              <span class="mx-artist__no">02</span>
+              <span class="mx-artist__flag" hidden>
+                <svg viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M9 2.5 11 6.6l4.5.6-3.3 3.2.8 4.5L9 12.8 5 15l.8-4.6L2.5 7.2 7 6.6 9 2.5Z" fill="currentColor"/></svg>
+              </span>
+              <h3>Kali<br>Circuit</h3>
+              <p class="mx-artist__genre">Hardware techno</p>
+              <span class="mx-artist__meta">Fri · 23:45 · Basement</span>
+            </button>
+          </article>
+
+          <article class="mx-artist tone--c" data-day="sat">
+            <button type="button" class="mx-artist__hit" data-artist
+              aria-label="Open artist details: The Paper Tigers"
+              data-id="paper-tigers" data-name="The Paper Tigers" data-initials="PT" data-tone="c"
+              data-genre="Art rock" data-stage="The Big Face" data-day-name="Saturday 14 Nov" data-time="22:00"
+              data-bio="Six people who cannot agree on a genre and have decided to make that the genre. Saxophone, two guitars and a drummer who treats the kit like a disagreement.">
+              <span class="mx-artist__no">03</span>
+              <span class="mx-artist__flag" hidden>
+                <svg viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M9 2.5 11 6.6l4.5.6-3.3 3.2.8 4.5L9 12.8 5 15l.8-4.6L2.5 7.2 7 6.6 9 2.5Z" fill="currentColor"/></svg>
+              </span>
+              <h3>The Paper<br>Tigers</h3>
+              <p class="mx-artist__genre">Art rock · 6 piece</p>
+              <span class="mx-artist__meta">Sat · 22:00 · Big Face</span>
+            </button>
+          </article>
+
+          <article class="mx-artist tone--b" data-day="sat">
+            <button type="button" class="mx-artist__hit" data-artist
+              aria-label="Open artist details: Mira and the Void"
+              data-id="mira-void" data-name="Mira &amp; the Void" data-initials="MV" data-tone="b"
+              data-genre="Dream pop" data-stage="The Garden" data-day-name="Saturday 14 Nov" data-time="20:15"
+              data-bio="Slow, bright and slightly underwater. Mira &amp; the Void are the part of the night when everyone sits down on the grass and remembers they have feelings.">
+              <span class="mx-artist__no">04</span>
+              <span class="mx-artist__flag" hidden>
+                <svg viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M9 2.5 11 6.6l4.5.6-3.3 3.2.8 4.5L9 12.8 5 15l.8-4.6L2.5 7.2 7 6.6 9 2.5Z" fill="currentColor"/></svg>
+              </span>
+              <h3>Mira &amp;<br>the Void</h3>
+              <p class="mx-artist__genre">Dream pop</p>
+              <span class="mx-artist__meta">Sat · 20:15 · Garden</span>
+            </button>
+          </article>
+
+          <article class="mx-artist tone--d" data-day="sat">
+            <button type="button" class="mx-artist__hit" data-artist
+              aria-label="Open artist details: DJ Naag"
+              data-id="dj-naag" data-name="DJ Naag" data-initials="DN" data-tone="d"
+              data-genre="Drum &amp; bass" data-stage="The Basement" data-day-name="Saturday 14 Nov" data-time="01:00"
+              data-bio="A serpentine drum &amp; bass set that starts at 1 a.m. and ends when the security guards start dancing. Bring water. Bring a friend. Bring two friends.">
+              <span class="mx-artist__no">05</span>
+              <span class="mx-artist__flag" hidden>
+                <svg viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M9 2.5 11 6.6l4.5.6-3.3 3.2.8 4.5L9 12.8 5 15l.8-4.6L2.5 7.2 7 6.6 9 2.5Z" fill="currentColor"/></svg>
+              </span>
+              <h3>DJ<br>Naag</h3>
+              <p class="mx-artist__genre">Drum &amp; bass</p>
+              <span class="mx-artist__meta">Sat · 01:00 · Basement</span>
+            </button>
+          </article>
+
+          <article class="mx-artist tone--a" data-day="sun">
+            <button type="button" class="mx-artist__hit" data-artist
+              aria-label="Open artist details: Saltwater Sons"
+              data-id="saltwater-sons" data-name="Saltwater Sons" data-initials="SS" data-tone="a"
+              data-genre="Indie rock" data-stage="The Big Face" data-day-name="Sunday 15 Nov" data-time="20:45"
+              data-bio="Four brothers, one van, approximately nine hundred choruses. Saltwater Sons close the main stage with songs built for people who claim they don’t sing along.">
+              <span class="mx-artist__no">06</span>
+              <span class="mx-artist__flag" hidden>
+                <svg viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M9 2.5 11 6.6l4.5.6-3.3 3.2.8 4.5L9 12.8 5 15l.8-4.6L2.5 7.2 7 6.6 9 2.5Z" fill="currentColor"/></svg>
+              </span>
+              <h3>Saltwater<br>Sons</h3>
+              <p class="mx-artist__genre">Indie rock</p>
+              <span class="mx-artist__meta">Sun · 20:45 · Big Face</span>
+            </button>
+          </article>
+
+          <article class="mx-artist tone--c" data-day="fri">
+            <button type="button" class="mx-artist__hit" data-artist
+              aria-label="Open artist details: Glass Aunty"
+              data-id="glass-aunty" data-name="Glass Aunty" data-initials="GA" data-tone="c"
+              data-genre="Experimental" data-stage="The Dome" data-day-name="Friday 13 Nov" data-time="19:30"
+              data-bio="Part sound installation, part family gathering. Glass Aunty plays bowed glass, field recordings and a pressure cooker. Nobody has ever described it the same way twice.">
+              <span class="mx-artist__no">07</span>
+              <span class="mx-artist__flag" hidden>
+                <svg viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M9 2.5 11 6.6l4.5.6-3.3 3.2.8 4.5L9 12.8 5 15l.8-4.6L2.5 7.2 7 6.6 9 2.5Z" fill="currentColor"/></svg>
+              </span>
+              <h3>Glass<br>Aunty</h3>
+              <p class="mx-artist__genre">Experimental</p>
+              <span class="mx-artist__meta">Fri · 19:30 · Dome</span>
+            </button>
+          </article>
+
+          <article class="mx-artist tone--b" data-day="sun">
+            <button type="button" class="mx-artist__hit" data-artist
+              aria-label="Open artist details: Bombay Bass Collective"
+              data-id="bombay-bass" data-name="Bombay Bass Collective" data-initials="BB" data-tone="b"
+              data-genre="Bass / breaks" data-stage="The Basement" data-day-name="Sunday 15 Nov" data-time="23:00"
+              data-bio="A rotating crew of Mumbai producers who treat sub-bass as a public service. Expect breaks, baile funk edits and at least one remix that should probably be illegal.">
+              <span class="mx-artist__no">08</span>
+              <span class="mx-artist__flag" hidden>
+                <svg viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M9 2.5 11 6.6l4.5.6-3.3 3.2.8 4.5L9 12.8 5 15l.8-4.6L2.5 7.2 7 6.6 9 2.5Z" fill="currentColor"/></svg>
+              </span>
+              <h3>Bombay Bass<br>Collective</h3>
+              <p class="mx-artist__genre">Bass · Breaks</p>
+              <span class="mx-artist__meta">Sun · 23:00 · Basement</span>
+            </button>
+          </article>
+
+          <article class="mx-artist tone--d" data-day="sat">
+            <button type="button" class="mx-artist__hit" data-artist
+              aria-label="Open artist details: Neon Sadhu"
+              data-id="neon-sadhu" data-name="Neon Sadhu" data-initials="NS" data-tone="d"
+              data-genre="Psytrance" data-stage="The Dome" data-day-name="Saturday 14 Nov" data-time="00:30"
+              data-bio="Neon Sadhu has been playing the same 132 BPM for twenty years and has somehow made it feel like a religious experience. The Dome will be full. The Dome is always full.">
+              <span class="mx-artist__no">09</span>
+              <span class="mx-artist__flag" hidden>
+                <svg viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M9 2.5 11 6.6l4.5.6-3.3 3.2.8 4.5L9 12.8 5 15l.8-4.6L2.5 7.2 7 6.6 9 2.5Z" fill="currentColor"/></svg>
+              </span>
+              <h3>Neon<br>Sadhu</h3>
+              <p class="mx-artist__genre">Psytrance</p>
+              <span class="mx-artist__meta">Sat · 00:30 · Dome</span>
+            </button>
+          </article>
+
+          <article class="mx-artist tone--a" data-day="sun">
+            <button type="button" class="mx-artist__hit" data-artist
+              aria-label="Open artist details: Tiny Loud Things"
+              data-id="tiny-loud" data-name="Tiny Loud Things" data-initials="TL" data-tone="a"
+              data-genre="Math pop" data-stage="The Garden" data-day-name="Sunday 15 Nov" data-time="18:45"
+              data-bio="Songs that last two minutes and change time signature four times. Tiny Loud Things are the reason you should arrive early on Sunday with a cold drink and no plans.">
+              <span class="mx-artist__no">10</span>
+              <span class="mx-artist__flag" hidden>
+                <svg viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M9 2.5 11 6.6l4.5.6-3.3 3.2.8 4.5L9 12.8 5 15l.8-4.6L2.5 7.2 7 6.6 9 2.5Z" fill="currentColor"/></svg>
+              </span>
+              <h3>Tiny Loud<br>Things</h3>
+              <p class="mx-artist__genre">Math pop</p>
+              <span class="mx-artist__meta">Sun · 18:45 · Garden</span>
+            </button>
+          </article>
+
+          <article class="mx-artist tone--c" data-day="fri">
+            <button type="button" class="mx-artist__hit" data-artist
+              aria-label="Open artist details: Aunty Ji and the Frequencies"
+              data-id="aunty-ji" data-name="Aunty Ji &amp; the Frequencies" data-initials="AJ" data-tone="c"
+              data-genre="Disco" data-stage="The Garden" data-day-name="Friday 13 Nov" data-time="22:30"
+              data-bio="A nine-piece disco machine led by the only person at the festival who can make a whistle sound dignified. Resistance is futile. The lawn will dance.">
+              <span class="mx-artist__no">11</span>
+              <span class="mx-artist__flag" hidden>
+                <svg viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M9 2.5 11 6.6l4.5.6-3.3 3.2.8 4.5L9 12.8 5 15l.8-4.6L2.5 7.2 7 6.6 9 2.5Z" fill="currentColor"/></svg>
+              </span>
+              <h3>Aunty Ji &amp;<br>the Frequencies</h3>
+              <p class="mx-artist__genre">Disco · 9 piece</p>
+              <span class="mx-artist__meta">Fri · 22:30 · Garden</span>
+            </button>
+          </article>
+
+          <article class="mx-artist tone--b" data-day="sun">
+            <button type="button" class="mx-artist__hit" data-artist
+              aria-label="Open artist details: 808 Raag"
+              data-id="808-raag" data-name="808 Raag" data-initials="8R" data-tone="b"
+              data-genre="Electronic" data-stage="The Big Face" data-day-name="Sunday 15 Nov" data-time="22:30"
+              data-bio="Tabla, 808s and a lighting rig with a mind of its own. 808 Raag closes the festival with a set that is half club, half classical concert and entirely too loud.">
+              <span class="mx-artist__no">12</span>
+              <span class="mx-artist__flag" hidden>
+                <svg viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M9 2.5 11 6.6l4.5.6-3.3 3.2.8 4.5L9 12.8 5 15l.8-4.6L2.5 7.2 7 6.6 9 2.5Z" fill="currentColor"/></svg>
+              </span>
+              <h3>808<br>Raag</h3>
+              <p class="mx-artist__genre">Electronic · Live</p>
+              <span class="mx-artist__meta">Sun · 22:30 · Big Face</span>
+            </button>
+          </article>
+        </div>
+
+        <p class="mx-lineup__note" data-reveal>
+          <span>Twelve of forty-two. The rest live on the timetable.</span>
+          <a class="mx-inline-link" href="#faq">When does it start? ↓</a>
+        </p>
+      </div>
+    </section>
+
+    <div class="mx-marquee" aria-hidden="true">
+      <div class="mx-marquee__inner">
+        <span>No sleep till Sunday</span><i class="mx-star"></i>
+        <span>No sleep till Sunday</span><i class="mx-star"></i>
+        <span>No sleep till Sunday</span><i class="mx-star"></i>
+        <span>No sleep till Sunday</span><i class="mx-star"></i>
+        <span>No sleep till Sunday</span><i class="mx-star"></i>
+      </div>
+    </div>
+
+    <section class="mx-world" id="world" aria-labelledby="world-title">
+      <div class="nx-container">
+        <header class="mx-world__head">
+          <div>
+            <p class="mx-kicker" data-reveal>02 / The world</p>
+            <h2 id="world-title" data-reveal style="--reveal-delay:60ms">Inside the<br><em>gates.</em></h2>
+          </div>
+          <p class="mx-world__intro" data-reveal style="--reveal-delay:120ms">
+            A festival is not just a stage. It is breakfast at 4 p.m., a record you
+            will lose, a stranger’s sunblock and six hours of walking. We built a
+            small city for it.
+          </p>
+        </header>
+
+        <div class="mx-world__photos">
+          <figure class="mx-shot mx-shot--crowd" data-reveal>
+            <img src="assets/img/fest-crowd.webp" width="1536" height="1024" alt="A festival crowd with hands raised under pink and amber lights and falling confetti" loading="lazy">
+            <figcaption>
+              <span>Main lawn · 21:04</span>
+              <span>Photo — 026 archive</span>
+            </figcaption>
+          </figure>
+          <figure class="mx-shot mx-shot--stage" data-reveal style="--reveal-delay:100ms">
+            <img src="assets/img/fest-stage.webp" width="1024" height="1024" alt="A performer silhouetted on a mirrored festival stage with colourful stacked panels, lasers and confetti" loading="lazy">
+            <figcaption>
+              <span>The Dome · last set</span>
+              <span>12,000 people, one floor</span>
+            </figcaption>
+          </figure>
+        </div>
+
+        <ul class="mx-fun">
+          <li class="mx-fun__card" data-reveal>
+            <span class="mx-fun__no">01</span>
+            <h3>Taste the street</h3>
+            <p>Eighteen kitchens, one lane. From 8 a.m. chai to 4 a.m. rolls.</p>
+            <span class="mx-fun__tag">Food lane</span>
+          </li>
+          <li class="mx-fun__card mx-fun__card--pop" data-reveal style="--reveal-delay:50ms">
+            <span class="mx-fun__no">02</span>
+            <h3>Late-night cinema</h3>
+            <p>A 40-seat tent showing festival films and one very bad dinosaur movie.</p>
+            <span class="mx-fun__tag">Open till 5</span>
+          </li>
+          <li class="mx-fun__card mx-fun__card--accent" data-reveal style="--reveal-delay:100ms">
+            <span class="mx-fun__no">03</span>
+            <h3>The record fair</h3>
+            <p>Thirty crates from Pune’s best collectors. Bring cash and opinions.</p>
+            <span class="mx-fun__tag">All weekend</span>
+          </li>
+          <li class="mx-fun__card mx-fun__card--zing" data-reveal style="--reveal-delay:150ms">
+            <span class="mx-fun__no">04</span>
+            <h3>Silent disco</h3>
+            <p>Three channels, wireless headphones, zero dignity. Runs till sunrise.</p>
+            <span class="mx-fun__tag">Sunrise club</span>
+          </li>
+          <li class="mx-fun__card mx-fun__card--accent" data-reveal style="--reveal-delay:200ms">
+            <span class="mx-fun__no">05</span>
+            <h3>Cool-down garden</h3>
+            <p>Shade, cold towels and a playlist that never goes above 90 BPM.</p>
+            <span class="mx-fun__tag">Free water</span>
+          </li>
+          <li class="mx-fun__card" data-reveal style="--reveal-delay:250ms">
+            <span class="mx-fun__no">06</span>
+            <h3>Art you can touch</h3>
+            <p>Six installations built to be climbed, crawled through and photographed.</p>
+            <span class="mx-fun__tag">Everywhere</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="mx-tickets" id="tickets" aria-labelledby="tickets-title">
+      <div class="nx-container">
+        <header class="mx-tickets__head">
+          <div>
+            <p class="mx-kicker" data-reveal>03 / Tickets</p>
+            <h2 id="tickets-title" data-reveal style="--reveal-delay:60ms">Choose your<br><em>chaos.</em></h2>
+          </div>
+          <p class="mx-tickets__note" data-reveal style="--reveal-delay:120ms">
+            All prices include entry, re-entry and as much water as you can carry.
+            Under-18s need a very responsible adult.
+          </p>
+        </header>
+
+        <div class="mx-ticket-grid">
+          <fieldset class="mx-tiers" data-reveal>
+            <legend class="nx-sr-only">Choose a ticket type</legend>
+
+            <label class="mx-tier is-selected">
+              <input class="mx-tier__input" type="radio" name="tier" value="day" checked>
+              <span class="mx-tier__head">
+                <span class="mx-tier__name">Day pass</span>
+                <span class="mx-tier__price">₹2,499</span>
+              </span>
+              <span class="mx-tier__desc">One night of your choosing. The gateway drug.</span>
+              <span class="mx-tier__list">
+                <span>One night · Fri, Sat or Sun</span>
+                <span>All five stages</span>
+                <span>No re-entry after 2 a.m.</span>
+              </span>
+              <span class="mx-tier__badge">Most bought</span>
+            </label>
+
+            <label class="mx-tier">
+              <input class="mx-tier__input" type="radio" name="tier" value="weekend">
+              <span class="mx-tier__head">
+                <span class="mx-tier__name">Full send</span>
+                <span class="mx-tier__price">₹5,999</span>
+              </span>
+              <span class="mx-tier__desc">Three nights, one wristband, zero regrets.</span>
+              <span class="mx-tier__list">
+                <span>All three nights</span>
+                <span>All five stages + silent disco</span>
+                <span>Free re-entry all weekend</span>
+              </span>
+              <span class="mx-tier__badge">Best value</span>
+            </label>
+
+            <label class="mx-tier">
+              <input class="mx-tier__input" type="radio" name="tier" value="vip">
+              <span class="mx-tier__head">
+                <span class="mx-tier__name">Backstage VIP</span>
+                <span class="mx-tier__price">₹9,999</span>
+              </span>
+              <span class="mx-tier__desc">For people who like the view from the side.</span>
+              <span class="mx-tier__list">
+                <span>Everything in Full send</span>
+                <span>Artist area + fast lane</span>
+                <span>Two hot meals a day</span>
+              </span>
+              <span class="mx-tier__badge">12 left</span>
+            </label>
+          </fieldset>
+
+          <aside class="mx-order" data-reveal style="--reveal-delay:100ms">
+            <p class="mx-order__label">Your order</p>
+            <div class="mx-order__row">
+              <span>Ticket</span>
+              <strong data-order-tier>Day pass</strong>
+            </div>
+            <div class="mx-order__row">
+              <span>Per ticket</span>
+              <strong data-order-each>₹2,499</strong>
+            </div>
+            <div class="mx-order__qty">
+              <span>How many?</span>
+              <div class="mx-qty">
+                <button type="button" data-qty-minus aria-label="Remove one ticket">−</button>
+                <output data-qty aria-live="polite">1</output>
+                <button type="button" data-qty-plus aria-label="Add one ticket">+</button>
+              </div>
+            </div>
+            <div class="mx-order__total">
+              <span>Total</span>
+              <strong data-order-total>₹2,499</strong>
+            </div>
+            <button class="mx-btn mx-btn--accent mx-order__btn" type="button" data-checkout>
+              Lock it in
+              <svg viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" stroke-width="2"/></svg>
+            </button>
+            <p class="mx-order__small">Prices include all fees. No surprise “convenience” charge — we hate that too.</p>
+          </aside>
+        </div>
+
+        <p class="mx-tickets__foot" data-reveal>
+          <span>Gates open 2 p.m. daily.</span>
+          <span>Festival is 18+ after 10 p.m.</span>
+          <span>Pune, Maharashtra</span>
+        </p>
+      </div>
+    </section>
+
+    <section class="mx-faq" id="faq" aria-labelledby="faq-title">
+      <div class="nx-container">
+        <div class="mx-faq__grid">
+          <header>
+            <p class="mx-kicker" data-reveal>04 / Good to know</p>
+            <h2 id="faq-title" data-reveal style="--reveal-delay:60ms">The boring<br>stuff, <em>loudly.</em></h2>
+            <p class="mx-faq__note" data-reveal style="--reveal-delay:120ms">
+              Still stuck? Write to us. A human reads it — usually after a coffee.
+            </p>
+            <a class="mx-email" href="mailto:hello@nyxo.dev" data-reveal style="--reveal-delay:160ms">
+              <span>hello@nyxo.dev</span>
+              <svg viewBox="0 0 22 22" fill="none" aria-hidden="true"><path d="M4 18 18 4M7 4h11v11" stroke="currentColor" stroke-width="1.6"/></svg>
+            </a>
+          </header>
+
+          <div class="mx-faq__list">
+            <details class="mx-faq__item">
+              <summary><span class="mx-faq__no">01</span><span>Where exactly is the festival?</span><i aria-hidden="true"></i></summary>
+              <p>Mahalaxmi Lawns, off Nagar Road, Pune. Shuttles run every 20 minutes from Kalyani Nagar and Koregaon Park between 1 p.m. and 5 a.m. The last shuttle leaves the venue 45 minutes after the final set.</p>
+            </details>
+            <details class="mx-faq__item">
+              <summary><span class="mx-faq__no">02</span><span>Can I leave and come back?</span><i aria-hidden="true"></i></summary>
+              <p>Yes — with a Full send or VIP wristband, re-entry is allowed all weekend until 2 a.m. Day passes are single-entry. If you need to step out for medicine or a phone charger, talk to the gate crew; they are nicer than they look.</p>
+            </details>
+            <details class="mx-faq__item">
+              <summary><span class="mx-faq__no">03</span><span>What should I bring?</span><i aria-hidden="true"></i></summary>
+              <p>Your ticket, a photo ID, a refillable bottle, sunscreen and shoes you can stand in for six hours. Leave the drone, the glass and the bad attitude at home. Lockers are available for ₹200 a day.</p>
+            </details>
+            <details class="mx-faq__item">
+              <summary><span class="mx-faq__no">04</span><span>Is the venue accessible?</span><i aria-hidden="true"></i></summary>
+              <p>All five stages have step-free routes and accessible viewing platforms. Accessible toilets are at every stage, and a companion ticket is free with any accessibility pass. Email us and we will walk you through the whole site before gates open.</p>
+            </details>
+            <details class="mx-faq__item">
+              <summary><span class="mx-faq__no">05</span><span>What if it rains?</span><i aria-hidden="true"></i></summary>
+              <p>We play through it. Pune in November is usually kind, but the main stage is covered and the Dome is indoors. In case of severe weather, sets may pause for safety — follow the crew and the screens, not the group chat.</p>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mx-signoff" aria-label="See you at the festival">
+      <div class="mx-signoff__inner nx-container">
+        <p class="mx-signoff__date" data-reveal>13–15 November 2026 · Pune</p>
+        <h2 data-reveal style="--reveal-delay:60ms">See you<br>in the <em>pit.</em></h2>
+        <div class="mx-signoff__row" data-reveal style="--reveal-delay:120ms">
+          <a class="mx-btn mx-btn--accent mx-btn--lg" href="#tickets">Get tickets</a>
+          <span>3 nights · 5 stages · 42 artists · 1 very loud lawn</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="mx-foot">
+    <div class="nx-container">
+      <div class="mx-foot__top">
+        <a class="mx-brand" href="#top" aria-label="NYXO Fest 2026 — back to top">
+          <span class="mx-brand__burst" aria-hidden="true">
+            <svg viewBox="0 0 40 40"><path d="M20 0l4.2 13.4L36 8l-7 12.3L40 24l-13.7 3.1L30 40l-11-9.2L8 40l3.7-12.9L0 24l10.8-3.7L4 8l11.8 5.4L20 0Z" fill="currentColor"/></svg>
+          </span>
+          <span class="mx-brand__word">NYXO <b>FEST</b> <em>’26</em></span>
+        </a>
+        <nav class="mx-foot__nav" aria-label="Footer">
+          <a href="#lineup">Lineup</a>
+          <a href="#world">The world</a>
+          <a href="#tickets">Tickets</a>
+          <a href="#faq">FAQ</a>
+          <a href="index.html">All NYXO styles</a>
+        </nav>
+      </div>
+      <div class="mx-foot__bottom">
+        <span>© <span data-year>2026</span> NYXO Web &amp; App Developer</span>
+        <span>A design demonstration. The festival, artists and ticket details are fictional.</span>
+        <a href="mailto:hello@nyxo.dev">hello@nyxo.dev</a>
+      </div>
+    </div>
+  </footer>
+
+  <dialog class="mx-dialog" id="artist-dialog" aria-labelledby="artist-title">
+    <div class="mx-dialog__card">
+      <button class="mx-dialog__close" type="button" data-artist-close aria-label="Close artist details">
+        <svg viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 3l12 12M15 3 3 15" stroke="currentColor" stroke-width="2"/></svg>
+      </button>
+      <div class="mx-dialog__art" data-artist-art>
+        <span class="mx-dialog__initials" data-artist-initials>AR</span>
+        <span class="mx-dialog__sticker">Live · 2026</span>
+      </div>
+      <div class="mx-dialog__body">
+        <p class="mx-dialog__when"><span data-artist-day>Friday 13 Nov</span> · <span data-artist-time>21:30</span></p>
+        <h2 id="artist-title" data-artist-name>Artist</h2>
+        <p class="mx-dialog__genre" data-artist-genre>Genre</p>
+        <p class="mx-dialog__bio" data-artist-bio></p>
+        <dl class="mx-dialog__meta">
+          <div><dt>Stage</dt><dd data-artist-stage>—</dd></div>
+          <div><dt>Day</dt><dd data-artist-full-day>—</dd></div>
+          <div><dt>Set</dt><dd data-artist-full-time>—</dd></div>
+        </dl>
+        <button class="mx-btn mx-btn--accent mx-dialog__save" type="button" data-lineup-toggle>
+          <svg viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M9 2.5 11 6.6l4.5.6-3.3 3.2.8 4.5L9 12.8 5 15l.8-4.6L2.5 7.2 7 6.6 9 2.5Z" stroke="currentColor" stroke-width="1.5"/></svg>
+          <span data-lineup-toggle-label>Add to my lineup</span>
+        </button>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="mx-dialog mx-dialog--order" id="order-dialog" aria-labelledby="order-title">
+    <div class="mx-dialog__card">
+      <button class="mx-dialog__close" type="button" data-order-close aria-label="Close ticket form">
+        <svg viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 3l12 12M15 3 3 15" stroke="currentColor" stroke-width="2"/></svg>
+      </button>
+      <div class="mx-dialog__body">
+        <p class="mx-kicker">Ticket hold · NYXO FEST ’26</p>
+        <h2 id="order-title">Lock it in.</h2>
+        <p class="mx-order-card__summary" data-order-summary>1 × Day pass — ₹2,499</p>
+        <form class="mx-order-form" data-order-form novalidate>
+          <label for="order-email">Where should we send the ticket?</label>
+          <input id="order-email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="you@example.com" required>
+          <button class="mx-btn mx-btn--accent mx-btn--lg" type="submit">
+            Reserve my spot
+            <svg viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" stroke-width="2"/></svg>
+          </button>
+        </form>
+        <p class="mx-order-form__status" data-order-status aria-live="polite"></p>
+        <p class="mx-order-form__small">This is a design demonstration — no payment is taken and no email is sent.</p>
+      </div>
+    </div>
+  </dialog>
+
+  <script>
+    (() => {
+      "use strict";
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+      const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+      const money = new Intl.NumberFormat("en-IN", { style: "currency", currency: "INR", maximumFractionDigits: 0 });
+
+      /* Countdown label — swaps to a live number until the gates open. */
+      const countdown = document.querySelector("[data-countdown]");
+      const gate = new Date("2026-11-13T14:00:00+05:30");
+      const diff = gate - new Date();
+      if (countdown) {
+        if (diff > 0) {
+          const days = Math.ceil(diff / 86400000);
+          countdown.textContent = days + (days === 1 ? " day to go" : " days to go");
+        } else {
+          countdown.textContent = "Gates are open";
+        }
+      }
+
+      /* Hero poster pointer parallax. */
+      const hero = document.querySelector(".mx-hero");
+      const poster = document.querySelector("[data-poster]");
+      if (hero && poster && finePointer && !reduceMotion.matches) {
+        let frame = 0;
+        hero.addEventListener("pointermove", (event) => {
+          if (event.pointerType === "touch") return;
+          if (frame) return;
+          frame = requestAnimationFrame(() => {
+            const x = event.clientX / window.innerWidth - 0.5;
+            const y = event.clientY / window.innerHeight - 0.5;
+            poster.style.setProperty("--px", x.toFixed(3));
+            poster.style.setProperty("--py", y.toFixed(3));
+            frame = 0;
+          });
+        }, { passive: true });
+      }
+
+      /* Lineup filters. */
+      const dayButtons = [...document.querySelectorAll(".mx-day")];
+      const artists = [...document.querySelectorAll(".mx-artist")];
+      const filterStatus = document.querySelector("[data-filter-status]");
+      const dayNames = { all: "", fri: "Friday", sat: "Saturday", sun: "Sunday" };
+
+      function filterLineup(day) {
+        let shown = 0;
+        artists.forEach((card) => {
+          const match = day === "all" || card.dataset.day === day;
+          card.hidden = !match;
+          if (match) shown += 1;
+        });
+        dayButtons.forEach((button) => button.setAttribute("aria-pressed", String(button.dataset.day === day)));
+        filterStatus.textContent = day === "all"
+          ? `Showing all ${shown} artists.`
+          : `Showing ${shown} artists on ${dayNames[day]}.`;
+      }
+
+      dayButtons.forEach((button) => {
+        button.addEventListener("click", () => filterLineup(button.dataset.day));
+      });
+
+      /* Artist dialog + saved lineup. */
+      const artistDialog = document.getElementById("artist-dialog");
+      const artistArt = artistDialog.querySelector("[data-artist-art]");
+      const artistInitials = artistDialog.querySelector("[data-artist-initials]");
+      const artistName = artistDialog.querySelector("[data-artist-name]");
+      const artistGenre = artistDialog.querySelector("[data-artist-genre]");
+      const artistBio = artistDialog.querySelector("[data-artist-bio]");
+      const artistStage = artistDialog.querySelector("[data-artist-stage]");
+      const artistDay = artistDialog.querySelector("[data-artist-day]");
+      const artistTime = artistDialog.querySelector("[data-artist-time]");
+      const artistFullDay = artistDialog.querySelector("[data-artist-full-day]");
+      const artistFullTime = artistDialog.querySelector("[data-artist-full-time]");
+      const saveButton = artistDialog.querySelector("[data-lineup-toggle]");
+      const saveLabel = artistDialog.querySelector("[data-lineup-toggle-label]");
+      const countNodes = [...document.querySelectorAll("[data-lineup-count]")];
+      const triggers = [...document.querySelectorAll("[data-artist]")];
+      let activeArtist = null;
+      let lastTrigger = null;
+
+      const STORE_KEY = "nyxo.fest.lineup";
+      let saved = [];
+      try {
+        const raw = JSON.parse(localStorage.getItem(STORE_KEY) || "[]");
+        if (Array.isArray(raw)) saved = raw.filter((id) => typeof id === "string");
+      } catch (e) {}
+
+      function paintSaved() {
+        countNodes.forEach((node) => { node.textContent = String(saved.length); });
+        artists.forEach((card) => {
+          const trigger = card.querySelector("[data-artist]");
+          const flag = card.querySelector(".mx-artist__flag");
+          const isSaved = saved.includes(trigger.dataset.id);
+          card.classList.toggle("is-saved", isSaved);
+          if (flag) flag.hidden = !isSaved;
+        });
+        if (activeArtist) paintSaveButton(activeArtist);
+      }
+
+      function paintSaveButton(trigger) {
+        const isSaved = saved.includes(trigger.dataset.id);
+        saveButton.classList.toggle("is-saved", isSaved);
+        saveLabel.textContent = isSaved ? "In my lineup" : "Add to my lineup";
+        saveButton.setAttribute("aria-pressed", String(isSaved));
+      }
+
+      function openArtist(trigger) {
+        lastTrigger = trigger;
+        activeArtist = trigger;
+        artistArt.dataset.tone = trigger.dataset.tone || "a";
+        artistInitials.textContent = trigger.dataset.initials || "NX";
+        artistName.textContent = trigger.dataset.name;
+        artistGenre.textContent = trigger.dataset.genre;
+        artistBio.textContent = trigger.dataset.bio;
+        artistStage.textContent = trigger.dataset.stage;
+        artistDay.textContent = trigger.dataset.dayName;
+        artistTime.textContent = trigger.dataset.time;
+        artistFullDay.textContent = trigger.dataset.dayName;
+        artistFullTime.textContent = trigger.dataset.time;
+        paintSaveButton(trigger);
+        if (typeof artistDialog.showModal === "function") artistDialog.showModal();
+        else artistDialog.setAttribute("open", "");
+      }
+
+      triggers.forEach((trigger) => {
+        trigger.addEventListener("click", () => openArtist(trigger));
+      });
+
+      artistDialog.querySelector("[data-artist-close]").addEventListener("click", () => artistDialog.close());
+      artistDialog.addEventListener("click", (event) => {
+        if (event.target === artistDialog) artistDialog.close();
+      });
+      artistDialog.addEventListener("close", () => {
+        if (lastTrigger) lastTrigger.focus();
+      });
+
+      saveButton.addEventListener("click", () => {
+        if (!activeArtist) return;
+        const id = activeArtist.dataset.id;
+        saved = saved.includes(id) ? saved.filter((entry) => entry !== id) : [...saved, id];
+        try { localStorage.setItem(STORE_KEY, JSON.stringify(saved)); } catch (e) {}
+        paintSaved();
+      });
+
+      paintSaved();
+
+      /* Ticket configurator. */
+      const tiers = {
+        day: { name: "Day pass", price: 2499 },
+        weekend: { name: "Full send", price: 5999 },
+        vip: { name: "Backstage VIP", price: 9999 },
+      };
+      const tierInputs = [...document.querySelectorAll(".mx-tier__input")];
+      const tierCards = [...document.querySelectorAll(".mx-tier")];
+      const orderTier = document.querySelector("[data-order-tier]");
+      const orderEach = document.querySelector("[data-order-each]");
+      const orderTotal = document.querySelector("[data-order-total]");
+      const qtyOut = document.querySelector("[data-qty]");
+      const qtyMinus = document.querySelector("[data-qty-minus]");
+      const qtyPlus = document.querySelector("[data-qty-plus]");
+      const totalNode = document.querySelector("[data-order-total]");
+      let currentTier = "day";
+      let qty = 1;
+      const MAX_QTY = 6;
+
+      function renderOrder() {
+        const tier = tiers[currentTier];
+        orderTier.textContent = tier.name;
+        orderEach.textContent = money.format(tier.price);
+        orderTotal.textContent = money.format(tier.price * qty);
+        qtyOut.textContent = String(qty);
+        qtyMinus.disabled = qty <= 1;
+        qtyPlus.disabled = qty >= MAX_QTY;
+        tierCards.forEach((card) => {
+          const input = card.querySelector(".mx-tier__input");
+          card.classList.toggle("is-selected", input.checked);
+        });
+        totalNode.classList.remove("is-bumped");
+        void totalNode.offsetWidth;
+        totalNode.classList.add("is-bumped");
+      }
+
+      tierInputs.forEach((input) => {
+        input.addEventListener("change", () => {
+          if (input.checked) {
+            currentTier = input.value;
+            renderOrder();
+          }
+        });
+      });
+
+      qtyMinus.addEventListener("click", () => {
+        qty = Math.max(1, qty - 1);
+        renderOrder();
+      });
+      qtyPlus.addEventListener("click", () => {
+        qty = Math.min(MAX_QTY, qty + 1);
+        renderOrder();
+      });
+      renderOrder();
+
+      /* Order dialog. */
+      const orderDialog = document.getElementById("order-dialog");
+      const orderForm = orderDialog.querySelector("[data-order-form]");
+      const orderEmail = orderDialog.querySelector("#order-email");
+      const orderStatus = orderDialog.querySelector("[data-order-status]");
+      const orderSummary = orderDialog.querySelector("[data-order-summary]");
+      const checkout = document.querySelector("[data-checkout]");
+
+      function paintOrderSummary() {
+        const tier = tiers[currentTier];
+        orderSummary.textContent = `${qty} × ${tier.name} — ${money.format(tier.price * qty)}`;
+      }
+
+      checkout.addEventListener("click", () => {
+        paintOrderSummary();
+        orderForm.hidden = false;
+        orderStatus.textContent = "";
+        orderStatus.classList.remove("is-ok");
+        if (typeof orderDialog.showModal === "function") orderDialog.showModal();
+        else orderDialog.setAttribute("open", "");
+        window.setTimeout(() => orderEmail.focus(), 60);
+      });
+
+      orderDialog.querySelector("[data-order-close]").addEventListener("click", () => orderDialog.close());
+      orderDialog.addEventListener("click", (event) => {
+        if (event.target === orderDialog) orderDialog.close();
+      });
+
+      orderForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const value = orderEmail.value.trim();
+        const valid = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(value);
+        if (!valid) {
+          orderStatus.textContent = "That email looks off — check it and try again.";
+          orderStatus.classList.remove("is-ok");
+          orderEmail.setAttribute("aria-invalid", "true");
+          orderEmail.focus();
+          return;
+        }
+        orderEmail.removeAttribute("aria-invalid");
+        orderForm.hidden = true;
+        orderStatus.classList.add("is-ok");
+        const safeValue = value.replace(/&/g, "&amp;").replace(/</g, "&lt;");
+        orderStatus.innerHTML = `<b>Hold confirmed.</b> ${qty} × ${tiers[currentTier].name} for ${money.format(tiers[currentTier].price * qty)}. A demo ticket would be sent to ${safeValue}.`;
+      });
+    })();
+  </script>
+</body>
+</html>

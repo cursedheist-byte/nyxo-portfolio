@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en" data-page="spatial-ui">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0e1118">
+  <meta name="description" content="NYXO Atlas — Aperture, a spatial exhibition of light, glass and distance. A spatial UI demonstration by NYXO Web &amp; App Developer.">
+  <title>NYXO Atlas — Spatial UI · NYXO Style Lab</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/spatial-ui.css">
+  <script>
+    document.documentElement.classList.add('js');
+    try {
+      var p = localStorage.getItem('nyxo.palette.' + document.documentElement.dataset.page);
+      if (p) document.documentElement.dataset.palette = p;
+    } catch (e) {}
+  </script>
+  <script src="assets/js/app.js" defer></script>
+</head>
+<body class="atlas-page">
+  <a class="nx-skip" href="#main">Skip to content</a>
+  <header id="nx-bar" class="nx-bar" aria-label="Style lab controls"></header>
+
+  <header class="sp-head">
+    <div class="sp-head__inner nx-container">
+      <div class="sp-bar">
+        <a class="sp-brand" href="#top" aria-label="NYXO Atlas — back to top">
+          <span class="sp-brand__mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="none">
+              <ellipse class="sp-brand__ring" cx="16" cy="16" rx="13" ry="6" stroke="currentColor" stroke-width="1.1"/>
+              <ellipse class="sp-brand__ring sp-brand__ring--b" cx="16" cy="16" rx="12.5" ry="5.5" stroke="currentColor" stroke-width="1.1" transform="rotate(62 16 16)" opacity=".6"/>
+              <circle cx="16" cy="16" r="2.6" fill="currentColor"/>
+            </svg>
+          </span>
+          <span class="sp-brand__word">NYXO <em>Atlas</em></span>
+        </a>
+
+        <nav class="sp-nav" aria-label="Primary">
+          <a href="#works">On view</a>
+          <a href="#space">The space</a>
+          <a href="#visit">Visit</a>
+        </nav>
+
+        <div class="sp-head__actions">
+          <span class="sp-open"><i aria-hidden="true"></i>Open today</span>
+          <a class="sp-btn sp-btn--small sp-btn--primary" href="#visit">Book a visit</a>
+          <button class="sp-menu" type="button" data-menu-toggle aria-controls="sp-sheet" aria-expanded="false" aria-label="Open menu">
+            <span></span><span></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="sp-sheet sp-window" id="sp-sheet">
+        <a href="#works"><span>01</span>On view</a>
+        <a href="#space"><span>02</span>The space</a>
+        <a href="#visit"><span>03</span>Visit &amp; book</a>
+        <span class="sp-sheet__hours">Open today · 11:00 — 20:00</span>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="sp-hero" id="top" aria-labelledby="hero-title">
+      <div class="sp-hero__inner nx-container">
+        <div class="sp-hero__copy">
+          <p class="sp-eyebrow" data-reveal>
+            <span class="sp-pill"><i class="sp-dot" aria-hidden="true"></i>Aperture · Autumn 2026</span>
+            <span>Pune, IN</span>
+          </p>
+          <h1 class="sp-hero__title" id="hero-title" data-reveal style="--reveal-delay:60ms">
+            Step into<br>the <span class="sp-glow">quiet.</span>
+          </h1>
+          <p class="sp-hero__lead" data-reveal style="--reveal-delay:130ms">
+            A spatial exhibition of light, glass and distance. Five works, three
+            rooms, one long walk — no frames, no ropes, and no right way round.
+          </p>
+          <div class="sp-hero__actions" data-reveal style="--reveal-delay:190ms">
+            <a class="sp-btn sp-btn--primary sp-btn--large" href="#works" data-magnetic>
+              Enter the gallery
+              <svg viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" stroke-width="1.5"/></svg>
+            </a>
+            <button class="sp-btn sp-btn--large" type="button" data-tour>
+              <svg viewBox="0 0 18 18" fill="none" aria-hidden="true"><circle cx="9" cy="9" r="6.5" stroke="currentColor" stroke-width="1.3"/><path d="M7.5 6.6 11.4 9l-3.9 2.4V6.6Z" fill="currentColor"/></svg>
+              Take the tour
+            </button>
+          </div>
+          <dl class="sp-hero__facts" data-reveal style="--reveal-delay:250ms">
+            <div><dt>Works</dt><dd><span data-count="5">5</span> in orbit</dd></div>
+            <div><dt>Rooms</dt><dd>Three + the hall</dd></div>
+            <div><dt>Until</dt><dd>14 Feb 2027</dd></div>
+          </dl>
+        </div>
+
+        <div class="sp-stage" data-stage data-reveal style="--reveal-delay:120ms">
+          <div class="sp-stage__glow" aria-hidden="true"></div>
+          <div class="sp-stage__grid" aria-hidden="true"></div>
+
+          <figure class="sp-window sp-hero-window" data-tilt="4">
+            <div class="sp-window__bar">
+              <span class="sp-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+              <span class="sp-window__title">The Long Room <em>· live view</em></span>
+              <span class="sp-window__badge">Room 01</span>
+            </div>
+            <div class="sp-hero-window__media">
+              <img src="assets/img/atlas-hero.webp" width="1792" height="1024" alt="A dark gallery hall with an amber sphere, a blue glass slab and a chrome ring glowing above a reflective floor" fetchpriority="high">
+              <span class="sp-look" aria-hidden="true">
+                <svg viewBox="0 0 16 16" fill="none"><path d="M8 2v12M2 8h12M5 5 2 8l3 3M11 5l3 3-3 3M5 5l3-3 3 3M5 11l3 3 3-3" stroke="currentColor" stroke-width="1"/></svg>
+                Move to look
+              </span>
+              <span class="sp-hotspot sp-hotspot--a" aria-hidden="true"><em>Solar Drift</em></span>
+              <span class="sp-hotspot sp-hotspot--b" aria-hidden="true"><em>Tidal Memory</em></span>
+              <span class="sp-hotspot sp-hotspot--c" aria-hidden="true"><em>Orbit Study</em></span>
+            </div>
+            <figcaption class="sp-hero-window__foot">
+              <span>Long Room · 18:41</span>
+              <span>3 works in view</span>
+            </figcaption>
+          </figure>
+
+          <div class="sp-window sp-float sp-float--a" aria-hidden="true">
+            <span class="sp-float__bar"><i></i><i></i><span>Room 02</span></span>
+            <img src="assets/img/atlas-tidal.webp" width="1024" height="1024" alt="" loading="lazy">
+            <span class="sp-float__foot">Tidal Memory</span>
+          </div>
+
+          <div class="sp-window sp-float sp-float--b" aria-hidden="true">
+            <span class="sp-float__bar"><i></i><i></i><span>Room 05</span></span>
+            <img src="assets/img/atlas-orbit.webp" width="1024" height="1024" alt="" loading="lazy">
+            <span class="sp-float__foot">Orbit Study</span>
+          </div>
+
+          <div class="sp-chip sp-chip--depth" aria-hidden="true"><em>Depth</em><b>03 layers</b></div>
+          <div class="sp-chip sp-chip--tone" aria-hidden="true">
+            <span class="sp-wave"><i></i><i></i><i></i><i></i></span>
+            <span><em>Room tone</em><b>32 dBA</b></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sp-strip" aria-hidden="true">
+        <div class="sp-strip__track">
+          <span>Aperture 2026</span><i></i><span>Five works</span><i></i><span>Three rooms</span><i></i><span>Open late Fridays</span><i></i><span>Free entry</span><i></i><span>Step-free access</span><i></i><span>Pune</span><i></i>
+          <span>Aperture 2026</span><i></i><span>Five works</span><i></i><span>Three rooms</span><i></i><span>Open late Fridays</span><i></i><span>Free entry</span><i></i><span>Step-free access</span><i></i><span>Pune</span><i></i>
+        </div>
+      </div>
+    </section>
+
+    <section class="sp-works" id="works" aria-labelledby="works-title">
+      <div class="nx-container">
+        <header class="sp-section-head sp-section-head--split">
+          <div>
+            <p class="sp-kicker" data-reveal>01 / On view</p>
+            <h2 id="works-title" data-reveal style="--reveal-delay:60ms">Five works.<br><span class="sp-glow">No wrong side.</span></h2>
+          </div>
+          <p class="sp-section-head__note" data-reveal style="--reveal-delay:120ms">
+            Windows, not frames. Open any work to step closer — each one holds its
+            room, its material and the time it asks for.
+          </p>
+        </header>
+
+        <div class="sp-toolbar" data-reveal>
+          <div class="sp-segment" role="group" aria-label="Choose view">
+            <button class="sp-segment__btn is-active" type="button" data-view="orbit" aria-pressed="true">Orbit</button>
+            <button class="sp-segment__btn" type="button" data-view="wall" aria-pressed="false">Wall</button>
+          </div>
+
+          <div class="sp-filters" role="group" aria-label="Filter works by room">
+            <button class="sp-filter" type="button" data-room-filter="all" aria-pressed="true">All</button>
+            <button class="sp-filter" type="button" data-room-filter="hall" aria-pressed="false"><i class="sp-roomdot sp-roomdot--hall" aria-hidden="true"></i>Hall</button>
+            <button class="sp-filter" type="button" data-room-filter="horizon" aria-pressed="false"><i class="sp-roomdot sp-roomdot--horizon" aria-hidden="true"></i>Horizon</button>
+            <button class="sp-filter" type="button" data-room-filter="quiet" aria-pressed="false"><i class="sp-roomdot sp-roomdot--quiet" aria-hidden="true"></i>Quiet</button>
+            <button class="sp-filter" type="button" data-room-filter="form" aria-pressed="false"><i class="sp-roomdot sp-roomdot--form" aria-hidden="true"></i>Form</button>
+          </div>
+
+          <p class="sp-toolbar__status" data-works-status aria-live="polite">5 works · All rooms · Orbit view</p>
+        </div>
+
+        <div class="sp-works__stage is-orbit" data-works-stage data-reveal>
+          <button class="sp-work" type="button" data-work="longroom" data-room="hall" data-tilt="4" aria-label="The Long Room by NYXO Studio, 2026. Hall. Open the work.">
+            <span class="sp-work__inner">
+              <span class="sp-work__chrome"><span class="sp-dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="sp-work__no">01</span></span>
+              <span class="sp-work__media"><img src="assets/img/atlas-hero.webp" width="1792" height="1024" alt="The long gallery hall glowing amber, blue and violet" loading="lazy"></span>
+              <span class="sp-work__body">
+                <span class="sp-work__room"><i class="sp-roomdot sp-roomdot--hall" aria-hidden="true"></i>Hall</span>
+                <span class="sp-work__title">The Long Room</span>
+                <span class="sp-work__meta">NYXO Studio · 2026</span>
+                <span class="sp-work__open">Open window <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.4"/></svg></span>
+              </span>
+            </span>
+          </button>
+
+          <button class="sp-work" type="button" data-work="solar" data-room="horizon" data-tilt="4" aria-label="Solar Drift by Ira Sen, 2026. Horizon. Open the work.">
+            <span class="sp-work__inner">
+              <span class="sp-work__chrome"><span class="sp-dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="sp-work__no">02</span></span>
+              <span class="sp-work__media"><img src="assets/img/atlas-solar.webp" width="1024" height="1024" alt="A glowing amber glass sphere hovering above a black reflective floor" loading="lazy"></span>
+              <span class="sp-work__body">
+                <span class="sp-work__room"><i class="sp-roomdot sp-roomdot--horizon" aria-hidden="true"></i>Horizon</span>
+                <span class="sp-work__title">Solar Drift</span>
+                <span class="sp-work__meta">Ira Sen · 2026</span>
+                <span class="sp-work__open">Open window <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.4"/></svg></span>
+              </span>
+            </span>
+          </button>
+
+          <button class="sp-work" type="button" data-work="tidal" data-room="horizon" data-tilt="4" aria-label="Tidal Memory by Mira Rao, 2025. Horizon. Open the work.">
+            <span class="sp-work__inner">
+              <span class="sp-work__chrome"><span class="sp-dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="sp-work__no">03</span></span>
+              <span class="sp-work__media"><img src="assets/img/atlas-tidal.webp" width="1024" height="1024" alt="Suspended translucent glass panels lit with blue underwater light" loading="lazy"></span>
+              <span class="sp-work__body">
+                <span class="sp-work__room"><i class="sp-roomdot sp-roomdot--horizon" aria-hidden="true"></i>Horizon</span>
+                <span class="sp-work__title">Tidal Memory</span>
+                <span class="sp-work__meta">Mira Rao · 2025</span>
+                <span class="sp-work__open">Open window <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.4"/></svg></span>
+              </span>
+            </span>
+          </button>
+
+          <button class="sp-work" type="button" data-work="signal" data-room="quiet" data-tilt="4" aria-label="Quiet Signal by Dev Malhotra, 2026. Quiet. Open the work.">
+            <span class="sp-work__inner">
+              <span class="sp-work__chrome"><span class="sp-dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="sp-work__no">04</span></span>
+              <span class="sp-work__media"><img src="assets/img/atlas-signal.webp" width="1024" height="1024" alt="A pale stone monolith in fog with a thin white line of light across it" loading="lazy"></span>
+              <span class="sp-work__body">
+                <span class="sp-work__room"><i class="sp-roomdot sp-roomdot--quiet" aria-hidden="true"></i>Quiet</span>
+                <span class="sp-work__title">Quiet Signal</span>
+                <span class="sp-work__meta">Dev Malhotra · 2026</span>
+                <span class="sp-work__open">Open window <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.4"/></svg></span>
+              </span>
+            </span>
+          </button>
+
+          <button class="sp-work" type="button" data-work="orbit" data-room="form" data-tilt="4" aria-label="Orbit Study by Anaya Kulkarni, 2024. Form. Open the work.">
+            <span class="sp-work__inner">
+              <span class="sp-work__chrome"><span class="sp-dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="sp-work__no">05</span></span>
+              <span class="sp-work__media"><img src="assets/img/atlas-orbit.webp" width="1024" height="1024" alt="Three thin chrome rings intersecting in a dark gallery lit violet" loading="lazy"></span>
+              <span class="sp-work__body">
+                <span class="sp-work__room"><i class="sp-roomdot sp-roomdot--form" aria-hidden="true"></i>Form</span>
+                <span class="sp-work__title">Orbit Study</span>
+                <span class="sp-work__meta">Anaya Kulkarni · 2024</span>
+                <span class="sp-work__open">Open window <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.4"/></svg></span>
+              </span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="sp-space" id="space" aria-labelledby="space-title">
+      <div class="nx-container">
+        <header class="sp-section-head sp-section-head--split">
+          <div>
+            <p class="sp-kicker" data-reveal>02 / The space</p>
+            <h2 id="space-title" data-reveal style="--reveal-delay:60ms">Built to be<br><span class="sp-glow">wandered.</span></h2>
+          </div>
+          <p class="sp-section-head__note" data-reveal style="--reveal-delay:120ms">
+            No wall labels, no fixed route, no headphones. The room does half the
+            work — it is dim, quiet and deliberately a little too large.
+          </p>
+        </header>
+
+        <div class="sp-notes">
+          <article class="sp-note" data-reveal>
+            <div class="sp-note__viz sp-note__viz--light" aria-hidden="true"><i></i></div>
+            <p class="sp-note__label"><span>01</span>Light</p>
+            <p class="sp-note__value">2,700 K</p>
+            <p class="sp-note__body">
+              Warm, low and indirect. The galleries dim to 1,800 K after 19:00 so
+              the works can take over the room.
+            </p>
+            <p class="sp-note__meta">Dims after 19:00</p>
+          </article>
+
+          <article class="sp-note" data-reveal style="--reveal-delay:70ms">
+            <div class="sp-note__viz sp-note__viz--sound" aria-hidden="true">
+              <i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+            </div>
+            <p class="sp-note__label"><span>02</span>Sound</p>
+            <p class="sp-note__value">32 dBA</p>
+            <p class="sp-note__body">
+              A room tone composed for the space — low enough to hear footsteps,
+              never enough to mask the work.
+            </p>
+            <p class="sp-note__meta">No headphones</p>
+          </article>
+
+          <article class="sp-note" data-reveal style="--reveal-delay:140ms">
+            <div class="sp-note__viz sp-note__viz--distance" aria-hidden="true">
+              <span></span><span></span><span></span><i></i>
+            </div>
+            <p class="sp-note__label"><span>03</span>Distance</p>
+            <p class="sp-note__value">4.5 m</p>
+            <p class="sp-note__body">
+              Works are spaced so you never see two at once. The walk between them
+              is part of the exhibition.
+            </p>
+            <p class="sp-note__meta">12 min walk</p>
+          </article>
+        </div>
+
+        <blockquote class="sp-quote" data-reveal>
+          <p>“We removed the centre of the room. What is left is a walk — and whatever you bring to it.”</p>
+          <footer>
+            <span>Ira Sen · Curator</span>
+            <span class="sp-quote__clock">Pune · <time data-clock>18:41</time> IST</span>
+          </footer>
+        </blockquote>
+      </div>
+    </section>
+
+    <section class="sp-visit" id="visit" aria-labelledby="visit-title">
+      <div class="nx-container">
+        <div class="sp-visit__grid">
+          <div class="sp-visit__copy">
+            <p class="sp-kicker" data-reveal>03 / Visit</p>
+            <h2 id="visit-title" data-reveal style="--reveal-delay:60ms">Come stand<br><span class="sp-glow">inside it.</span></h2>
+            <p class="sp-visit__lead" data-reveal style="--reveal-delay:110ms">
+              Aperture runs until 14 February 2027. Entry is free, groups are
+              small, and the last walk begins forty minutes before close.
+            </p>
+
+            <dl class="sp-hours" data-reveal style="--reveal-delay:150ms">
+              <div><dt>Weekdays</dt><dd>11:00 — 20:00</dd></div>
+              <div><dt>Weekends</dt><dd>10:00 — 21:00</dd></div>
+              <div><dt>Late Friday</dt><dd>11:00 — 23:00</dd></div>
+            </dl>
+
+            <address class="sp-address" data-reveal style="--reveal-delay:190ms">
+              <span>Studio 04, Lane 7</span>
+              <span>Koregaon Park, Pune 411001</span>
+              <span class="sp-address__meta">Step-free entry · Cloakroom · No flash photography</span>
+            </address>
+
+            <div class="sp-map" data-reveal aria-hidden="true">
+              <span class="sp-map__room sp-map__room--a">Long room</span>
+              <span class="sp-map__room sp-map__room--b">Horizon</span>
+              <span class="sp-map__room sp-map__room--c">Form</span>
+              <span class="sp-map__room sp-map__room--d">Quiet</span>
+              <span class="sp-map__route"></span>
+              <span class="sp-map__pin"><i></i>You</span>
+            </div>
+          </div>
+
+          <div class="sp-window sp-book" data-reveal style="--reveal-delay:120ms">
+            <div class="sp-window__bar">
+              <span class="sp-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+              <span class="sp-window__title">Reserve a window</span>
+              <span class="sp-window__badge">Free entry</span>
+            </div>
+            <div class="sp-book__body">
+              <p class="sp-book__eyebrow">
+                Today · <span data-count="38">38</span> visitors · <span data-clock>18:41</span> IST
+              </p>
+              <h3>Hold a place.</h3>
+              <p class="sp-book__lede">
+                Choose a day and bring up to six people. Unclaimed places are
+                released fifteen minutes after the hour.
+              </p>
+
+              <form class="sp-form" data-book-form novalidate>
+                <label for="book-email">Email</label>
+                <input id="book-email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="you@example.com" required>
+
+                <div class="sp-form__row">
+                  <div>
+                    <label for="book-date">Date</label>
+                    <input id="book-date" name="date" type="date" required>
+                  </div>
+                  <div>
+                    <label for="book-guests">Guests</label>
+                    <select id="book-guests" name="guests">
+                      <option value="1">1 person</option>
+                      <option value="2" selected>2 people</option>
+                      <option value="3">3 people</option>
+                      <option value="4">4 people</option>
+                      <option value="5">5 people</option>
+                      <option value="6">6 people</option>
+                    </select>
+                  </div>
+                </div>
+
+                <button class="sp-btn sp-btn--primary" type="submit">
+                  Reserve a slot
+                  <svg viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" stroke-width="1.5"/></svg>
+                </button>
+                <p class="sp-form__small">Free entry · we hold your place for 15 minutes.</p>
+                <p class="sp-form__status" data-book-status aria-live="polite"></p>
+              </form>
+
+              <div class="sp-book__done" data-book-done hidden>
+                <span class="sp-done__mark" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none"><path d="m5 12 5 5L20 7" stroke="currentColor" stroke-width="1.5"/></svg>
+                </span>
+                <h3>Your window is held.</h3>
+                <p data-book-summary>We will email your entry window.</p>
+                <button class="sp-btn sp-btn--small" type="button" data-book-reset>Change the booking</button>
+              </div>
+
+              <p class="sp-book__demo">A design demonstration — no booking is made and no email is sent.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="sp-foot">
+    <div class="nx-container">
+      <div class="sp-foot__top">
+        <a class="sp-brand" href="#top" aria-label="NYXO Atlas — back to top">
+          <span class="sp-brand__mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="none">
+              <ellipse class="sp-brand__ring" cx="16" cy="16" rx="13" ry="6" stroke="currentColor" stroke-width="1.1"/>
+              <ellipse class="sp-brand__ring sp-brand__ring--b" cx="16" cy="16" rx="12.5" ry="5.5" stroke="currentColor" stroke-width="1.1" transform="rotate(62 16 16)" opacity=".6"/>
+              <circle cx="16" cy="16" r="2.6" fill="currentColor"/>
+            </svg>
+          </span>
+          <span class="sp-brand__word">NYXO <em>Atlas</em></span>
+        </a>
+        <nav class="sp-foot__nav" aria-label="Footer">
+          <a href="#works">On view</a>
+          <a href="#space">The space</a>
+          <a href="#visit">Visit</a>
+          <a href="index.html">All NYXO styles</a>
+        </nav>
+      </div>
+      <div class="sp-foot__bottom">
+        <span>© <span data-year>2026</span> NYXO Web &amp; App Developer</span>
+        <span>A design demonstration. The exhibition, works and artists are fictional.</span>
+        <a href="mailto:hello@nyxo.dev">hello@nyxo.dev</a>
+      </div>
+    </div>
+  </footer>
+
+  <dialog class="sp-dialog" id="work-dialog" aria-labelledby="sp-dialog-title">
+    <div class="sp-window sp-dialog__window">
+      <div class="sp-window__bar sp-dialog__bar">
+        <span class="sp-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span class="sp-window__title sp-dialog__count" data-dialog-count>Work 01 / 05</span>
+        <button class="sp-dialog__close" type="button" data-dialog-close aria-label="Close work">
+          <svg viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="m4 4 10 10M14 4 4 14" stroke="currentColor" stroke-width="1.5"/></svg>
+        </button>
+      </div>
+
+      <div class="sp-dialog__grid">
+        <figure class="sp-dialog__media">
+          <img data-dialog-img src="assets/img/atlas-hero.webp" width="1792" height="1024" alt="">
+          <figcaption data-dialog-caption>The Long Room · Hall</figcaption>
+        </figure>
+
+        <div class="sp-dialog__content">
+          <p class="sp-dialog__room"><i class="sp-roomdot sp-roomdot--hall" data-dialog-dot aria-hidden="true"></i><span data-dialog-room>Hall</span></p>
+          <h3 id="sp-dialog-title" tabindex="-1" data-dialog-title>The Long Room</h3>
+          <p class="sp-dialog__meta" data-dialog-meta>NYXO Studio · 2026</p>
+          <p class="sp-dialog__statement" data-dialog-statement></p>
+
+          <dl class="sp-dialog__specs">
+            <div><dt>Medium</dt><dd data-dialog-medium></dd></div>
+            <div><dt>Time</dt><dd data-dialog-duration></dd></div>
+            <div><dt>Room</dt><dd data-dialog-room2></dd></div>
+          </dl>
+
+          <div class="sp-dialog__actions">
+            <button class="sp-btn sp-btn--small" type="button" data-dialog-prev>
+              <svg viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M15 9H3M8 4 3 9l5 5" stroke="currentColor" stroke-width="1.5"/></svg>
+              Previous
+            </button>
+            <button class="sp-btn sp-btn--small sp-btn--primary" type="button" data-dialog-next>
+              Next work
+              <svg viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" stroke-width="1.5"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <script>
+    (() => {
+      "use strict";
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+      const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+
+      /* Hero stage parallax. */
+      const stage = document.querySelector("[data-stage]");
+      if (stage && finePointer && !reduceMotion.matches) {
+        let frame = 0;
+        stage.addEventListener("pointermove", (event) => {
+          if (event.pointerType === "touch") return;
+          if (frame) return;
+          frame = requestAnimationFrame(() => {
+            const rect = stage.getBoundingClientRect();
+            stage.style.setProperty("--sx", ((event.clientX - rect.left) / rect.width - 0.5).toFixed(3));
+            stage.style.setProperty("--sy", ((event.clientY - rect.top) / rect.height - 0.5).toFixed(3));
+            frame = 0;
+          });
+        }, { passive: true });
+      }
+
+      const works = [...document.querySelectorAll(".sp-work")];
+      const worksStage = document.querySelector("[data-works-stage]");
+      const worksStatus = document.querySelector("[data-works-status]");
+      const viewButtons = [...document.querySelectorAll("[data-view]")];
+      const filterButtons = [...document.querySelectorAll("[data-room-filter]")];
+      const roomNames = { all: "All rooms", hall: "Hall", horizon: "Horizon", quiet: "Quiet", form: "Form" };
+      let view = "orbit";
+      let activeRoom = "all";
+
+      /* Shared exhibit data. */
+      const worksData = {
+        longroom: {
+          title: "The Long Room",
+          artist: "NYXO Studio",
+          year: "2026",
+          room: "hall",
+          medium: "Mixed media, light and glass",
+          duration: "12 min walk",
+          statement:
+            "The hall is the first work: a long, unlit room where three pieces hold the only light. Walk slowly and the floor becomes a second exhibition.",
+          img: "assets/img/atlas-hero.webp",
+          alt: "A dark gallery hall with an amber sphere, a blue glass slab and a chrome ring glowing above a reflective floor",
+        },
+        solar: {
+          title: "Solar Drift",
+          artist: "Ira Sen",
+          year: "2026",
+          room: "horizon",
+          medium: "Suspended glass, warm light",
+          duration: "6 min",
+          statement:
+            "A sphere of glass and warm light, held a metre off the floor. It breathes with the room's humidity; no two visits look the same.",
+          img: "assets/img/atlas-solar.webp",
+          alt: "A glowing amber glass sphere hovering above a black reflective floor",
+        },
+        tidal: {
+          title: "Tidal Memory",
+          artist: "Mira Rao",
+          year: "2025",
+          room: "horizon",
+          medium: "Cast glass, caustic projection",
+          duration: "8 min",
+          statement:
+            "Five water-cast panels carry the memory of a tide. The light learns the shape of the glass and draws it across the floor.",
+          img: "assets/img/atlas-tidal.webp",
+          alt: "Suspended translucent glass panels lit with blue underwater light above a wet black floor",
+        },
+        signal: {
+          title: "Quiet Signal",
+          artist: "Dev Malhotra",
+          year: "2026",
+          room: "quiet",
+          medium: "Limestone, laser, fog",
+          duration: "4 min",
+          statement:
+            "A single line of light passes through stone. The work is silent; the fog does the speaking.",
+          img: "assets/img/atlas-signal.webp",
+          alt: "A pale limestone monolith in fog with a thin white line of light crossing it",
+        },
+        orbit: {
+          title: "Orbit Study",
+          artist: "Anaya Kulkarni",
+          year: "2024",
+          room: "form",
+          medium: "Polished steel, violet light",
+          duration: "5 min",
+          statement:
+            "Three rings, suspended and turning slowly. Stand underneath and the gallery becomes a sky with one object in it.",
+          img: "assets/img/atlas-orbit.webp",
+          alt: "Three thin chrome rings intersecting in a dark gallery lit with violet light",
+        },
+      };
+
+      const capitalise = (value) => value.charAt(0).toUpperCase() + value.slice(1);
+
+      function paintSlots() {
+        const visible = works.filter((work) => !work.classList.contains("is-off"));
+        const count = visible.length;
+        visible.forEach((work, index) => {
+          const d = index - (count - 1) / 2;
+          work.style.setProperty("--rot", (d * -7).toFixed(2) + "deg");
+          work.style.setProperty("--ty", Math.round(Math.abs(d) * 18) + "px");
+          work.style.setProperty("--tz", Math.round(44 - Math.abs(d) * 46) + "px");
+        });
+        worksStatus.textContent =
+          count + (count === 1 ? " work" : " works") +
+          " · " + roomNames[activeRoom] +
+          " · " + (view === "orbit" ? "Orbit view" : "Wall view");
+      }
+
+      function setView(next) {
+        view = next;
+        worksStage.classList.toggle("is-orbit", next === "orbit");
+        worksStage.classList.toggle("is-wall", next === "wall");
+        viewButtons.forEach((button) => {
+          const active = button.dataset.view === next;
+          button.classList.toggle("is-active", active);
+          button.setAttribute("aria-pressed", String(active));
+        });
+        paintSlots();
+      }
+
+      function setRoom(room) {
+        activeRoom = room;
+        works.forEach((work) => {
+          work.classList.toggle("is-off", room !== "all" && work.dataset.room !== room);
+        });
+        filterButtons.forEach((button) => {
+          button.setAttribute("aria-pressed", String(button.dataset.roomFilter === room));
+        });
+        paintSlots();
+      }
+
+      viewButtons.forEach((button) => {
+        button.addEventListener("click", () => setView(button.dataset.view));
+      });
+
+      filterButtons.forEach((button) => {
+        button.addEventListener("click", () => setRoom(button.dataset.roomFilter));
+      });
+
+      paintSlots();
+
+      /* Exhibit dialog. */
+      const dialog = document.querySelector("#work-dialog");
+      const dialogClose = dialog.querySelector("[data-dialog-close]");
+      const dialogImg = dialog.querySelector("[data-dialog-img]");
+      const dialogCaption = dialog.querySelector("[data-dialog-caption]");
+      const dialogRoom = dialog.querySelector("[data-dialog-room]");
+      const dialogRoom2 = dialog.querySelector("[data-dialog-room2]");
+      const dialogRoomDot = dialog.querySelector("[data-dialog-dot]");
+      const dialogTitle = dialog.querySelector("[data-dialog-title]");
+      const dialogMeta = dialog.querySelector("[data-dialog-meta]");
+      const dialogStatement = dialog.querySelector("[data-dialog-statement]");
+      const dialogMedium = dialog.querySelector("[data-dialog-medium]");
+      const dialogDuration = dialog.querySelector("[data-dialog-duration]");
+      const dialogCount = dialog.querySelector("[data-dialog-count]");
+      const order = ["longroom", "solar", "tidal", "signal", "orbit"];
+      let current = 0;
+      let lastTrigger = null;
+      const supportsDialog = typeof dialog.showModal === "function";
+
+      function paintDialog(index) {
+        current = (index + order.length) % order.length;
+        const id = order[current];
+        const data = worksData[id];
+        const roomLabel = capitalise(data.room);
+        dialogImg.src = data.img;
+        dialogImg.alt = data.alt;
+        dialogCaption.textContent = data.title + " · " + roomLabel;
+        dialogRoom.textContent = roomLabel;
+        dialogRoom2.textContent = roomLabel;
+        dialogRoomDot.className = "sp-roomdot sp-roomdot--" + data.room;
+        dialogTitle.textContent = data.title;
+        dialogMeta.textContent = data.artist + " · " + data.year;
+        dialogStatement.textContent = data.statement;
+        dialogMedium.textContent = data.medium;
+        dialogDuration.textContent = data.duration;
+        dialogCount.textContent = "Work " + String(current + 1).padStart(2, "0") + " / " + String(order.length).padStart(2, "0");
+      }
+
+      function openWork(id, trigger) {
+        const index = order.indexOf(id);
+        if (index < 0 || !supportsDialog) return;
+        lastTrigger = trigger || null;
+        paintDialog(index);
+        dialog.showModal();
+        document.body.classList.add("sp-modal-open");
+        dialogClose.focus();
+      }
+
+      function closeWork() {
+        if (supportsDialog && dialog.open) dialog.close();
+      }
+
+      works.forEach((work) => {
+        work.addEventListener("click", () => openWork(work.dataset.work, work));
+      });
+
+      const tourButton = document.querySelector("[data-tour]");
+      if (tourButton) {
+        tourButton.addEventListener("click", () => openWork("longroom", tourButton));
+      }
+
+      dialogClose.addEventListener("click", closeWork);
+      dialog.querySelector("[data-dialog-next]").addEventListener("click", () => paintDialog(current + 1));
+      dialog.querySelector("[data-dialog-prev]").addEventListener("click", () => paintDialog(current - 1));
+
+      dialog.addEventListener("click", (event) => {
+        if (event.target === dialog) closeWork();
+      });
+
+      dialog.addEventListener("keydown", (event) => {
+        if (event.key === "ArrowRight") {
+          event.preventDefault();
+          paintDialog(current + 1);
+        } else if (event.key === "ArrowLeft") {
+          event.preventDefault();
+          paintDialog(current - 1);
+        }
+      });
+
+      dialog.addEventListener("close", () => {
+        document.body.classList.remove("sp-modal-open");
+        if (lastTrigger && document.contains(lastTrigger)) {
+          lastTrigger.focus({ preventScroll: true });
+        }
+      });
+
+      /* Booking form. */
+      const bookForm = document.querySelector("[data-book-form]");
+      if (bookForm) {
+        const email = bookForm.querySelector("#book-email");
+        const date = bookForm.querySelector("#book-date");
+        const guests = bookForm.querySelector("#book-guests");
+        const status = bookForm.querySelector("[data-book-status]");
+        const done = document.querySelector("[data-book-done]");
+        const summary = document.querySelector("[data-book-summary]");
+        const reset = document.querySelector("[data-book-reset]");
+        const demo = document.querySelector(".sp-book__demo");
+        const today = new Date();
+        const pad = (n) => String(n).padStart(2, "0");
+        const iso = today.getFullYear() + "-" + pad(today.getMonth() + 1) + "-" + pad(today.getDate());
+        date.min = iso;
+
+        function fail(field, message) {
+          status.textContent = message;
+          field.setAttribute("aria-invalid", "true");
+          field.focus();
+        }
+
+        bookForm.addEventListener("submit", (event) => {
+          event.preventDefault();
+          const value = email.value.trim();
+          if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(value)) {
+            fail(email, "That email does not look right — check it and try again.");
+            return;
+          }
+          if (!date.value || date.value < iso) {
+            fail(date, "Choose a date from today onwards.");
+            return;
+          }
+          if (!guests.value || Number(guests.value) < 1 || Number(guests.value) > 6) {
+            fail(guests, "Choose between one and six guests.");
+            return;
+          }
+          email.removeAttribute("aria-invalid");
+          date.removeAttribute("aria-invalid");
+          guests.removeAttribute("aria-invalid");
+          status.textContent = "";
+          const when = new Date(date.value + "T12:00:00").toLocaleDateString("en-GB", {
+            day: "numeric",
+            month: "short",
+            year: "numeric",
+          });
+          const people = guests.value === "1" ? "1 person" : guests.value + " people";
+          bookForm.hidden = true;
+          if (demo) demo.hidden = true;
+          done.hidden = false;
+          summary.textContent =
+            "A window for " + people + " is held for " + when + ". We will write to " + value + " with directions.";
+          reset.focus();
+        });
+
+        reset.addEventListener("click", () => {
+          done.hidden = true;
+          bookForm.hidden = false;
+          if (demo) demo.hidden = false;
+          status.textContent = "";
+          email.value = "";
+          date.value = "";
+          guests.value = "2";
+          email.focus();
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

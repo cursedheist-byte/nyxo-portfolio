@@ -7,6 +7,7 @@ import Marquee from './components/Marquee'
 import Navbar from './components/Navbar'
 import About from './components/About'
 import Work from './components/Work'
+import StyleLab from './components/StyleLab'
 import Stack from './components/Stack'
 import Process from './components/Process'
 import GithubSection from './components/GithubSection'
@@ -61,6 +62,7 @@ export default function App() {
         <Marquee />
         <About />
         <Work />
+        <StyleLab />
         <Stack />
         <Process />
         <GithubSection />

@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en" data-page="skeuomorphism">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1c130c">
+  <meta name="description" content="NYXO Soundworks — hand-finished walnut and brass hi-fi. A skeuomorphic demonstration by NYXO Web &amp; App Developer.">
+  <title>NYXO Soundworks — Skeuomorphism · NYXO Style Lab</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Chivo+Mono:wght@400;500;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/skeuomorphism.css">
+  <script>
+    document.documentElement.classList.add('js');
+    try {
+      var p = localStorage.getItem('nyxo.palette.' + document.documentElement.dataset.page);
+      if (p) document.documentElement.dataset.palette = p;
+    } catch (e) {}
+  </script>
+  <script src="assets/js/app.js" defer></script>
+</head>
+<body class="skeu">
+  <a class="nx-skip" href="#main">Skip to content</a>
+  <header id="nx-bar" class="nx-bar" aria-label="Style lab controls"></header>
+
+  <header class="skh">
+    <div class="skh__inner nx-container">
+      <a class="skh__brand" href="#top" aria-label="NYXO Soundworks home">
+        <span class="skh__badge" aria-hidden="true">N</span>
+        <span class="skh__name">NYXO <small>Soundworks</small></span>
+      </a>
+      <nav class="skh__nav" aria-label="Primary">
+        <a href="#collection">Collection</a>
+        <a href="#listening">Listening room</a>
+        <a href="#craft">Craft</a>
+        <a href="#contact">Visit</a>
+      </nav>
+      <div class="skh__actions">
+        <a class="skh__cta" href="#contact" data-magnetic="3">Book a listening</a>
+        <button class="skh__menu" type="button" data-menu-toggle aria-controls="skh-sheet" aria-expanded="false" aria-label="Open menu">
+          <svg viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 5.5h12M3 9h12M3 12.5h7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="skh__sheet" id="skh-sheet">
+      <a href="#collection">Collection</a>
+      <a href="#listening">Listening room</a>
+      <a href="#craft">Craft</a>
+      <a href="#contact">Visit the showroom</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero__grain" aria-hidden="true"></div>
+      <div class="nx-container hero__grid">
+        <div class="hero__copy">
+          <p class="kicker" data-reveal>NYXO Soundworks · Analogue since 1987</p>
+          <h1 id="hero-title" data-reveal style="--reveal-delay:60ms">Warmth you can <em>hear.</em></h1>
+          <p class="hero__lead" data-reveal style="--reveal-delay:120ms">
+            Hand-matched walnut, machined brass and a signal path built by people who
+            still own records. This is hi-fi made to be touched, not just streamed.
+          </p>
+          <div class="hero__actions" data-reveal style="--reveal-delay:180ms">
+            <a class="btn btn--brass" href="#collection" data-magnetic="4">
+              Explore the collection
+              <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h9M8.5 3.5 13 8l-4.5 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <button class="btn btn--metal" type="button" data-demo-play aria-pressed="false">
+              <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" class="icon-play"><path d="M5.5 3.6v8.8L12.4 8 5.5 3.6Z" fill="currentColor"/></svg>
+              <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" class="icon-pause"><path d="M5.5 3.5v9M10.5 3.5v9" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              <span data-demo-label data-off="Play the NR-70" data-on="Pause the NR-70">Play the NR-70</span>
+            </button>
+          </div>
+          <dl class="hero__specs" data-reveal style="--reveal-delay:240ms">
+            <div><dt>Finish</dt><dd>Oiled walnut</dd></div>
+            <div><dt>Power</dt><dd>2 × 70 W</dd></div>
+            <div><dt>Warranty</dt><dd>10 years</dd></div>
+          </dl>
+        </div>
+
+        <div class="hero__stage" data-reveal style="--reveal-delay:150ms">
+          <figure class="receiver" data-tilt="5" aria-label="The NYXO NR-70 stereo receiver in an oiled walnut cabinet with brass controls and two illuminated VU meters.">
+            <div class="receiver__cabinet">
+              <div class="receiver__face">
+                <div class="receiver__topline">
+                  <span class="receiver__logo">NYXO</span>
+                  <span class="receiver__model">NR-70 · Stereo receiver</span>
+                  <span class="receiver__lamp" aria-hidden="true"></span>
+                </div>
+
+                <div class="meters" aria-hidden="true">
+                  <div class="meter">
+                    <span class="meter__ch">L</span>
+                    <div class="meter__face">
+                      <i class="meter__mark"></i>
+                      <span class="meter__scale"><b>-20</b><b>-10</b><b>-5</b><b>0</b><b>+3</b></span>
+                      <i class="needle"></i>
+                      <span class="meter__vu">VU</span>
+                    </div>
+                  </div>
+                  <div class="meter">
+                    <span class="meter__ch">R</span>
+                    <div class="meter__face">
+                      <i class="meter__mark"></i>
+                      <span class="meter__scale"><b>-20</b><b>-10</b><b>-5</b><b>0</b><b>+3</b></span>
+                      <i class="needle"></i>
+                      <span class="meter__vu">VU</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="tuner">
+                  <span class="tuner__band">FM Stereo</span>
+                  <strong class="tuner__dial"><span data-tuner>98.4</span><small>MHz</small></strong>
+                  <span class="tuner__scale" aria-hidden="true"><i></i></span>
+                </div>
+
+                <div class="controls">
+                  <div class="knob-group">
+                    <button class="knob" type="button" data-knob aria-label="Volume 6 of 10. Activate to increase." style="--rot:26deg">
+                      <span class="knob__cap" aria-hidden="true"></span>
+                    </button>
+                    <span class="knob__label">Volume <b data-volume>6</b></span>
+                  </div>
+
+                  <button class="power" type="button" data-demo-play aria-pressed="false">
+                    <span class="power__led" aria-hidden="true"></span>
+                    <span class="power__txt" data-demo-label data-off="Standby" data-on="Playing">Standby</span>
+                  </button>
+
+                  <div class="knob-group">
+                    <button class="knob" type="button" data-input aria-label="Switch input. Current input phono." style="--rot:-60deg">
+                      <span class="knob__cap" aria-hidden="true"></span>
+                    </button>
+                    <span class="knob__label">Input <b data-input-label>Phono</b></span>
+                  </div>
+                </div>
+
+                <div class="receiver__foot">
+                  <span>NYXO Audio Labs · Copenhagen</span>
+                  <span class="receiver__toggles" aria-hidden="true"><i></i><i></i><i></i></span>
+                  <span>Phono · Aux · Tape</span>
+                </div>
+              </div>
+              <div class="receiver__vents" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            </div>
+            <figcaption class="receiver__caption">
+              <span class="pulse" aria-hidden="true"></span>
+              NR-70 in oiled walnut · Turn the volume, change the input.
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <div class="strip" aria-hidden="true">
+      <div class="strip__track">
+        <span>Analog soul</span><i></i><span>Hand-matched pairs</span><i></i><span>Brass, not plastic</span><i></i><span>Ten-year service</span><i></i>
+        <span>Analog soul</span><i></i><span>Hand-matched pairs</span><i></i><span>Brass, not plastic</span><i></i><span>Ten-year service</span><i></i>
+      </div>
+    </div>
+
+    <section class="section collection" id="collection" aria-labelledby="collection-title">
+      <div class="nx-container">
+        <div class="section-head" data-reveal>
+          <div>
+            <p class="kicker">The collection · Three pieces</p>
+            <h2 id="collection-title">A system that <em>ages well.</em></h2>
+          </div>
+          <p class="section-head__note">Each unit is finished by a single maker, signed underneath, and matched to its pair by ear before it leaves the bench.</p>
+        </div>
+
+        <div class="products">
+          <article class="product" data-reveal>
+            <div class="product__visual product__visual--tt" aria-hidden="true">
+              <div class="tt">
+                <div class="tt__plinth">
+                  <div class="tt__platter"><span class="tt__label"></span><i class="tt__groove"></i></div>
+                  <div class="tt__arm"><i></i></div>
+                  <div class="tt__controls"><span></span><span></span><b>33</b><b>45</b></div>
+                </div>
+                <div class="tt__shadow"></div>
+              </div>
+            </div>
+            <div class="product__body">
+              <p class="product__tag">Turntable · 01</p>
+              <h3>TT-12</h3>
+              <p class="product__copy">Belt-driven, brass bearing, solid walnut plinth. Built around an arm that tracks like it has all the time in the world.</p>
+              <ul class="product__specs">
+                <li><span>Drive</span><b>Belt</b></li>
+                <li><span>Speeds</span><b>33 / 45</b></li>
+              </ul>
+              <div class="product__foot">
+                <span class="price">₹1,84,000</span>
+                <button class="textlink" type="button" data-product="tt12">Details <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h9M8.5 3.5 13 8l-4.5 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product product--feature" data-reveal style="--reveal-delay:80ms">
+            <div class="product__visual product__visual--nr" aria-hidden="true">
+              <div class="mini-nr">
+                <div class="mini-nr__face">
+                  <span class="mini-nr__brand">NYXO</span>
+                  <div class="mini-nr__meters"><i></i><i></i></div>
+                  <div class="mini-nr__knobs"><span></span><span></span><span></span></div>
+                  <div class="mini-nr__led"></div>
+                </div>
+              </div>
+            </div>
+            <div class="product__body">
+              <p class="product__tag">Receiver · 02</p>
+              <h3>NR-70</h3>
+              <p class="product__copy">Seventy honest watts per channel, a phono stage that respects the record, and VU meters you will watch more than the film.</p>
+              <ul class="product__specs">
+                <li><span>Output</span><b>2 × 70 W</b></li>
+                <li><span>Inputs</span><b>Phono · Aux · Tape</b></li>
+              </ul>
+              <div class="product__foot">
+                <span class="price">₹2,26,000</span>
+                <button class="textlink" type="button" data-product="nr70">Details <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h9M8.5 3.5 13 8l-4.5 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product" data-reveal style="--reveal-delay:160ms">
+            <div class="product__visual product__visual--ls" aria-hidden="true">
+              <div class="speaker">
+                <div class="speaker__cab">
+                  <span class="speaker__badge">NYXO</span>
+                  <i class="speaker__driver speaker__driver--tweeter"></i>
+                  <i class="speaker__driver speaker__driver--mid"></i>
+                  <i class="speaker__driver speaker__driver--woofer"></i>
+                  <i class="speaker__port"></i>
+                </div>
+                <div class="speaker__cab speaker__cab--back"></div>
+              </div>
+            </div>
+            <div class="product__body">
+              <p class="product__tag">Loudspeakers · 03</p>
+              <h3>LS-8</h3>
+              <p class="product__copy">An eight-inch paper cone in a cabinet heavy enough to stay quiet. Warm midrange, patient bass, no showmanship.</p>
+              <ul class="product__specs">
+                <li><span>Woofer</span><b>8 in paper</b></li>
+                <li><span>Sold as</span><b>Matched pair</b></li>
+              </ul>
+              <div class="product__foot">
+                <span class="price">₹1,58,000</span>
+                <button class="textlink" type="button" data-product="ls8">Details <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h9M8.5 3.5 13 8l-4.5 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section listening" id="listening" aria-labelledby="listening-title">
+      <div class="nx-container listening__grid">
+        <figure class="listening__photo" data-reveal>
+          <img src="assets/img/skeu-listening-room.webp" alt="A warm walnut listening room with floor-standing speakers, a turntable and a wall of records in late afternoon light" width="1536" height="1024" loading="lazy">
+          <figcaption>
+            <span class="listening__pin" aria-hidden="true"></span>
+            <span><b>The listening room</b>By appointment · Copenhagen</span>
+          </figcaption>
+        </figure>
+
+        <div class="session" data-reveal style="--reveal-delay:80ms">
+          <div class="session__head">
+            <p class="kicker kicker--dark">Now spinning</p>
+            <span class="session__live"><i aria-hidden="true"></i>Live signal</span>
+          </div>
+          <h2 id="listening-title">Side A, <em>track one.</em></h2>
+          <div class="session__now" aria-live="polite">
+            <p class="session__art">Kind of Blue</p>
+            <p class="session__track" data-now-track>So What</p>
+            <p class="session__meta"><span data-now-artist>Miles Davis</span><span aria-hidden="true">·</span><span data-now-length>9:22</span><span aria-hidden="true">·</span><span>1959 · Stereo</span></p>
+          </div>
+
+          <div class="session__progress" aria-hidden="true"><i data-progress></i></div>
+          <div class="session__times" aria-hidden="true"><span>00:00</span><span data-now-length>9:22</span></div>
+
+          <ul class="session__list">
+            <li><button class="session__track-btn is-active" type="button" data-track="So What" data-artist="Miles Davis" data-length="9:22" aria-pressed="true"><span class="session__num">01</span><span class="session__name">So What</span><span class="session__len">9:22</span><span class="session__eq" aria-hidden="true"><i></i><i></i><i></i></span></button></li>
+            <li><button class="session__track-btn" type="button" data-track="Freddie Freeloader" data-artist="Miles Davis" data-length="9:46" aria-pressed="false"><span class="session__num">02</span><span class="session__name">Freddie Freeloader</span><span class="session__len">9:46</span><span class="session__eq" aria-hidden="true"><i></i><i></i><i></i></span></button></li>
+            <li><button class="session__track-btn" type="button" data-track="Blue in Green" data-artist="Miles Davis" data-length="5:37" aria-pressed="false"><span class="session__num">03</span><span class="session__name">Blue in Green</span><span class="session__len">5:37</span><span class="session__eq" aria-hidden="true"><i></i><i></i><i></i></span></button></li>
+          </ul>
+
+          <div class="session__foot">
+            <button class="session__play" type="button" data-demo-play aria-pressed="false">
+              <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" class="icon-play"><path d="M5.5 3.6v8.8L12.4 8 5.5 3.6Z" fill="currentColor"/></svg>
+              <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" class="icon-pause"><path d="M5.5 3.5v9M10.5 3.5v9" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              <span data-demo-label data-off="Play the room" data-on="Pause the room">Play the room</span>
+            </button>
+            <p>Recorded live through an NR-70 and LS-8 pair. Headphones recommended.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section craft" id="craft" aria-labelledby="craft-title">
+      <div class="nx-container">
+        <div class="section-head" data-reveal>
+          <div>
+            <p class="kicker">How it is made</p>
+            <h2 id="craft-title">Slow hands, <em>steady signal.</em></h2>
+          </div>
+          <p class="section-head__note">Three weeks per receiver. No shortcuts that you could hear later.</p>
+        </div>
+        <ol class="steps">
+          <li class="step" data-reveal>
+            <span class="step__plate">01</span>
+            <h3>Choose the tree</h3>
+            <p>We buy walnut in whole boards, then cut and book-match each cabinet so the grain runs like a single piece around the box.</p>
+            <span class="step__meta">Week one · Veneer</span>
+          </li>
+          <li class="step" data-reveal style="--reveal-delay:90ms">
+            <span class="step__plate">02</span>
+            <h3>Machine the brass</h3>
+            <p>Knobs are turned from solid stock, brushed by hand and lacquered. The weight is deliberate — you should feel a click, not a shrug.</p>
+            <span class="step__meta">Week two · Metalwork</span>
+          </li>
+          <li class="step" data-reveal style="--reveal-delay:180ms">
+            <span class="step__plate">03</span>
+            <h3>Listen, then sign</h3>
+            <p>Every finished unit runs for forty hours on the bench. Two makers listen, adjust bias, and sign the underside before it is boxed.</p>
+            <span class="step__meta">Week three · Voicing</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section visit" id="contact" aria-labelledby="contact-title">
+      <div class="nx-container">
+        <div class="visit__card" data-reveal>
+          <div class="visit__copy">
+            <p class="kicker kicker--dark">Visit the showroom</p>
+            <h2 id="contact-title">Come hear it <em>properly.</em></h2>
+            <p>Book an hour in the listening room. Bring a record, or choose from the shelf. We will set the system up around you — no script, no pressure.</p>
+            <div class="visit__actions">
+              <a class="btn btn--brass" href="mailto:hello@nyxo.dev?subject=Listening%20room%20appointment%20%E2%80%94%20NYXO%20Soundworks" data-magnetic="4">
+                Book by email
+                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h9M8.5 3.5 13 8l-4.5 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+              <a class="btn btn--outline" href="tel:+4531001987">+45 31 00 19 87</a>
+            </div>
+          </div>
+          <div class="visit__card-side">
+            <p class="visit__label">Open by appointment</p>
+            <p class="visit__hours">Wednesday – Saturday<br>11:00 – 19:00</p>
+            <p class="visit__addr">NYXO Soundworks<br>Bredgade 42, Copenhagen K</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="sfoot">
+    <div class="nx-container">
+      <div class="sfoot__top">
+        <a class="sfoot__brand" href="#top"><span aria-hidden="true">N</span> NYXO Soundworks</a>
+        <nav class="sfoot__nav" aria-label="Footer">
+          <a href="#collection">Collection</a>
+          <a href="#listening">Listening room</a>
+          <a href="#craft">Craft</a>
+          <a href="index.html">All 10 styles</a>
+        </nav>
+        <p class="sfoot__note">A NYXO demonstration · Built to be touched</p>
+      </div>
+      <p class="sfoot__word" aria-hidden="true">Soundworks</p>
+      <div class="sfoot__bottom">
+        <span>© <span data-year>2026</span> NYXO Web &amp; App Developer</span>
+        <span>Demonstration site · Prices in INR</span>
+      </div>
+    </div>
+  </footer>
+
+  <dialog class="spec-dialog" id="spec-dialog" aria-labelledby="spec-title">
+    <div class="spec-dialog__inner">
+      <button class="spec-dialog__close" type="button" data-dialog-close aria-label="Close details">
+        <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      </button>
+      <p class="kicker kicker--dark" data-spec-kicker>Turntable · 01</p>
+      <h2 id="spec-title" data-spec-title>TT-12</h2>
+      <p class="spec-dialog__copy" data-spec-copy></p>
+      <dl class="spec-dialog__list" data-spec-list></dl>
+      <div class="spec-dialog__foot">
+        <span class="price" data-spec-price></span>
+        <a class="btn btn--brass" href="mailto:hello@nyxo.dev?subject=NYXO%20Soundworks%20enquiry" data-dialog-mail>Enquire about this piece</a>
+      </div>
+    </div>
+  </dialog>
+
+  <script>
+    (() => {
+      const body = document.body;
+      const playButtons = Array.from(document.querySelectorAll('[data-demo-play]'));
+      let playing = false;
+
+      function setPlaying(next) {
+        playing = next;
+        body.classList.toggle('is-playing', playing);
+        playButtons.forEach((button) => {
+          button.setAttribute('aria-pressed', String(playing));
+        });
+        document.querySelectorAll('[data-demo-label]').forEach((label) => {
+          label.textContent = playing ? label.dataset.on : label.dataset.off;
+        });
+        const progress = document.querySelector('[data-progress]');
+        if (progress) {
+          progress.style.animation = 'none';
+          void progress.offsetWidth;
+          progress.style.animation = '';
+        }
+      }
+
+      playButtons.forEach((button) => {
+        button.addEventListener('click', () => setPlaying(!playing));
+      });
+
+      const knob = document.querySelector('[data-knob]');
+      const volume = document.querySelector('[data-volume]');
+      let level = 6;
+      if (knob) {
+        knob.addEventListener('click', () => {
+          level = level >= 10 ? 1 : level + 1;
+          knob.style.setProperty('--rot', `${-130 + level * 26}deg`);
+          knob.setAttribute('aria-label', `Volume ${level} of 10. Activate to increase.`);
+          if (volume) volume.textContent = String(level);
+        });
+      }
+
+      const inputKnob = document.querySelector('[data-input]');
+      const inputLabel = document.querySelector('[data-input-label]');
+      const inputs = ['Phono', 'Aux', 'Tape'];
+      let inputIndex = 0;
+      if (inputKnob) {
+        inputKnob.addEventListener('click', () => {
+          inputIndex = (inputIndex + 1) % inputs.length;
+          inputKnob.style.setProperty('--rot', `${-60 + inputIndex * 60}deg`);
+          inputKnob.setAttribute('aria-label', `Switch input. Current input ${inputs[inputIndex].toLowerCase()}.`);
+          if (inputLabel) inputLabel.textContent = inputs[inputIndex];
+        });
+      }
+
+      const trackButtons = Array.from(document.querySelectorAll('[data-track]'));
+      trackButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+          trackButtons.forEach((item) => {
+            item.classList.toggle('is-active', item === button);
+            item.setAttribute('aria-pressed', String(item === button));
+          });
+          const track = document.querySelector('[data-now-track]');
+          const artist = document.querySelector('[data-now-artist]');
+          const length = document.querySelector('[data-now-length]');
+          if (track) track.textContent = button.dataset.track;
+          if (artist) artist.textContent = button.dataset.artist;
+          document.querySelectorAll('[data-now-length]').forEach((el) => {
+            el.textContent = button.dataset.length;
+          });
+          if (length) length.textContent = button.dataset.length;
+          if (!playing) setPlaying(true);
+          const progress = document.querySelector('[data-progress]');
+          if (progress) {
+            progress.style.animation = 'none';
+            void progress.offsetWidth;
+            progress.style.animation = '';
+          }
+        });
+      });
+
+      const products = {
+        tt12: {
+          kicker: 'Turntable · 01',
+          title: 'TT-12',
+          copy: 'A belt-driven turntable with a solid walnut plinth, machined brass bearing and an arm voiced for long, unhurried listening. The platter is 2.6 kg of damped alloy, so speed stays honest through dense passages.',
+          specs: [['Drive', 'Belt, DC motor'], ['Speeds', '33⅓ / 45 rpm'], ['Platter', '2.6 kg damped alloy'], ['Arm', '9 in brass / carbon'], ['Finish', 'Oiled walnut'], ['Warranty', '10 years']],
+          price: '₹1,84,000'
+        },
+        nr70: {
+          kicker: 'Receiver · 02',
+          title: 'NR-70',
+          copy: 'Seventy watts per channel of class-AB power, a discrete phono stage and twin illuminated VU meters. Inputs are switched with a real rotary knob, and the tone controls are there for records that need them.',
+          specs: [['Output', '2 × 70 W into 8 Ω'], ['Phono', 'MM, discrete stage'], ['Inputs', 'Phono · Aux · Tape'], ['Meters', 'Twin illuminated VU'], ['Finish', 'Walnut / brushed brass'], ['Warranty', '10 years']],
+          price: '₹2,26,000'
+        },
+        ls8: {
+          kicker: 'Loudspeakers · 03',
+          title: 'LS-8',
+          copy: 'A two-way stand-mount with an eight-inch paper cone, a silk-dome tweeter and a cabinet heavy enough to stay quiet. Pairs are matched within 0.5 dB and voiced in the same room as the electronics.',
+          specs: [['Woofer', '8 in coated paper'], ['Tweeter', '1 in silk dome'], ['Sensitivity', '89 dB / 1 W / 1 m'], ['Impedance', '8 Ω nominal'], ['Finish', 'Oiled walnut'], ['Sold as', 'Matched pair']],
+          price: '₹1,58,000'
+        }
+      };
+
+      const dialog = document.getElementById('spec-dialog');
+      const specTitle = document.querySelector('[data-spec-title]');
+      const specKicker = document.querySelector('[data-spec-kicker]');
+      const specCopy = document.querySelector('[data-spec-copy]');
+      const specList = document.querySelector('[data-spec-list]');
+      const specPrice = document.querySelector('[data-spec-price]');
+
+      document.querySelectorAll('[data-product]').forEach((button) => {
+        button.addEventListener('click', () => {
+          const product = products[button.dataset.product];
+          if (!product || !dialog) return;
+          specKicker.textContent = product.kicker;
+          specTitle.textContent = product.title;
+          specCopy.textContent = product.copy;
+          specPrice.textContent = product.price;
+          specList.innerHTML = product.specs.map(([key, value]) => `<div><dt>${key}</dt><dd>${value}</dd></div>`).join('');
+          dialog.showModal();
+        });
+      });
+
+      if (dialog) {
+        dialog.querySelector('[data-dialog-close]').addEventListener('click', () => dialog.close());
+        dialog.addEventListener('click', (event) => {
+          if (event.target === dialog) dialog.close();
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
